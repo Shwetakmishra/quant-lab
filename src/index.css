@@ -1,0 +1,121 @@
+/* ============================================================
+   Quant Lab — design tokens & base styles
+   Values transcribed from the design handoff (hi-fi spec).
+   ============================================================ */
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/PublicSans-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/PublicSans-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Brand / navy */
+  --navy: #46417B;
+  --navy-deep: #2E2B4D;
+  --navy-hover: #5853A0;
+  /* Accent (warm) */
+  --accent: #F2A085;
+  --accent-wash: #FBE7DC;
+  /* Surfaces */
+  --canvas: #F8F6FC;
+  --spec-bg: #ECE8F4;
+  --surface: #ffffff;
+  /* Text */
+  --text: #3A3656;
+  --text-banner: #3B3766;
+  /* Status */
+  --green: #6CBE96;
+  --green-deep: #46805F;
+  --green-wash: #E7F4ED;
+  --red: #E68077;
+  --red-wash: #FBE8E5;
+  --blue: #6189B4;
+  --blue-wash: #E7F0FA;
+  --teal: #5A9B96;
+  --teal-wash: #E4F2EF;
+  --amber: #A98640;
+  --amber-wash: #FBF1DD;
+  --brown: #B07A52;
+  --purple: #6E62A4;
+  --gold: #CBA15C;
+
+  /* Spacing scale */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px;
+
+  /* Radius */
+  --r-pill: 999px;
+  --r-card: 18px;
+  --r-card-lg: 24px;
+  --r-input: 14px;
+
+  /* Shadows */
+  --sh-card: 0 4px 14px rgba(58,54,86,.04);
+  --sh-lift: 0 14px 30px rgba(58,54,86,.1);
+  --sh-pop: 0 8px 24px rgba(58,54,86,.12);
+  --sh-flip-front: 0 18px 50px rgba(58,54,86,.1);
+  --sh-flip-back: 0 18px 50px rgba(70,65,123,.32);
+
+  /* Easing */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+
+  --maxw-content: 980px;
+
+  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+}
+
+button { font-family: inherit; }
+
+input, button { font-family: inherit; }
+
+::selection { background: var(--accent-wash); }
+
+/* ---- Animations ---- */
+@keyframes qlFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes qlPop {
+  from { opacity: 0; transform: scale(.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes qlSpin {
+  to { transform: rotate(360deg); }
+}
+.ql-fade { animation: qlFade .3s var(--ease) both; }
+.ql-pop  { animation: qlPop .16s var(--ease) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* ---- Math typography (KaTeX wrapper) ---- */
+.math-inline .katex { font-size: 1em; }
+.math-block { display: flex; justify-content: center; }
+.math-block .katex { font-size: 1.25em; }
+
+/* ---- Scrollbars (subtle) ---- */
+* { scrollbar-width: thin; scrollbar-color: rgba(58,54,86,.18) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: rgba(58,54,86,.18); border-radius: 999px; }
