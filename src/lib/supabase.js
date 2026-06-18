@@ -1,7 +1,12 @@
 import { createClient } from '@supabase/supabase-js'
 
-const url = import.meta.env.VITE_SUPABASE_URL
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+// Strip ALL whitespace: a Supabase URL and a JWT anon key never contain any, so
+// this safely repairs values that picked up a stray newline/space when pasted
+// into a host's env-var field (which otherwise produces a "fetch ... Invalid
+// value" error when the key lands in an HTTP header).
+const clean = (v) => (v || '').replace(/\s+/g, '')
+const url = clean(import.meta.env.VITE_SUPABASE_URL)
+const anonKey = clean(import.meta.env.VITE_SUPABASE_ANON_KEY)
 
 // Surfaced in the UI so a missing/blank .env.local fails loudly and helpfully
 // rather than throwing deep inside the auth call.
