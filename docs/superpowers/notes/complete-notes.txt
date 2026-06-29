@@ -1,0 +1,822 @@
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 1
+GRE Quant — Complete Study Notes
+Flashcard- & quiz-ready  |  every concept as an atomic Q&A
+Each entry is a self-contained question and answer — copy a Q to the front of a flashcard and the A to the back, or pull the
+Q’s directly into a quiz. Organised by topic for easy filtering.
+1   NUMBER PROPERTIES & SETS
+Number types
+Q.  What are natural (counting) numbers?
+ 
+A.  1, 2, 3, 4, … (start at 1, no zero).
+ 
+Q.  What are whole numbers?
+ 
+A.  0, 1, 2, 3, … (counting numbers + 0).
+ 
+Q.  What are integers?
+ 
+A.  …, −2, −1, 0, 1, 2, … (whole numbers + negatives; extend both directions).
+ 
+Q.  Definition of a rational number?
+ 
+A.  Any number that can be written as a fraction a/b (b≠0). Includes all integers and terminating/repeating
+ decimals.
+Q.  Definition of an irrational number?
+ 
+A.  A number that cannot be written as a fraction. Its decimal is non-terminating AND non-repeating (e.g. π,
+ √2, e).
+Q.  Is 0.333… rational or irrational?
+ 
+A.  Rational (= 1/3). ‘Goes forever’ alone doesn’t make it irrational — it must also be non-repeating.
+ 
+Q.  What is the full number hierarchy?
+ 
+A.  Complex ⊇ Real ⊇ Rational ⊇ Integers. Real = anything on the number line; Complex adds imaginary (i =
+ √−1).
+Fractions
+Q.  Proper fraction?
+ 
+A.  Numerator < Denominator; value < 1.
+ 
+Q.  Improper fraction?
+ 
+A.  Numerator ≥ Denominator; value ≥ 1 (e.g. 5/5 = 1 still counts as improper).
+ 
+Q.  Mixed number?
+ 
+A.  A whole number + a proper fraction (e.g. 2 1/3); value > 1.
+ 
+Q.  When does a fraction give a terminating decimal?
+ 
+A.  When the denominator (in lowest terms) factors into only 2s and 5s. Any other prime factor → repeating.
+ (Reduce first.)
+Q.  How to convert a fully-repeating decimal (e.g. 0.ababab…) to a fraction?
+ 
+A.  Numerator = the repeating block (ab); denominator = a 9 for each repeating digit. So 0.ababab… = ab/99.
+ 
+Q.  How to convert a mixed repeating decimal (e.g. 0.2141414… where 2 is fixed, 14 repeats) to a fraction?
+ 
+A.  Numerator = (all decimal digits, one cycle) − (the non-repeating digits) = 214 − 2 = 212. Denominator = a 9
+ per repeating digit + a 0 per non-repeating digit = 990. So = 212/990.
+Properties of 0 & 1
+Q.  What is 00?
+ 
+A.  Undefined (the x0=1 rule needs a nonzero base).
+ 
+Q.  What is 0!?
+ 
+A.  1 (by definition).
+ 
+Q.  Key facts about 0?
+ 
+A.  Multiple of every integer; factor of itself only; neither positive nor negative; even.
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 2
+2   FACTORS, MULTIPLES & DIVISIBILITY
+Q.  Number of factors of pa·qb?
+ 
+A.  (a+1)(b+1). Extend by multiplying (exponent+1) for each prime.
+ 
+Q.  How to count ODD factors of a number?
+ 
+A.  Strip out all the 2s from the prime factorization, then count the factors of what remains.
+ 
+Q.  How to count EVEN factors?
+ 
+A.  Total factors − odd factors.
+ 
+Q.  Why only strip 2s for odd factors?
+ 
+A.  2 is the only even prime; odd factors contain no 2s.
+ 
+Q.  Divisibility by 2?
+ 
+A.  Last digit is even.
+ 
+Q.  Divisibility by 3?
+ 
+A.  Digit sum is divisible by 3.
+ 
+Q.  Divisibility by 4?
+ 
+A.  Last 2 digits form a number divisible by 4.
+ 
+Q.  Divisibility by 5?
+ 
+A.  Last digit is 0 or 5.
+ 
+Q.  Divisibility by 6?
+ 
+A.  Divisible by both 2 AND 3.
+ 
+Q.  Divisibility by 8?
+ 
+A.  Last 3 digits divisible by 8.
+ 
+Q.  Divisibility by 9?
+ 
+A.  Digit sum is divisible by 9.
+ 
+Q.  Divisibility by 11?
+ 
+A.  Alternating sum of digits (+−+−) is a multiple of 11 (including 0).
+ 
+Q.  Remainder when dividing by 3 or 9?
+ 
+A.  Same remainder as the digit sum gives (digit sum mod 3, or mod 9).
+ 
+Q.  Remainder when dividing by 4 / 8 / 10?
+ 
+A.  Use last 2 digits (÷4), last 3 digits (÷8), or the unit digit (÷10).
+ 
+Q.  Remainder of x÷y when y > x?
+ 
+A.  The remainder is x itself; quotient is 0.
+ 
+Q.  HCF via ladder method?
+ 
+A.  Divide only while a number divides EVERY term; stop when no common divisor; multiply all left-side
+ divisors.
+Q.  LCM via ladder method?
+ 
+A.  Divide while it divides AT LEAST ONE term; continue until the bottom row is all 1s; multiply all left-side
+ divisors.
+Q.  What does it mean for two numbers to be co-prime?
+ 
+A.  They share no common factor except 1, i.e. their HCF = 1 (e.g. 8 & 15).
+ 
+Q.  How to test if n is prime?
+ 
+A.  Test divisibility only by primes ≤ √n. If none divide it, n is prime.
+ 
+Q.  Number of trailing zeros in n!?
+ 
+A.  Count factors of 5: floor(n/5) + floor(n/25) + floor(n/125) + … (Legendre’s formula; floor each).
+ 
+Q.  Why count 5s (not 2s) for trailing zeros?
+ 
+A.  A trailing zero needs a 10 = 2×5. 2s are plentiful; 5s are the bottleneck.
+ 
+Q.  What does the floor function (the [ ] brackets) do?
+ 
+A.  Rounds DOWN to the nearest integer. For negatives: floor(−2.3) = −3.
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 3
+3   ARITHMETIC & ALGEBRA
+Exponents & identities
+Q.  xa · xb = ?
+ 
+A.  xa+b (same base, multiply → add exponents).
+ 
+Q.  xa / xb = ?
+ 
+A.  xa−b (same base, divide → subtract exponents).
+ 
+Q.  xa · ya = ?
+ 
+A.  (xy)a (same exponent → multiply bases).
+ 
+Q.  x−n = ?
+ 
+A.  1/xn (negative exponent → reciprocal).
+ 
+Q.  (a+b)3 = ?
+ 
+A.  a3 + 3a2b + 3ab2 + b3 (all plus).
+ 
+Q.  (a−b)3 = ?
+ 
+A.  a3 − 3a2b + 3ab2 − b3 (alternating signs).
+ 
+Q.  (a−b)2 = ?
+ 
+A.  a2 − 2ab + b2.
+ 
+Q.  (a+b)(a−b) = ?
+ 
+A.  a2 − b2 (difference of squares).
+ 
+Q.  √(a2) = ?
+ 
+A.  |a| (absolute value — not a, not ±a).
+ 
+Q.  What makes an expression a polynomial?
+ 
+A.  Every variable’s exponent is a whole number ≥ 0 (no 1/x, no √x). Constants and roots on coefficients are
+ fine.
+Quadratics
+Q.  Quadratic formula?
+ 
+A.  x = [−b ± √(b2−4ac)] / 2a.
+ 
+Q.  What is the discriminant and what does it tell you?
+ 
+A.  b2−4ac. >0 → 2 real roots; =0 → 1; <0 → 0 real roots.
+ 
+Q.  Sum of roots of ax2+bx+c?
+ 
+A.  −b/a.
+ 
+Q.  Product of roots?
+ 
+A.  c/a.
+ 
+Q.  Vertex x-coordinate / axis of symmetry?
+ 
+A.  x = −b/2a (also = average of the two roots).
+ 
+Q.  Completing the square — method & use?
+ 
+A.  Take half the x-coefficient → (x+h)2+k. Vertex (−h, k); min value = k (since a square is ≥ 0).
+ 
+Q.  √36 vs solving x2 = 36?
+ 
+A.  The √ symbol gives +6 only (positive root). Solving x2=36 gives ±6 (both).
+ 
+Inequalities, ratios, interest
+Q.  When do you flip an inequality sign?
+ 
+A.  Only when multiplying/dividing both sides by a NEGATIVE number.
+ 
+Q.  Order of a, a2, √a for a fraction (0<a<1)?
+ 
+A.  √a > a > a2 (squaring → toward 0; rooting → toward 1).
+ 
+Q.  Order of a, a2, √a for a>1?
+ 
+A.  a2 > a > √a.
+ 
+Q.  Percent increase / decrease formula?
+ 
+A.  |difference| / starting value × 100. (Increase → smaller number in denominator; decrease → larger.)
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 4
+Q.  Quick way to apply a % change?
+ 
+A.  +x% → ×(1 + x/100); −x% → ×(1 − x/100).
+ 
+Q.  Simple interest formula?
+ 
+A.  SI = prt (gives interest; add P for the total amount).
+ 
+Q.  Compound interest formula?
+ 
+A.  A = P(1 + r/n)nt. n = times compounded per year; A = final amount; subtract P for interest.
+ 
+Q.  Mixture / concentration?
+ 
+A.  (component ÷ total) × 100 = % of that component.
+ 
+4   SEQUENCES & SERIES
+Q.  Arithmetic sequence?
+ 
+A.  Add/subtract a constant (common difference) each term.
+ 
+Q.  Geometric sequence?
+ 
+A.  Multiply/divide by a constant (common ratio) each term.
+ 
+Q.  Harmonic sequence?
+ 
+A.  Reciprocals of an arithmetic sequence (e.g. 1, 1/2, 1/3, 1/4, …).
+ 
+Q.  Quadratic sequence?
+ 
+A.  Second differences are constant (first differences are not); formula involves n2.
+ 
+Q.  Sequence vs series?
+ 
+A.  Sequence = a list (2,4,6). Series = the sum of that list (2+4+6 = 12).
+ 
+Q.  Number of terms in a spaced/evenly-spaced series?
+ 
+A.  (Last − First)/step + 1. Snap endpoints inward to real multiples first if needed.
+ 
+Q.  Sum of an arithmetic series?
+ 
+A.  Sn = (n/2)(a + l): n = number of terms, a = first, l = last.
+ 
+Q.  Sum of a geometric series?
+ 
+A.  Sn = a(rn−1)/(r−1). n = number of terms (count them).
+ 
+Q.  Sum of an infinite geometric series (|r|<1)?
+ 
+A.  S = a/(1−r) (terms shrink to 0, so the sum converges).
+ 
+5   COORDINATE GEOMETRY
+Q.  Slope formula?
+ 
+A.  (y2−y1)/(x2−x1) = rise/run.
+ 
+Q.  Slope of a horizontal line (y = constant)?
+ 
+A.  0.
+ 
+Q.  Slope of a vertical line (x = constant)?
+ 
+A.  Undefined (run = 0).
+ 
+Q.  Slope-intercept form?
+ 
+A.  y = mx + c (m = slope, c = y-intercept).
+ 
+Q.  Point-slope form — and when to use it?
+ 
+A.  y − y1 = m(x − x1). Use when you know the slope and one point (no +c needed).
+ 
+Q.  Slopes of parallel lines?
+ 
+A.  Equal slopes, different y-intercepts.
+ 
+Q.  Slopes of perpendicular lines?
+ 
+A.  Negative reciprocals (their product = −1).
+ 
+Q.  Slope of a parabola ax2+bx+c at a point?
+ 
+A.  2ax + b (plug in x). At the vertex (x=−b/2a), slope = 0.
+ 
+Q.  Distance between two points?
+ 
+A.  √[(x2−x1)2 + (y2−y1)2] (subtract first, then square).
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 5
+Q.  Midpoint between two points?
+ 
+A.  ((x1+x2)/2, (y1+y2)/2) — the average of the x’s and the average of the y’s.
+ 
+Q.  Equation of a circle?
+ 
+A.  (x−h)2 + (y−k)2 = r2; center (h,k), radius r.
+ 
+Q.  Reflection across y = x?
+ 
+A.  (x, y) → (y, x).
+ 
+Q.  Reflection across y = −x?
+ 
+A.  (x, y) → (−y, −x).
+ 
+Q.  Reflection across horizontal line y = k?
+ 
+A.  (x, y) → (x, 2k−y).
+ 
+Q.  Reflection across vertical line x = k?
+ 
+A.  (x, y) → (2k−x, y).
+ 
+Q.  90° rotation anticlockwise about origin?
+ 
+A.  (x, y) → (−y, x).
+ 
+Q.  90° rotation clockwise about origin?
+ 
+A.  (x, y) → (y, −x).
+ 
+Q.  180° rotation about origin?
+ 
+A.  (x, y) → (−x, −y).
+ 
+Q.  Which way does a parabola open?
+ 
+A.  a > 0 → up; a < 0 → down.
+ 
+Q.  Find the y-intercept / x-intercept of a graph?
+ 
+A.  y-intercept: set x = 0. x-intercept: set y = 0.
+ 
+Q.  Graph shift: y = (x−h)2 + k from y = x2?
+ 
+A.  Inside (horizontal) is backwards: −h → right h. Outside (vertical): +k → up k. Vertex (h, k).
+ 
+6   GEOMETRY — TRIANGLES, POLYGONS & SOLIDS
+Polygons
+Q.  Sum of interior angles of an n-sided polygon?
+ 
+A.  (n−2) × 180°. (It splits into n−2 triangles.)
+ 
+Q.  Each interior angle of a regular polygon?
+ 
+A.  (n−2) × 180 / n.
+ 
+Q.  Sum of exterior angles of any polygon?
+ 
+A.  360° (always, regardless of n).
+ 
+Q.  Each exterior angle of a regular polygon?
+ 
+A.  360 / n.
+ 
+Triangles
+Q.  The four Pythagorean triples?
+ 
+A.  3-4-5, 5-12-13, 8-15-17, 7-24-25 (largest = hypotenuse) + all their multiples.
+ 
+Q.  Side ratio of a 45-45-90 triangle?
+ 
+A.  x : x : x√2 (hypotenuse = leg × √2).
+ 
+Q.  Side ratio of a 30-60-90 triangle?
+ 
+A.  x : x√3 : 2x (opposite the 30° : 60° : 90° angles).
+ 
+Q.  What makes two triangles similar?
+ 
+A.  Same shape, different size: equal angles, proportional sides.
+ 
+Q.  Area ratio of two similar triangles?
+ 
+A.  (side ratio)2 (area is 2D, so it scales by the square).
+ 
+Q.  Criteria to prove similarity?
+ 
+A.  AA, SAS, SSS (sides proportional). AA alone is enough.
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 6
+Q.  Criteria to prove congruence?
+ 
+A.  SSS, SAS, ASA, AAS (sides equal). AA is NOT enough.
+ 
+Q.  Area of an equilateral triangle (side x)?
+ 
+A.  (√3/4) × x2.
+ 
+Circles
+Q.  Central angle vs inscribed angle?
+ 
+A.  Central angle = 2 × inscribed angle (on the same arc). Central vertex at center; inscribed vertex on the
+ circle.
+Q.  Sector area / arc length proportion?
+ 
+A.  (central angle / 360) = arc/circumference = sector/total area. If the total is given, take the fraction — no
+ need to find r.
+Q.  Which shape has the largest area for a given perimeter?
+ 
+A.  A circle (largest area, least perimeter). Among polygons, the regular one maximizes area.
+ 
+Q.  To maximize a polygon’s area for fixed sides, what shape?
+ 
+A.  Make it regular (all sides/angles equal). For a quadrilateral, max area is a square.
+ 
+Q.  In a regular hexagon, how does the radius relate to the side?
+ 
+A.  A regular hexagon = 6 equilateral triangles; the radius of its circumscribed circle equals its side length.
+ 
+Areas & solids
+Q.  Area of parallelogram / rhombus / rectangle?
+ 
+A.  base × height.
+ 
+Q.  Area of a trapezoid?
+ 
+A.  [(b1 + b2)/2] × h (average of parallel sides × height).
+ 
+Q.  Cube: surface area, volume, longest diagonal?
+ 
+A.  SA = 6a2; Vol = s3; diagonal = x√3.
+ 
+Q.  Cuboid: surface area, volume, longest diagonal?
+ 
+A.  SA = 2(ab+bc+ca); Vol = abc; diagonal = √(x2+y2+z2).
+ 
+Q.  Cylinder: volume and surface area?
+ 
+A.  Vol = πr2h; SA = 2πr(r+h).
+ 
+7   STATISTICS
+Q.  Mean, median, mode?
+ 
+A.  Mean = average; median = middle value; mode = most frequent value.
+ 
+Q.  Mean of an evenly-spaced set?
+ 
+A.  (first term + last term) / 2 (= median too).
+ 
+Q.  Range?
+ 
+A.  Greatest − least.
+ 
+Q.  What does standard deviation measure?
+ 
+A.  Spread — the typical distance of data points from the mean. Higher = more scattered.
+ 
+Q.  Can SD be negative? When is it 0?
+ 
+A.  Never negative (≥ 0). It’s 0 only when all values are identical.
+ 
+Q.  Effect on SD of adding/subtracting a constant?
+ 
+A.  Unchanged (shifts the data, doesn’t change spread).
+ 
+Q.  Effect on SD of multiplying/dividing by k?
+ 
+A.  SD scales by the same factor k.
+ 
+Q.  The empirical rule (68-95-99.7)?
+ 
+A.  ±1 SD → 68%, ±2 SD → 95%, ±3 SD → 99.7% of data.
+ 
+Q.  How does 68% split around the mean?
+ 
+A.  34% on each side (the curve is symmetric).
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 7
+Q.  Find the value range for a given % (mean µ, SD σ)?
+ 
+A.  mean ± (n × SD), where n = 1 (68%), 2 (95%), 3 (99.7%).
+ 
+Q.  Z-score formula and meaning?
+ 
+A.  z = (x − µ)/σ = how many SDs a value is from the mean (− below, + above).
+ 
+Q.  Percentiles for z = 0, +1, −2?
+ 
+A.  z=0 → 50th; z=+1 → 84th; z=−2 → ~2.5th.
+ 
+Q.  In a normal curve, what does the mean control?
+ 
+A.  Location — where the peak sits (bigger → right). 50% below, 50% above.
+ 
+Q.  In a normal curve, what does SD control?
+ 
+A.  Width/spread: small σ → tall & narrow; large σ → short & wide. Area always = 1.
+ 
+Q.  Discrete uniform distribution — probability of one outcome?
+ 
+A.  1/n (n equally likely outcomes, e.g. a die → 1/6).
+ 
+Q.  Continuous uniform (a to b): height, mean?
+ 
+A.  Height = 1/(b−a); mean = median = (a+b)/2. Probability = area; P(sub-range) = length × height.
+ 
+Quartiles, percentiles & spread
+Q.  How do quartiles divide a dataset?
+ 
+A.  Into 4 equal groups. Q1 = lower 25% boundary, Q2 = median (50%), Q3 = upper 75% boundary.
+ 
+Q.  How do you find Q1, Q2, Q3?
+ 
+A.  Q2 = median of the whole set. Q1 = median of the lower half. Q3 = median of the upper half.
+ 
+Q.  Interquartile range (IQR)?
+ 
+A.  Q3 − Q1 (the spread of the middle 50% of the data).
+ 
+Q.  What does a boxplot show?
+ 
+A.  The five-number summary: lowest, Q1, Q2 (median), Q3, highest — the box spans Q1 to Q3.
+ 
+Q.  Percentile rank formula?
+ 
+A.  (number of values below x / total number of values) × 100 = % of data points strictly below that value.
+ 
+Q.  What is standardization?
+ 
+A.  Re-expressing a value as how many SDs it sits from the mean: subtract the mean, divide by the SD (= the
+ z-score).
+8   COUNTING & PROBABILITY
+Q.  Permutation vs combination — the key difference?
+ 
+A.  Permutation: order matters (ABC ≠ BCA). Combination: order doesn’t (ABC = BCA).
+ 
+Q.  Permutation formula (n items, choose r)?
+ 
+A.  nPr = n! / (n−r)!.
+ 
+Q.  Combination formula (n items, choose r)?
+ 
+A.  nCr = n! / [r!(n−r)!] (= permutation ÷ r!).
+ 
+Q.  Permutations with repeated items?
+ 
+A.  n! / (r1! · r2! …), dividing by the factorial of each repeated group.
+ 
+Q.  Circular arrangements of n items?
+ 
+A.  (n−1)!
+ 
+Q.  Handshake formula (n people, each shakes once)?
+ 
+A.  n(n−1)/2 (= nC2).
+ 
+Q.  Counting paths / arrangements with m of one type, n of another?
+ 
+A.  (m+n)! / (m! · n!).
+ 
+Q.  Overlapping sets — two sets?
+ 
+A.  Total = A + B − (both) + (neither).
+ 
+Q.  Overlapping sets — three sets?
+ 
+A.  Total = A + B + C − (3 pairwise overlaps) + (all three) + (neither).
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 8
+Q.  ‘Exactly one’ vs ‘at least one’ in sets?
+ 
+A.  ‘At least one’ = in any set (the union). ‘Exactly one’ = in one set only, excluding the overlaps. Draw a Venn
+ diagram and subtract the overlap regions.
+Q.  Basic probability?
+ 
+A.  Favorable outcomes / total outcomes.
+ 
+Q.  Complement rule?
+ 
+A.  P(not A) = 1 − P(A).
+ 
+Q.  P(A or B) — general formula?
+ 
+A.  P(A) + P(B) − P(A and B).
+ 
+Q.  Mutually exclusive events — meaning & P(A and B)?
+ 
+A.  Can’t happen at the same time; P(A and B) = 0; so P(A or B) = P(A)+P(B).
+ 
+Q.  Independent events — meaning & P(A and B)?
+ 
+A.  One doesn’t affect the other; P(A and B) = P(A) × P(B).
+ 
+Q.  Why do we multiply for AND (independent)?
+ 
+A.  ‘Both’ narrows possibilities — a fraction of a fraction. Each condition contributes one factor.
+ 
+Q.  Expected value formula?
+ 
+A.  E[X] = Σ(outcome × probability) = long-run average.
+ 
+Q.  Expected value of a game — interpretation?
+ 
+A.  (net gain × P(win)) + (net loss × P(lose)). >0 worth playing; <0 don’t; =0 fair.
+ 
+Q.  Binomial conditions (BINS)?
+ 
+A.  Binary outcomes, Independent trials, Number of trials fixed, Same success probability.
+ 
+Q.  Binomial probability formula?
+ 
+A.  P(k in n) = nCk · pk · (1−p)n−k = (ways to arrange) × (success)k × (failure)n−k.
+ 
+★  GRE EXTRAS — standard topics & strategy NOT in your handwritten notes
+(added for full exam coverage)
+Everything below is new — commonly tested GRE material that wasn’t in your notes. Worth folding into your deck so there
+are no blind spots.
+Ratios & proportions
+Q.  What is a ratio, and how do you scale it?
+ 
+A.  A comparison a:b. Multiply/divide both parts by the same number to scale (2:3 = 4:6 = 6:9). Reduce to
+ lowest terms to compare.
+Q.  How do you combine ratios (a:b and b:c)?
+ 
+A.  Make the shared term match, then chain. If A:B = 2:3 and B:C = 4:5, scale B to a common value (12):
+ A:B:C = 8:12:15.
+Q.  Direct vs inverse proportion?
+ 
+A.  Direct: y = kx (both grow together; y/x constant). Inverse: y = k/x (one grows as the other shrinks; xy
+ constant).
+Q.  Splitting a quantity in a ratio?
+ 
+A.  Add the ratio parts to get total parts, then give each its share. Split 60 in 2:3 → 5 parts → 24 and 36.
+ 
+Percents (advanced)
+Q.  Successive percent changes — can you just add them?
+ 
+A.  No. Apply multipliers in sequence. +20% then −20% = ×1.2 ×0.8 = ×0.96 = a 4% net DECREASE (not 0%).
+ 
+Q.  Percent of a percent?
+ 
+A.  Multiply the decimals. 30% of 40% = 0.30 × 0.40 = 0.12 = 12%.
+ 
+Q.  ‘A is what percent of B’ vs ‘A is what percent greater than B’?
+ 
+A.  ‘Percent of’ = A/B ×100. ‘Percent greater than’ = (A−B)/B ×100 (the change relative to B).
+ 
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 9
+Rates: speed, distance, work
+Q.  Distance / speed / time relationship?
+ 
+A.  Distance = speed × time. (Rearrange: speed = d/t, time = d/s.)
+ 
+Q.  Average speed for a round trip?
+ 
+A.  Total distance / total time — NOT the average of the speeds. For equal distances at speeds a, b:
+ 2ab/(a+b).
+Q.  Combined work rate (two workers together)?
+ 
+A.  Add their rates. If A does a job in x hrs and B in y hrs, together: rate = 1/x + 1/y, so time = 1/(1/x + 1/y) =
+ xy/(x+y).
+Q.  Relative speed — same vs opposite directions?
+ 
+A.  Opposite directions → ADD speeds (closing faster). Same direction → SUBTRACT speeds.
+ 
+Absolute value & number line
+Q.  What does |x| mean?
+ 
+A.  Distance from 0 on the number line; always ≥ 0. |−5| = 5, |5| = 5.
+ 
+Q.  How to solve |x − 3| = 5?
+ 
+A.  Split into two cases: x − 3 = 5 (x = 8) OR x − 3 = −5 (x = −2).
+ 
+Q.  How to solve |x| < 5 (an inequality)?
+ 
+A.  It means −5 < x < 5 (within 5 of zero). |x| > 5 means x < −5 OR x > 5 (outside).
+ 
+Q.  |a + b| vs |a| + |b|?
+ 
+A.  |a + b| ≤ |a| + |b| (triangle inequality). |ab| = |a|·|b| (always equal).
+ 
+Probability shortcuts
+Q.  ‘At least one’ probability — the fast way?
+ 
+A.  P(at least one) = 1 − P(none). Far easier than adding up all the ‘one or more’ cases.
+ 
+Q.  Probability with/without replacement?
+ 
+A.  Without replacement, the total shrinks each draw (events become dependent). With replacement,
+ probabilities stay constant (independent).
+Data interpretation (a whole GRE question type)
+Q.  What is a Data Interpretation set?
+ 
+A.  A group of questions based on one or more charts/tables (bar, line, pie, scatter). You read values off the
+ graphic and compute.
+Q.  Reading a pie chart — key relationship?
+ 
+A.  Each slice’s % × the total = that category’s value. The whole circle = 100% = 360°.
+ 
+Q.  Common DI traps?
+ 
+A.  Watch axis scales (do they start at 0?), units (thousands vs millions), and whether a question asks for a
+ value vs a percent change. Re-read what’s actually being asked.
+GRE-specific strategy
+Q.  What is a Quantitative Comparison (QC) question?
+ 
+A.  You compare Quantity A vs Quantity B. Four fixed answers: A bigger / B bigger / equal / cannot be
+ determined. Roughly half the quant section.
+Q.  QC strategy — the key habit?
+ 
+A.  Try to make the two quantities equal, then test if other values break it. Plug in 0, 1, a fraction, and a
+ negative — if the relationship changes, the answer is ‘cannot be determined.’
+Q.  QC — the ‘cannot be determined’ trap?
+ 
+A.  If a variable can be negative, a fraction, or zero, the relationship often flips. Never assume variables are
+ positive integers unless stated.
+Q.  Numeric Entry questions?
+ 
+A.  You type the answer (no options to eliminate). Watch the requested form: fraction vs decimal, rounding
+ instructions, units.
+
+GRE Quant — Complete Study Notes (flashcard-ready)
+Page 10
+Q.  Multiple-answer questions?
+ 
+A.  ‘Select all that apply’ — there may be more than one correct choice, and you must get all of them. Check
+ every option independently.
+Q.  Smart use of the on-screen calculator?
+ 
+A.  It’s basic (no order-of-operations memory beyond simple chains). Estimate first; use it for arithmetic, not as
+ a crutch. QC often needs reasoning, not computation.
+Q.  Plugging in numbers — when and how?
+ 
+A.  For variable-heavy or QC problems, substitute simple test numbers (0, 1, 2, −1, ½). Use them to check
+ relationships and eliminate answers.
+Q.  Back-solving from answer choices?
+ 
+A.  For ‘solve for x’ multiple-choice, plug the answer options into the problem and see which works — often
+ faster than algebra.
+A few more commonly-tested facts
+Q.  Sum of the first n positive integers?
+ 
+A.  n(n+1)/2 (e.g. 1+2+…+100 = 5050).
+ 
+Q.  Sum of first n even / odd numbers?
+ 
+A.  First n even = n(n+1). First n odd = n2.
+ 
+Q.  Prime numbers under 20?
+ 
+A.  2, 3, 5, 7, 11, 13, 17, 19. (2 is the only even prime; 1 is NOT prime.)
+ 
+Q.  Quick squares to know (11–15)?
+ 
+A.  112=121, 122=144, 132=169, 142=196, 152=225.
+ 
+Q.  Fraction–decimal–percent conversions worth memorizing?
+ 
+A.  1/8=12.5%, 1/4=25%, 1/3≈33.3%, 3/8=37.5%, 1/2=50%, 2/3≈66.7%, 5/8=62.5%, 3/4=75%.
+ 
+Q.  Is a negative number raised to an even vs odd power positive or negative?
+ 
+A.  Even power → positive ((−2)2=4). Odd power → negative ((−2)3=−8).
+ 
+Sections 1–8 = your handwritten notes (complete). The ★ GRE Extras = standard syllabus topics & strategy not in your
+notes, added for full exam coverage. Tip: the bolded answer parts are the ‘must-recall’ kernels. Good luck, Shweta.

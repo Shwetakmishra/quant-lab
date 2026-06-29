@@ -1,0 +1,166 @@
+GRE Quant — Burn-In Sheet
+Page 1
+GRE Quant — Burn-In Sheet
+Shweta's consolidated revision notes  |  high-value formulas, corrected forms & the traps that tripped
+you up
+★  WATCH THESE — concepts that felt shaky, give extra review
+★ Trapezoid area — why the average
+ A trapezoid is ‘almost a rectangle,’ but its two parallel sides are different lengths (b1 ≠ b2). A rectangle
+uses one width; a trapezoid has none, so use the average of the two parallel sides as the effective width. →
+Area = [(b1 + b2)/2] × h.
+★ Why AND multiplies (independent events)
+ ‘Both must happen’ = you narrow the possibilities twice. 100 people flip a coin twice, want both heads: 100
+→ keep half (50) → keep half of those (25) = ¼ = ½×½. You multiply because the 2nd probability acts on
+‘what survived the 1st’ — a fraction of a fraction. Number of multiplications = number of conditions (one
+per event). AND → multiply (narrows, smaller); OR → add (widens, bigger).
+★ Continuous uniform — ‘probability = area, not 1/n’
+ Shift from discrete (die: each outcome 1/n) to continuous: outcomes are any value in a range (infinitely
+many), so the chance of an exact point is ~0. Ask about ranges: probability = AREA under a flat
+rectangle. Total area = 1 → height = 1/(b−a). P(sub-range) = its length × height. Mean = (a+b)/2
+(midpoint). Key shift: ranges & area, not exact points.
+1   NUMBER PROPERTIES, FACTORS & DIVISIBILITY
+  Number hierarchy: Complex ⊇ Real ⊇ Rational (can be written a/b) ⊇ Integers. Irrational = cannot be
+ written as a fraction (non-terminating, non-repeating decimal is the symptom; the no-fraction form is the
+definition). Repeating decimals (0.333…) are still rational.
+  Fractions: Proper = Num < Den (value < 1). Improper = Num ≥ Den (value ≥ 1; e.g. 5/5 = 1 still counts).
+ Mixed = whole number + proper fraction.
+  Factorial: n! = n × (n−1) × … × 1. 0! = 1. (4! = 24.)
+ 
+  Number of factors of pa·qb = (a+1)(b+1) — extend by multiplying (exponent+1) for each prime. Odd
+ factors = strip all 2s, count factors of what’s left. Even = total − odd. (2 is the only even prime.)
+  Divisibility: ÷2 (last digit even); ÷3 (digit sum ÷3); ÷4 (last 2 digits ÷4); ÷5 (ends 0/5); ÷6 (÷2 and ÷3); ÷8
+ (last 3 digits ÷8); ÷9 (digit sum ÷9); ÷11 (alternating digit sum = multiple of 11, including 0 — not just ‘0 or
+11’).
+  Remainders: ÷3 & ÷9 → number leaves the same remainder as its digit sum. ÷4 (last 2 digits), ÷8 (last 3
+ digits), ÷10 (unit digit), ÷5 (unit 0–4 = that digit; 5–9 = digit−5). If divisor > number: remainder = the number
+itself (quotient 0).
+  HCF / LCM (ladder): multiply all left-side divisors (not the quotients). HCF: divide only while a number
+ divides every term; stop when no common divisor. LCM: continue while it divides at least one, until bottom
+row is all 1s.
+  Co-prime: share no common factor except 1, i.e. HCF = 1 (e.g. 8 & 15). (1 is not prime.)
+ 
+  Primality test: test divisibility only by primes ≤ √n. None divide → prime. (Factors mirror around √n.)
+ 
+  Properties of 0: 00 = undefined (x0=1 needs a nonzero base). 0 is a multiple of every integer; a factor of
+ itself only; neither positive nor negative; even.
+
+GRE Quant — Burn-In Sheet
+Page 2
+  Trailing zeros / Legendre: count factors of 5 in n! (5s are the bottleneck since 10 = 2×5). Sum floor(n/5) +
+ floor(n/25) + … (floor each). Same formula for any prime. The [ ] brackets = floor = round DOWN (for
+negatives: floor(−2.3) = −3).
+2   ARITHMETIC & ALGEBRA
+  Exponents: xa·xb = xa+b; xa/xb = xa−b; xa·ya = (xy)a; x−n = 1/xn; anything0 = 1 (but 00 undefined).
+ 
+  Identities: (a+b)3 = a3+3a2b+3ab2+b3; (a−b)3 = a3−3a2b+3ab2−b3 (alternating signs); (a−b)2 = a2−2ab+b2;
+ (a+b)(a−b) = a2−b2; √(a2) = |a| (absolute value, not ±).
+  Polynomial test: every variable’s exponent must be a whole number ≥ 0 (no 1/x = x−1, no √x = x½). A bare
+ constant IS a polynomial; roots/fractions on coefficients are fine (3x2 + √5 OK).
+  Quadratic formula: x = [−b ± √(b2−4ac)] / 2a. Discriminant b2−4ac: >0 → 2 real roots; =0 → 1; <0 → 0
+ (negative under √).
+  The a,b,c family (y = ax2+bx+c): vertex x-coord / axis of symmetry = −b/2a; sum of roots = −b/a; product of
+ roots = c/a. Link: axis = (sum of roots)/2 — vertex sits halfway between the roots (that’s the ‘÷2’).
+  Completing the square: take half the x-coefficient → (x+h)2+k; vertex (−h, k); k is the min (opens up). A
+ square is never negative → min of (x+h)2 is 0 → min y = k.
+  √ symbol vs equation: the √ symbol gives the positive root only (√36 = +6). But solving x2 = 36 gives
+ ±6 (both). Unrelated to √ of negatives.
+  Inequalities: flip the sign only when multiplying/dividing by a negative (negating reverses left–right order on
+ the number line). Adding/subtracting or ×÷ positive → no flip.
+  a vs a2 vs √a (‘1 is the magnet’): for fractions 0<a<1 → √a > a > a2 (squaring → toward 0; rooting → toward
+ 1). For a>1 → a2 > a > √a.
+  Percent change = |difference| / starting value × 100. Increase → smaller (start) number in denominator;
+ decrease → larger. Shortcut: +x% → ×(1 + x/100); −x% → ×(1 − x/100).
+  Simple/Compound interest: A = P(1 + r/n)nt (n = times compounded per year). SI = prt gives interest →
+ add P for amount. CI formula gives amount → subtract P for interest. t = years (varies per problem); nt = total
+periods.
+  Mixture / concentration = (component ÷ total) × 100 = the % of that component (part-over-whole as a
+ percentage).
+3   SEQUENCES & SERIES
+  Types: Arithmetic = add/subtract a constant; Geometric = multiply/divide a constant; Harmonic = reciprocals
+ of an arithmetic sequence; Quadratic = 2nd differences constant (involves n2).
+  Sequence vs Series: sequence = a list (2,4,6); series = the sum of that list (2+4+6 = 12).
+ 
+  Counting terms in a spaced series: (Last − First)/step + 1 (the +1 rule alone is only for step = 1). Snap
+ endpoints inward to real multiples first if needed.
+  Arithmetic series sum: Sn = (n/2)(a + l), where n = number of terms, a = first, l = last.
+ 
+  Geometric series sum: Sn = a(rn − 1)/(r − 1). n = number of terms (count them, not the last exponent).
+ Infinite (|r|<1): S = a/(1−r).
+4   COORDINATE GEOMETRY
+  Line: y = mx + c (m = slope, c = y-intercept). Point-slope: y − y1 = m(x − x1) — use when you know slope +
+ a point; no +c (complete on its own). Parallel = same slope, different intercepts. Perpendicular = negative
+
+GRE Quant — Burn-In Sheet
+Page 3
+reciprocal slopes (multiply to −1).
+  Slope = rise/run = (y2−y1)/(x2−x1). Horizontal (y = const) → slope 0; vertical (x = const) → undefined. y = x
+ has slope 1; above it y > x, below it x > y.
+  Slope of a quadratic ax2+bx+c = 2ax + b (derivative); plug in x for the slope there. At the vertex (x = −b/2a)
+ slope = 0.
+  Distance formula: d = √[(x2−x1)2 + (y2−y1)2]. Subtract first, then square (it’s Pythagoras; differences are
+ the legs).
+  Circle: (x−h)2 + (y−k)2 = r2; center (h, k) (signs flip from the equation), radius r.
+ 
+  Reflections: across y = x → (y, x); y = −x → (−y, −x); horizontal y = k → (x, 2k−y); vertical x = k → (2k−x, y).
+ Reflection = same distance, opposite side (not onto the line).
+  Rotations about origin: 90° anticlockwise → (−y, x) (lifts toward +y); 90° clockwise → (y, −x) (drops toward
+ −y); 180° → (−x, −y). Recovery: rotate (1,0) in your head.
+  Parabola: a>0 opens up, a<0 down. y-intercept → set x = 0; x-intercept(s) → set y = 0. (A point is on an axis
+ when the other coordinate is 0.)
+  Graph shifts (from y = x2): outside = vertical = normal (+k up, −k down); inside = horizontal =
+ backwards (−h → right, +h → left). Trick: set inside = 0, solve for x → vertex location. Vertex form (x−h)2+k
+→ vertex (h, k).
+5   GEOMETRY — TRIANGLES, POLYGONS, SOLIDS
+  Polygon angles: interior sum = (n−2)·180; each interior (regular) = (n−2)·180/n. Exterior sum = 360°
+ always; each exterior (regular) = 360/n. Interior + exterior = 180° per corner.
+  Pythagorean triples: 3-4-5, 5-12-13, 8-15-17, 7-24-25 (largest = hypotenuse) + all multiples (6-8-10,
+ 9-12-15…). Spot on sight to skip the calculation.
+  Angle-based triangles: 45-45-90 → x : x : x√2 (hypotenuse = leg×√2). 30-60-90 → x : x√3 : 2x (opposite 30
+ : 60 : 90; shortest faces 30°).
+  Similar triangles: equal angles, proportional sides. Area ratio = (side ratio)2 (area is 2D; if sides scale by
+ k, area scales by k2). Prove by AA, SAS, SSS (sides proportional). Volume ratio = (side ratio)3. Congruence
+uses SSS, SAS, ASA, AAS (sides equal; AA alone is NOT enough).
+  Circle angles/arcs: central angle = 2 × inscribed angle (same arc). Master proportion: (central angle/360)
+ = arc/circumference = sector/total area. If the total is given, take the fraction directly — no need to find r.
+  2D areas: parallelogram/rhombus/rectangle = base×height; trapezoid = [(b1+b2)/2] × h (average of parallel
+ sides × height); equilateral triangle = (√3/4)·side2.
+  3D solids: Cube — SA = 6a2, Vol = s3, diagonal = x√3. Cuboid — SA = 2(ab+bc+ca), Vol = abc, diagonal =
+ √(x2+y2+z2) (3D Pythagoras). Cylinder — Vol = πr2h, SA = 2πr(r+h).
+6   STATISTICS
+  Standard deviation = spread (typical distance from the mean). Always ≥ 0 (0 only if all values identical).
+ Add/subtract a constant → SD unchanged (shifts data, not spread). Multiply/divide by k → SD scales
+by k.
+  Empirical rule (normal): ±1 SD → 68%, ±2 SD → 95%, ±3 SD → 99.7%. Symmetric → 68% splits
+ 34%/34%. Range for a %: mean ± (n × SD), n = 1/2/3.
+  Z-score = (x − µ)/σ = how many SDs a value is from the mean (− below, + above). z=0 → 50th pctile; z=+1
+ → 84th (50+34); z=+2 → ~97.5th; z=−2 → ~2.5th. Bell slices per SD band: 34% / 13.5% / 2.5%.
+
+GRE Quant — Burn-In Sheet
+Page 4
+  Normal (bell) curve — two dials: Mean (µ) = location (bigger → right, smaller → left; 50/50 split). SD (σ) =
+ spread/width (small → tall & narrow; large → short & wide; area always = 1). σ never shifts sideways &
+never negative; the ± above/below idea belongs to z-scores (a point).
+  Uniform distribution: discrete → each of n outcomes has prob 1/n. Continuous (a→b, flat rectangle, area
+ 1): height = 1/(b−a), mean = median = (a+b)/2, P(sub-range) = length × height. (SD = √[(b−a)2/12] — rare,
+optional.)
+7   COUNTING & PROBABILITY
+  Permutations vs Combinations: P (order matters) = n!/(n−r)!; C (order doesn’t) = n!/[r!(n−r)!]. Both have
+ (n−r)! on the bottom — combination just adds ÷r!. So C ≤ P. Keywords: arrange/order/rank/seat → P;
+group/select/team/subset → C.
+  Handshakes: n people, each shakes once → n(n−1)/2 (= nC2; ÷2 removes double-counting).
+ 
+  Counting paths / arrangements with repeats: m of one type + n of another → (m+n)!/(m!·n!) (NOT m×n).
+ = choosing positions for one type.
+  Overlapping sets — 2: Total = A + B − (both) + (neither). 3: Total = A + B + C − (3 pairwise overlaps) + (all
+ three) + (neither). Principle: count everyone exactly once. Match the formula to the number of sets.
+  Probability = favorable / total. Complement: P(not A) = 1 − P(A).
+ 
+  OR / AND rules: P(A or B) = P(A) + P(B) − P(A and B). Mutually exclusive (can’t coexist): overlap = 0 →
+ OR = P(A)+P(B), AND = 0. Independent (don’t affect each other): AND = P(A)×P(B). Diagnostic: ‘can both
+happen?’ no → mutually exclusive; ‘does one affect the other?’ no → independent.
+  Expected value E[X] = Σ(outcome × probability) = long-run average. Game form: (net gain × P(win)) + (net
+ loss × P(lose)) — loss is negative. >0 favorable, <0 don’t play, =0 fair game.
+  Binomial probability (conditions BINS: Binary, Independent, Number fixed, Same prob): P(k in n) = nCk ·
+ pk · (1−p)n−k = (ways to arrange the successes) × (success prob)k × (failure prob)n−k. Don’t forget the nCk.
+Built from your full study session — every formula here was either a high-value shortcut or something worth nailing down. The
+★ Watch-These section is your highest priority for a final pass. Good luck, Shweta.
