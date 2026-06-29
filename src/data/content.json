@@ -1,5 +1,5 @@
 {
-  "_note": "Content source of truth, parsed from quant-notes.md. Edit freely without touching app logic. Formulas are KaTeX/LaTeX strings. card_id values are used as the primary key in the Supabase card_reviews table.",
+  "_note": "Content source of truth, transcribed from GRE_Quant_Complete_Notes.pdf and GRE_Quant_BurnIn_Sheet.pdf (text extracts in docs/superpowers/notes/). Edit freely without touching app logic. Formulas are KaTeX/LaTeX strings. id values are the primary key in the Supabase card_reviews table — never renumber existing ids.",
   "topics": [
     { "id": "number-properties", "name": "Number Properties", "color": "#F2A085", "wash": "#FBE7DC" },
     { "id": "algebra", "name": "Algebra", "color": "#6189B4", "wash": "#E7F0FA" },
@@ -7,7 +7,9 @@
     { "id": "counting", "name": "Counting", "color": "#B07A52", "wash": "#FBEFE3" },
     { "id": "probability", "name": "Probability", "color": "#6E62A4", "wash": "#ECE8F4" },
     { "id": "statistics", "name": "Statistics", "color": "#46805F", "wash": "#E7F4ED" },
-    { "id": "word-problems", "name": "Word Problems", "color": "#CBA15C", "wash": "#FBF1DD" }
+    { "id": "word-problems", "name": "Word Problems", "color": "#CBA15C", "wash": "#FBF1DD" },
+    { "id": "data-interpretation", "name": "Data Interpretation", "color": "#B5667E", "wash": "#F7E6EC" },
+    { "id": "test-strategy", "name": "Test Strategy", "color": "#7A7196", "wash": "#ECEAF2" }
   ],
 
   "flashcards": [
