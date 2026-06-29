@@ -6,10 +6,26 @@
 
 ## Goal
 
-Integrate the full content of `~/Downloads/GRE_Quant_Complete_Notes.pdf` (a flashcard-ready
-set of ~180–190 atomic Q&As across 8 sections plus a "GRE Extras" appendix) into the app's
-content source of truth, `src/data/content.json`. Expand all three study modes — Flashcards,
-Formulas, and Quizzes — across a topic set grown from 7 to 9.
+Integrate the full content of **both** source PDFs into the app's content source of truth,
+`src/data/content.json`, and expand all three study modes — Flashcards, Formulas, and Quizzes —
+across a topic set grown from 7 to 9.
+
+## Sources
+
+1. **`~/Downloads/GRE_Quant_Complete_Notes.pdf`** — flashcard-ready set of **191** atomic Q&As
+   across 8 sections plus a "GRE Extras" appendix. Verbatim count confirmed by script.
+2. **`~/Downloads/GRE_Quant_BurnIn_Sheet.pdf`** — a 4-page consolidated revision sheet. ~90% is
+   a condensed restatement of facts already in (1) and is handled by the dedup rule. It uniquely
+   contributes:
+   - A **"★ Watch These"** section: three concepts Shweta flagged as shaky — trapezoid area
+     (why the *average* of parallel sides), why AND multiplies for independent events, and
+     continuous uniform as *area not 1/n*. These get `starred: true` (see below).
+   - A handful of **refinements** absent from (1): ÷5 remainder trick (unit 0–4 → that digit,
+     5–9 → digit−5); **volume** ratio of similar solids = (side ratio)³ (notes had only area
+     ratio); z-score bell slices 34% / 13.5% / 2.5% per band and z=+2 → ~97.5th; permutation
+     vs combination keyword cues (arrange/rank/seat → P; group/select/team → C); mutually-
+     exclusive vs independent diagnostic ("can both happen?" / "does one affect the other?");
+     interior + exterior angle = 180° per corner. These fold in as normal flashcards/formulas.
 
 ## Background
 
@@ -29,6 +45,8 @@ Renumbering or removing an existing id orphans saved review progress.
    derived with crafted distractors — across all 9 topics.
 4. **Build approach:** Author directly, topic by topic, followed by a whole-file verification
    pass. No multi-agent fan-out (avoids LaTeX/style/math drift).
+5. **Watch-These traps:** Capture via an additive `starred: true` field on the relevant cards
+   (data only). No "Watch These" UI view in this change; it becomes a small follow-up.
 
 ## Data model changes
 
@@ -53,11 +71,21 @@ Renumbering or removing an existing id orphans saved review progress.
 - New entries continue each topic's existing sequence (e.g. new Number Properties flashcards
   start at `np-fc-7`). New topics start at `-1`.
 
+### `starred` field
+
+Add an optional `"starred": true` field to flashcards covering the three "★ Watch These"
+concepts (mapped to their home topics: trapezoid area → Geometry, AND-multiplies → Probability,
+continuous uniform → Statistics). The field is purely additive — the Flashcards screen reads
+cards by `id`/`topic` and ignores unknown fields. A future "Watch These" filter would mirror the
+existing `markedOnly` filter in `Flashcards.jsx`.
+
 ### Dedup rule
 
-Where a PDF Q&A restates a concept already present in the app (e.g. number of factors of
-pᵃqᵇ, trailing zeros in n!, quadratic formula), keep the existing entry and skip the PDF
-duplicate. No near-duplicate pairs. Applies to flashcards, quizzes, and formulas.
+Where a Q&A restates a concept already present in the app (e.g. number of factors of pᵃqᵇ,
+trailing zeros in n!, quadratic formula), keep the existing entry and skip the duplicate. The
+same rule deduplicates the Burn-In sheet against both the existing app content and the Complete
+Notes — only its unique refinements and the starred Watch-These cards are added. No near-
+duplicate pairs. Applies to flashcards, quizzes, and formulas.
 
 ## Topic mapping (PDF → app topic)
 
@@ -111,11 +139,14 @@ existing format (use `questionLatex` when math renders better). New topics: DI ~
 4. Diff existing entries against the prior file to confirm no id was renumbered or content
    altered.
 5. App boots and the two new topics render across all three modes.
+6. The three starred cards are present and carry `"starred": true`.
 
 ## Out of scope
 
 - No changes to app logic, screens, components, Supabase schema, or styling beyond the two new
   topic color tokens (which are data, not code).
 - No reordering or rewording of existing entries.
-- The source PDF lives outside the repo; `content.json` remains the source of truth. The
-  `_note` field's mention of `quant-notes.md` will be updated to reference the PDF.
+- The source PDFs live outside the repo; `content.json` remains the source of truth. The
+  `_note` field's mention of `quant-notes.md` will be updated to reference both PDFs.
+- No "Watch These" UI view is built in this change (the `starred` field is data-only); it is a
+  deliberate future follow-up.
