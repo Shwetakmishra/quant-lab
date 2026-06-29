@@ -1,351 +1,2474 @@
 {
   "_note": "Content source of truth, transcribed from GRE_Quant_Complete_Notes.pdf and GRE_Quant_BurnIn_Sheet.pdf (text extracts in docs/superpowers/notes/). Edit freely without touching app logic. Formulas are KaTeX/LaTeX strings. id values are the primary key in the Supabase card_reviews table — never renumber existing ids.",
   "topics": [
-    { "id": "number-properties", "name": "Number Properties", "color": "#F2A085", "wash": "#FBE7DC" },
-    { "id": "algebra", "name": "Algebra", "color": "#6189B4", "wash": "#E7F0FA" },
-    { "id": "geometry", "name": "Geometry", "color": "#5A9B96", "wash": "#E4F2EF" },
-    { "id": "counting", "name": "Counting", "color": "#B07A52", "wash": "#FBEFE3" },
-    { "id": "probability", "name": "Probability", "color": "#6E62A4", "wash": "#ECE8F4" },
-    { "id": "statistics", "name": "Statistics", "color": "#46805F", "wash": "#E7F4ED" },
-    { "id": "word-problems", "name": "Word Problems", "color": "#CBA15C", "wash": "#FBF1DD" },
-    { "id": "data-interpretation", "name": "Data Interpretation", "color": "#B5667E", "wash": "#F7E6EC" },
-    { "id": "test-strategy", "name": "Test Strategy", "color": "#7A7196", "wash": "#ECEAF2" }
+    {
+      "id": "number-properties",
+      "name": "Number Properties",
+      "color": "#F2A085",
+      "wash": "#FBE7DC"
+    },
+    {
+      "id": "algebra",
+      "name": "Algebra",
+      "color": "#6189B4",
+      "wash": "#E7F0FA"
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "color": "#5A9B96",
+      "wash": "#E4F2EF"
+    },
+    {
+      "id": "counting",
+      "name": "Counting",
+      "color": "#B07A52",
+      "wash": "#FBEFE3"
+    },
+    {
+      "id": "probability",
+      "name": "Probability",
+      "color": "#6E62A4",
+      "wash": "#ECE8F4"
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "color": "#46805F",
+      "wash": "#E7F4ED"
+    },
+    {
+      "id": "word-problems",
+      "name": "Word Problems",
+      "color": "#CBA15C",
+      "wash": "#FBF1DD"
+    },
+    {
+      "id": "data-interpretation",
+      "name": "Data Interpretation",
+      "color": "#B5667E",
+      "wash": "#F7E6EC"
+    },
+    {
+      "id": "test-strategy",
+      "name": "Test Strategy",
+      "color": "#7A7196",
+      "wash": "#ECEAF2"
+    }
   ],
-
   "flashcards": [
-    { "id": "np-fc-1", "topic": "Number Properties", "front": "Number of positive factors of pᵃ × qᵇ — what's the formula?", "latex": "(a+1)(b+1)", "answer": "Add 1 to each prime's exponent, then multiply. Works for any prime factorization." },
-    { "id": "np-fc-2", "topic": "Number Properties", "front": "Trailing zeros in n! — how do you count them?", "latex": "\\left\\lfloor \\tfrac{n}{5} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{25} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{125} \\right\\rfloor + \\cdots", "answer": "Count the factors of 5 in n! — 2s are plentiful, so the 5s are the limiting factor." },
-    { "id": "np-fc-3", "topic": "Number Properties", "front": "Exponent of a prime p inside n! (Legendre's formula)?", "latex": "E_p(n!) = \\sum_{k=1}^{\\infty} \\left\\lfloor \\tfrac{n}{p^{k}} \\right\\rfloor", "answer": "Sum the floor-divisions by increasing powers of p until the term becomes 0." },
-    { "id": "np-fc-4", "topic": "Number Properties", "front": "When does a fraction give a terminating decimal?", "latex": "2^{c} \\times 5^{d}", "answer": "When, in lowest terms, the denominator has only factors of 2 and 5 (c, d ≥ 0)." },
-    { "id": "np-fc-5", "topic": "Number Properties", "front": "+20% then −20% — what's the net effect?", "latex": "1.20 \\times 0.80 = 0.96", "answer": "A 4% net loss. Successive percent changes multiply — they do not add to 0." },
-    { "id": "np-fc-6", "topic": "Number Properties", "front": "Comparing a, a², √a when 0 < a < 1?", "latex": "\\sqrt{a} > a > a^{2}", "answer": "For values between 0 and 1 the square root is largest and squaring is smallest." },
-
-    { "id": "np-fc-7", "topic": "Number Properties", "front": "What are natural (counting) numbers?", "answer": "1, 2, 3, 4, … — start at 1, no zero." },
-    { "id": "np-fc-8", "topic": "Number Properties", "front": "What are whole numbers?", "answer": "0, 1, 2, 3, … — counting numbers plus 0." },
-    { "id": "np-fc-9", "topic": "Number Properties", "front": "What are integers?", "answer": "…, −2, −1, 0, 1, 2, … — whole numbers and their negatives, extending in both directions." },
-    { "id": "np-fc-10", "topic": "Number Properties", "front": "Definition of a rational number?", "answer": "Any number expressible as a/b (b ≠ 0). Includes all integers and all terminating or repeating decimals." },
-    { "id": "np-fc-11", "topic": "Number Properties", "front": "Definition of an irrational number?", "answer": "A number that cannot be written as a fraction. Its decimal is non-terminating AND non-repeating (e.g. π, √2, e)." },
-    { "id": "np-fc-12", "topic": "Number Properties", "front": "Is 0.333… rational or irrational?", "answer": "Rational — it equals 1/3. A decimal 'going on forever' alone doesn't make it irrational; it must also be non-repeating." },
-    { "id": "np-fc-13", "topic": "Number Properties", "front": "What is the full number hierarchy?", "answer": "Complex ⊇ Real ⊇ Rational ⊇ Integers. Real = anything on the number line; Complex adds imaginary numbers (i = √−1)." },
-    { "id": "np-fc-14", "topic": "Number Properties", "front": "What is a proper fraction?", "answer": "Numerator < Denominator; value < 1 (e.g. 3/5)." },
-    { "id": "np-fc-15", "topic": "Number Properties", "front": "What is an improper fraction?", "answer": "Numerator ≥ Denominator; value ≥ 1. (5/5 = 1 still counts as improper.)" },
-    { "id": "np-fc-16", "topic": "Number Properties", "front": "What is a mixed number?", "answer": "A whole number plus a proper fraction, e.g. 2 1/3; its value is always greater than 1." },
-    { "id": "np-fc-17", "topic": "Number Properties", "front": "How do you convert a fully-repeating decimal (e.g. 0.ababab…) to a fraction?", "answer": "Numerator = the repeating block; denominator = one 9 for each repeating digit. e.g. 0.272727… = 27/99 = 3/11." },
-    { "id": "np-fc-18", "topic": "Number Properties", "front": "How do you convert a mixed-repeating decimal (e.g. 0.2141414…) to a fraction?", "latex": "\\dfrac{214 - 2}{990} = \\dfrac{212}{990}", "answer": "Numerator = (all decimal digits, one cycle) − (non-repeating digits). Denominator = a 9 per repeating digit + a 0 per non-repeating digit." },
-    { "id": "np-fc-19", "topic": "Number Properties", "front": "What is 0⁰?", "answer": "Undefined. The rule xⁿ = 1 requires a non-zero base; 0⁰ has no agreed value." },
-    { "id": "np-fc-20", "topic": "Number Properties", "front": "What is 0!?", "answer": "1, by definition." },
-    { "id": "np-fc-21", "topic": "Number Properties", "front": "Key facts about 0?", "answer": "0 is a multiple of every integer; a factor of itself only; neither positive nor negative; and even." },
-    { "id": "np-fc-22", "topic": "Number Properties", "front": "How do you count the ODD factors of a number?", "answer": "Strip all factors of 2 from the prime factorization, then count the factors of what remains using (exp+1)(exp+1)…" },
-    { "id": "np-fc-23", "topic": "Number Properties", "front": "How do you count the EVEN factors of a number?", "answer": "Total factors − odd factors." },
-    { "id": "np-fc-24", "topic": "Number Properties", "front": "Why do you strip only the 2s when counting odd factors?", "answer": "2 is the only even prime. Any factor containing a 2 is even, so odd factors have no 2s in them." },
-    { "id": "np-fc-25", "topic": "Number Properties", "front": "Divisibility rule for 2?", "answer": "Last digit is even (0, 2, 4, 6, or 8)." },
-    { "id": "np-fc-26", "topic": "Number Properties", "front": "Divisibility rule for 3?", "answer": "The digit sum is divisible by 3." },
-    { "id": "np-fc-27", "topic": "Number Properties", "front": "Divisibility rule for 4?", "answer": "The last two digits form a number divisible by 4." },
-    { "id": "np-fc-28", "topic": "Number Properties", "front": "Divisibility rule for 5?", "answer": "Last digit is 0 or 5." },
-    { "id": "np-fc-29", "topic": "Number Properties", "front": "Divisibility rule for 6?", "answer": "Divisible by both 2 AND 3." },
-    { "id": "np-fc-30", "topic": "Number Properties", "front": "Divisibility rule for 8?", "answer": "The last three digits form a number divisible by 8." },
-    { "id": "np-fc-31", "topic": "Number Properties", "front": "Divisibility rule for 9?", "answer": "The digit sum is divisible by 9." },
-    { "id": "np-fc-32", "topic": "Number Properties", "front": "Divisibility rule for 11?", "answer": "The alternating digit sum (+ − + − …) is a multiple of 11 (including 0)." },
-    { "id": "np-fc-33", "topic": "Number Properties", "front": "How do you find the remainder when dividing by 3 or 9?", "answer": "The number leaves the same remainder as its digit sum does when divided by 3 (or 9)." },
-    { "id": "np-fc-34", "topic": "Number Properties", "front": "How do you find the remainder when dividing by 4, 8, or 10?", "answer": "Use the last 2 digits for ÷4, last 3 digits for ÷8, and the unit digit for ÷10." },
-    { "id": "np-fc-35", "topic": "Number Properties", "front": "÷5 remainder rule (Burn-In shortcut)?", "answer": "If the unit digit is 0–4, the remainder equals that digit. If the unit digit is 5–9, the remainder equals (digit − 5)." },
-    { "id": "np-fc-36", "topic": "Number Properties", "front": "What is the remainder when dividing x by y, if y > x?", "answer": "The remainder is x itself; the quotient is 0." },
-    { "id": "np-fc-37", "topic": "Number Properties", "front": "HCF (GCF) via the ladder method?", "answer": "Divide only while a number divides EVERY term; stop when no common divisor remains; multiply all left-side divisors." },
-    { "id": "np-fc-38", "topic": "Number Properties", "front": "LCM via the ladder method?", "answer": "Divide while the number divides AT LEAST ONE term; continue until the bottom row is all 1s; multiply all left-side divisors." },
-    { "id": "np-fc-39", "topic": "Number Properties", "front": "What does it mean for two numbers to be co-prime?", "answer": "They share no common factor except 1, i.e. their HCF = 1 (e.g. 8 and 15)." },
-    { "id": "np-fc-40", "topic": "Number Properties", "front": "How do you test whether n is prime?", "answer": "Test divisibility only by primes ≤ √n. If none divide it, n is prime." },
-    { "id": "np-fc-41", "topic": "Number Properties", "front": "What does the floor function do?", "latex": "\\left\\lfloor x \\right\\rfloor", "answer": "Rounds DOWN to the nearest integer. e.g. ⌊3.9⌋ = 3; ⌊−2.3⌋ = −3 (not −2)." },
-    { "id": "np-fc-42", "topic": "Number Properties", "front": "What does |x| mean?", "answer": "The distance of x from 0 on the number line; always ≥ 0. |−5| = 5, |5| = 5." },
-    { "id": "np-fc-43", "topic": "Number Properties", "front": "How do you solve |x − 3| = 5?", "answer": "Split into two cases: x − 3 = 5 → x = 8, or x − 3 = −5 → x = −2." },
-    { "id": "np-fc-44", "topic": "Number Properties", "front": "How do you solve |x| < 5?", "answer": "|x| < 5 means −5 < x < 5 (within 5 of zero). |x| > 5 means x < −5 OR x > 5 (outside)." },
-    { "id": "np-fc-45", "topic": "Number Properties", "front": "|a + b| vs |a| + |b| — what's the relationship?", "latex": "|a + b| \\le |a| + |b|", "answer": "Triangle inequality: the absolute value of a sum is at most the sum of the absolute values. Also, |ab| = |a|·|b| (always equal)." },
-    { "id": "np-fc-46", "topic": "Number Properties", "front": "Sum of the first n positive integers?", "latex": "\\dfrac{n(n+1)}{2}", "answer": "e.g. 1 + 2 + … + 100 = 5050." },
-    { "id": "np-fc-47", "topic": "Number Properties", "front": "Sum of the first n even positive integers?", "latex": "n(n+1)", "answer": "2 + 4 + … + 2n = n(n+1). e.g. first 3 evens: 2+4+6 = 12 = 3×4." },
-    { "id": "np-fc-48", "topic": "Number Properties", "front": "Sum of the first n odd positive integers?", "latex": "n^{2}", "answer": "1 + 3 + 5 + … + (2n−1) = n². e.g. first 4 odds: 1+3+5+7 = 16 = 4²." },
-    { "id": "np-fc-49", "topic": "Number Properties", "front": "Primes under 20?", "answer": "2, 3, 5, 7, 11, 13, 17, 19. (2 is the only even prime; 1 is NOT prime.)" },
-    { "id": "np-fc-50", "topic": "Number Properties", "front": "Quick squares to know: 11² through 15²?", "answer": "11² = 121, 12² = 144, 13² = 169, 14² = 196, 15² = 225." },
-    { "id": "np-fc-51", "topic": "Number Properties", "front": "Fraction–decimal–percent conversions worth memorising?", "answer": "1/8 = 12.5%, 1/4 = 25%, 1/3 ≈ 33.3%, 3/8 = 37.5%, 1/2 = 50%, 5/8 = 62.5%, 2/3 ≈ 66.7%, 3/4 = 75%." },
-    { "id": "np-fc-52", "topic": "Number Properties", "front": "Is (−2)⁴ positive or negative? What about (−2)³?", "answer": "Even power → positive: (−2)⁴ = 16. Odd power → negative: (−2)³ = −8." },
-
-    { "id": "al-fc-1", "topic": "Algebra", "front": "Quadratic formula — solutions of ax² + bx + c = 0?", "latex": "x = \\dfrac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}", "answer": "The ± yields the two roots; the expression under the root is the discriminant." },
-    { "id": "al-fc-2", "topic": "Algebra", "front": "Discriminant of ax² + bx + c = 0 — and what it tells you?", "latex": "b^{2} - 4ac", "answer": "> 0 → two real roots, = 0 → one root, < 0 → no real roots." },
-    { "id": "al-fc-3", "topic": "Algebra", "front": "Sum and product of the roots of ax² + bx + c = 0?", "latex": "\\text{sum} = -\\tfrac{b}{a}, \\qquad \\text{product} = \\tfrac{c}{a}", "answer": "Both read directly off the coefficients." },
-    { "id": "al-fc-4", "topic": "Algebra", "front": "Vertex / axis of symmetry of a parabola?", "latex": "x = -\\dfrac{b}{2a}", "answer": "Plug back in for the minimum (a > 0) or maximum (a < 0) y-value." },
-    { "id": "al-fc-5", "topic": "Algebra", "front": "Difference of squares identity?", "latex": "a^{2} - b^{2} = (a+b)(a-b)", "answer": "Any difference of two squares factors into a sum times a difference." },
-    { "id": "al-fc-6", "topic": "Algebra", "front": "Sum of an arithmetic sequence?", "latex": "S = n \\cdot \\dfrac{a_1 + a_n}{2}", "answer": "Number of terms times the average of the first and last term." },
-
-    { "id": "al-fc-7", "topic": "Algebra", "front": "xᵃ · xᵇ = ?", "latex": "x^{a} \\cdot x^{b} = x^{a+b}", "answer": "Same base, multiply → add the exponents." },
-    { "id": "al-fc-8", "topic": "Algebra", "front": "xᵃ / xᵇ = ?", "latex": "\\dfrac{x^{a}}{x^{b}} = x^{a-b}", "answer": "Same base, divide → subtract the exponents." },
-    { "id": "al-fc-9", "topic": "Algebra", "front": "xᵃ · yᵃ = ?", "latex": "x^{a} \\cdot y^{a} = (xy)^{a}", "answer": "Same exponent on different bases → multiply the bases." },
-    { "id": "al-fc-10", "topic": "Algebra", "front": "x⁻ⁿ = ?", "latex": "x^{-n} = \\dfrac{1}{x^{n}}", "answer": "A negative exponent means the reciprocal of the positive-exponent form." },
-    { "id": "al-fc-11", "topic": "Algebra", "front": "x⁰ = ? (for x ≠ 0)", "latex": "x^{0} = 1", "answer": "Any nonzero base raised to the power 0 equals 1. (0⁰ is undefined.)" },
-    { "id": "al-fc-12", "topic": "Algebra", "front": "(a + b)³ = ?", "latex": "(a+b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}", "answer": "Cube of a sum — all terms are positive; remember the 1-3-3-1 pattern." },
-    { "id": "al-fc-13", "topic": "Algebra", "front": "(a − b)³ = ?", "latex": "(a-b)^{3} = a^{3} - 3a^{2}b + 3ab^{2} - b^{3}", "answer": "Cube of a difference — signs alternate (−, +, −) after the leading a³." },
-    { "id": "al-fc-14", "topic": "Algebra", "front": "(a − b)² = ?", "latex": "(a-b)^{2} = a^{2} - 2ab + b^{2}", "answer": "Square of a difference — middle term is negative 2ab." },
-    { "id": "al-fc-15", "topic": "Algebra", "front": "√(a²) = ?", "latex": "\\sqrt{a^{2}} = |a|", "answer": "The square root of a square is the absolute value — always non-negative, not ±a." },
-    { "id": "al-fc-16", "topic": "Algebra", "front": "What is the polynomial test?", "answer": "Every variable's exponent must be a whole number ≥ 0. No 1/x (= x⁻¹) and no √x (= x^½). Roots or fractions on coefficients are fine (e.g. √5·x² is a polynomial)." },
-    { "id": "al-fc-17", "topic": "Algebra", "front": "Completing the square — method and what it gives you?", "answer": "Take half the x-coefficient and write (x + h)² + k. The vertex is (−h, k) and k is the minimum value of the quadratic when a > 0 (a perfect square is never negative)." },
-    { "id": "al-fc-18", "topic": "Algebra", "front": "√36 vs solving x² = 36 — what's the difference?", "answer": "The √ symbol returns the positive root only: √36 = +6. Solving x² = 36 gives both roots: x = ±6." },
-    { "id": "al-fc-19", "topic": "Algebra", "front": "When do you flip an inequality sign?", "answer": "Only when multiplying or dividing both sides by a negative number. Adding, subtracting, or multiplying/dividing by a positive → no flip." },
-    { "id": "al-fc-20", "topic": "Algebra", "front": "Order of a, a², √a when 0 < a < 1?", "latex": "\\sqrt{a} > a > a^{2}", "answer": "For fractions between 0 and 1 — squaring pushes toward 0, rooting pushes toward 1. ('1 is the magnet.')" },
-    { "id": "al-fc-21", "topic": "Algebra", "front": "Order of a, a², √a when a > 1?", "latex": "a^{2} > a > \\sqrt{a}", "answer": "For values above 1 — squaring grows fastest, rooting grows slowest." },
-    { "id": "al-fc-22", "topic": "Algebra", "front": "What is an arithmetic sequence?", "answer": "A sequence where each term is obtained by adding (or subtracting) a constant common difference d. e.g. 3, 7, 11, 15, … (d = 4)." },
-    { "id": "al-fc-23", "topic": "Algebra", "front": "What is a geometric sequence?", "answer": "A sequence where each term is obtained by multiplying by a constant common ratio r. e.g. 2, 6, 18, 54, … (r = 3)." },
-    { "id": "al-fc-24", "topic": "Algebra", "front": "What is a harmonic sequence?", "answer": "A sequence whose terms are the reciprocals of an arithmetic sequence. e.g. 1, 1/2, 1/3, 1/4, …" },
-    { "id": "al-fc-25", "topic": "Algebra", "front": "What is a quadratic sequence?", "answer": "A sequence where the second differences are constant (the first differences are not). Its general term involves n². e.g. 1, 4, 9, 16, … (first diff: 3,5,7; second diff: 2,2)." },
-    { "id": "al-fc-26", "topic": "Algebra", "front": "Sequence vs series — what's the difference?", "answer": "A sequence is a list of terms (2, 4, 6). A series is the sum of those terms (2 + 4 + 6 = 12)." },
-    { "id": "al-fc-27", "topic": "Algebra", "front": "Number of terms in a spaced (evenly-spaced) series?", "latex": "n = \\dfrac{\\text{last} - \\text{first}}{\\text{step}} + 1", "answer": "Snap the endpoints inward to real multiples first if needed, then apply the formula. The +1 alone is only for step = 1." },
-    { "id": "al-fc-28", "topic": "Algebra", "front": "Sum of an infinite geometric series when |r| < 1?", "latex": "S = \\dfrac{a}{1 - r}", "answer": "When |r| < 1, the terms shrink to 0 and the series converges. If |r| ≥ 1, the sum diverges." },
-
-    { "id": "ge-fc-1", "topic": "Geometry", "front": "Distance between two points?", "latex": "d = \\sqrt{(x_1 - x_2)^{2} + (y_1 - y_2)^{2}}", "answer": "Pythagoras applied to the differences in coordinates." },
-    { "id": "ge-fc-2", "topic": "Geometry", "front": "Area of an equilateral triangle?", "latex": "\\dfrac{\\sqrt{3}}{4}\\, s^{2}", "answer": "Where s is the side length." },
-    { "id": "ge-fc-3", "topic": "Geometry", "front": "A central angle is ___ the inscribed angle on the same arc?", "latex": "\\theta_{\\text{central}} = 2\\,\\theta_{\\text{inscribed}}", "answer": "Double — the central angle is twice the inscribed angle subtending the same arc." },
-    { "id": "ge-fc-4", "topic": "Geometry", "front": "Pythagorean theorem?", "latex": "a^{2} + b^{2} = c^{2}", "answer": "c is the hypotenuse, the side opposite the right angle." },
-    { "id": "ge-fc-5", "topic": "Geometry", "front": "Sum of interior angles of an n-sided polygon?", "latex": "(n-2)\\times 180^{\\circ}", "answer": "Divide by n for each interior angle of a regular polygon." },
-    { "id": "ge-fc-6", "topic": "Geometry", "front": "30-60-90 triangle — side ratio?", "latex": "x : x\\sqrt{3} : 2x", "answer": "The 45-45-90 triangle is x : x : x√2." },
-    { "id": "ge-fc-7", "topic": "Geometry", "front": "Longest diagonal of a cube with side s?", "latex": "s\\sqrt{3}", "answer": "For a cuboid it is √(x² + y² + z²)." },
-
-    { "id": "ge-fc-8", "topic": "Geometry", "front": "Slope formula — rise over run?", "latex": "m = \\dfrac{y_2 - y_1}{x_2 - x_1}", "answer": "Rise (change in y) divided by run (change in x). Subtract in the same order for both coordinates." },
-    { "id": "ge-fc-9", "topic": "Geometry", "front": "Slope of a horizontal line (y = constant)?", "answer": "0 — no rise, so rise/run = 0/something = 0." },
-    { "id": "ge-fc-10", "topic": "Geometry", "front": "Slope of a vertical line (x = constant)?", "answer": "Undefined — run = 0, and you can't divide by zero." },
-    { "id": "ge-fc-11", "topic": "Geometry", "front": "Slope-intercept form of a line?", "latex": "y = mx + c", "answer": "m is the slope; c is the y-intercept (the value of y when x = 0)." },
-    { "id": "ge-fc-12", "topic": "Geometry", "front": "Point-slope form — when do you use it?", "latex": "y - y_1 = m(x - x_1)", "answer": "Use when you know the slope and one point on the line. No need to find c first." },
-    { "id": "ge-fc-13", "topic": "Geometry", "front": "Slopes of parallel lines?", "answer": "Equal slopes, different y-intercepts. If m₁ = m₂ the lines never meet." },
-    { "id": "ge-fc-14", "topic": "Geometry", "front": "Slopes of perpendicular lines?", "latex": "m_1 \\times m_2 = -1", "answer": "Negative reciprocals — flip and negate. e.g. slope 2/3 ⊥ slope −3/2." },
-    { "id": "ge-fc-15", "topic": "Geometry", "front": "Midpoint between two points?", "latex": "\\left(\\dfrac{x_1+x_2}{2},\\ \\dfrac{y_1+y_2}{2}\\right)", "answer": "Average the x-coordinates and average the y-coordinates separately." },
-    { "id": "ge-fc-16", "topic": "Geometry", "front": "Equation of a circle — what do h, k, r represent?", "latex": "(x-h)^{2}+(y-k)^{2}=r^{2}", "answer": "Center is (h, k) — watch the sign flip from the equation. r is the radius." },
-    { "id": "ge-fc-17", "topic": "Geometry", "front": "Reflection across y = x?", "answer": "Swap the coordinates: (x, y) → (y, x). The line y = x acts as a mirror." },
-    { "id": "ge-fc-18", "topic": "Geometry", "front": "Reflection across y = −x?", "answer": "(x, y) → (−y, −x). Swap and negate both coordinates." },
-    { "id": "ge-fc-19", "topic": "Geometry", "front": "Reflection across a horizontal line y = k?", "answer": "(x, y) → (x, 2k − y). The x-coordinate stays; the y-coordinate flips symmetrically about y = k." },
-    { "id": "ge-fc-20", "topic": "Geometry", "front": "Reflection across a vertical line x = k?", "answer": "(x, y) → (2k − x, y). The y-coordinate stays; the x-coordinate flips symmetrically about x = k." },
-    { "id": "ge-fc-21", "topic": "Geometry", "front": "90° anticlockwise rotation about the origin?", "answer": "(x, y) → (−y, x). The point lifts toward the +y axis." },
-    { "id": "ge-fc-22", "topic": "Geometry", "front": "90° clockwise rotation about the origin?", "answer": "(x, y) → (y, −x). The point drops toward the −y axis." },
-    { "id": "ge-fc-23", "topic": "Geometry", "front": "180° rotation about the origin?", "answer": "(x, y) → (−x, −y). Both coordinates are negated — the point moves to the diagonally opposite position." },
-    { "id": "ge-fc-24", "topic": "Geometry", "front": "Which way does a parabola y = ax² + bx + c open?", "answer": "a > 0 → opens upward (minimum at vertex). a < 0 → opens downward (maximum at vertex)." },
-    { "id": "ge-fc-25", "topic": "Geometry", "front": "How do you find the x- and y-intercepts of a graph?", "answer": "y-intercept: set x = 0. x-intercept(s): set y = 0. A point is on an axis when the other coordinate is 0." },
-    { "id": "ge-fc-26", "topic": "Geometry", "front": "Graph shift y = (x − h)² + k from y = x² — how does each parameter move the vertex?", "answer": "Inside (horizontal) shift is backwards: −h in the bracket moves the vertex right by h. Outside (vertical): +k moves it up by k. Vertex is (h, k)." },
-    { "id": "ge-fc-27", "topic": "Geometry", "front": "Slope of a parabola ax²+bx+c at a point x?", "latex": "2ax + b", "answer": "Plug in x for the slope there; at the vertex (x = −b/2a) the slope is 0." },
-    { "id": "ge-fc-28", "topic": "Geometry", "front": "Sum of exterior angles of any convex polygon?", "answer": "Always 360°, regardless of the number of sides. One exterior angle per vertex." },
-    { "id": "ge-fc-29", "topic": "Geometry", "front": "Each interior angle of a regular n-gon?", "latex": "\\dfrac{(n-2)\\times 180^{\\circ}}{n}", "answer": "Interior angle sum ÷ n. e.g. regular hexagon: (4×180)/6 = 120°." },
-    { "id": "ge-fc-30", "topic": "Geometry", "front": "Each exterior angle of a regular n-gon?", "latex": "\\dfrac{360^{\\circ}}{n}", "answer": "360° ÷ number of sides. Interior + exterior = 180° at every vertex." },
-    { "id": "ge-fc-31", "topic": "Geometry", "front": "The four Pythagorean triples to know by sight?", "answer": "3-4-5, 5-12-13, 8-15-17, 7-24-25 (largest is always the hypotenuse). All their multiples also work (e.g. 6-8-10)." },
-    { "id": "ge-fc-32", "topic": "Geometry", "front": "45-45-90 triangle — side ratio?", "latex": "x : x : x\\sqrt{2}", "answer": "Two equal legs; hypotenuse = leg × √2. An isosceles right triangle." },
-    { "id": "ge-fc-33", "topic": "Geometry", "front": "What makes two triangles similar? What is the area ratio?", "answer": "Same shape: equal angles AND proportional sides. Area ratio = (side ratio)². If sides scale by k, area scales by k²." },
-    { "id": "ge-fc-34", "topic": "Geometry", "front": "Volume ratio of two similar solids?", "latex": "\\left(\\dfrac{s_1}{s_2}\\right)^{3}", "answer": "Volume is 3D so it scales by the cube of the side ratio. If sides double, volume is 8× larger." },
-    { "id": "ge-fc-35", "topic": "Geometry", "front": "Similarity criteria for triangles?", "answer": "AA (two angles), SAS (included angle + proportional adjacent sides), SSS (all three sides proportional). AA alone is sufficient." },
-    { "id": "ge-fc-36", "topic": "Geometry", "front": "Congruence criteria for triangles?", "answer": "SSS, SAS, ASA, AAS — all require at least one pair of equal sides. AA is NOT enough for congruence (only for similarity)." },
-    { "id": "ge-fc-37", "topic": "Geometry", "front": "Sector/arc proportion rule?", "answer": "(central angle / 360°) = arc length / circumference = sector area / total area. If the total is given, take the fraction directly without finding r." },
-    { "id": "ge-fc-38", "topic": "Geometry", "front": "Which shape has the largest area for a given perimeter?", "answer": "A circle. Among polygons, a regular polygon maximises area for fixed perimeter; a square maximises for quadrilaterals." },
-    { "id": "ge-fc-39", "topic": "Geometry", "front": "In a regular hexagon, how does the circumradius relate to the side length?", "answer": "They are equal. A regular hexagon is made of 6 equilateral triangles, so radius = side length." },
-    { "id": "ge-fc-40", "topic": "Geometry", "front": "Area of a parallelogram, rhombus, and rectangle?", "answer": "All three: base × height. For a rectangle the height equals the width; for rhombus/parallelogram use the perpendicular height." },
-    { "id": "ge-fc-41", "topic": "Geometry", "front": "Area of a trapezoid — and why the average?", "latex": "\\dfrac{b_1 + b_2}{2}\\times h", "answer": "A trapezoid is almost a rectangle, but its two parallel sides differ (b₁ ≠ b₂), so there's no single width — use the average of the parallel sides as the effective width, times the height.", "starred": true },
-    { "id": "ge-fc-42", "topic": "Geometry", "front": "Cube: surface area and volume?", "latex": "SA = 6s^{2},\\quad Vol = s^{3}", "answer": "6 square faces for SA; volume is the side cubed. Longest diagonal = s√3." },
-    { "id": "ge-fc-43", "topic": "Geometry", "front": "Cuboid: surface area and volume?", "latex": "SA = 2(ab+bc+ca),\\quad Vol = abc", "answer": "SA sums the three distinct face pairs (each counted twice). Volume is length × width × height." },
-    { "id": "ge-fc-44", "topic": "Geometry", "front": "Cylinder: volume and surface area?", "latex": "Vol = \\pi r^{2}h,\\quad SA = 2\\pi r(r+h)", "answer": "Volume is the circle area times height. SA = two circular caps plus the lateral rectangle (circumference × height)." },
-
-    { "id": "co-fc-1", "topic": "Counting", "front": "Permutation with repetition — what's the formula?", "latex": "n^{r}", "answer": "When items can repeat and order matters." },
-    { "id": "co-fc-2", "topic": "Counting", "front": "nCr (combinations) formula?", "latex": "\\dfrac{n!}{r!\\,(n-r)!}", "answer": "Choosing r of n — order doesn't matter." },
-    { "id": "co-fc-3", "topic": "Counting", "front": "nPr (permutations) formula?", "latex": "\\dfrac{n!}{(n-r)!}", "answer": "Arrange r of n — order matters." },
-    { "id": "co-fc-4", "topic": "Counting", "front": "Circular arrangements of n items?", "latex": "(n-1)!", "answer": "Fix one item to remove duplicate rotations." },
-    { "id": "co-fc-5", "topic": "Counting", "front": "Handshakes among n people (each pair once)?", "latex": "\\dfrac{n(n-1)}{2}", "answer": "Same as choosing 2 of n, i.e. nC2." },
-    { "id": "co-fc-6", "topic": "Counting", "front": "Arrangements of n items with repeats (p, q alike)?", "latex": "\\dfrac{n!}{p!\\,q!\\cdots}", "answer": "Divide out the orderings of the identical items." },
-
-    { "id": "co-fc-7", "topic": "Counting", "front": "Permutation vs combination — keyword cues?", "answer": "Arrange / order / rank / seat → Permutation (order matters). Group / select / team / subset → Combination (order doesn't matter). When in doubt: could swapping two items give a different outcome? Yes → P; No → C." },
-    { "id": "co-fc-8", "topic": "Counting", "front": "Why is nCr always ≤ nPr?", "latex": "{}^{n}C_{r} = \\dfrac{{}^{n}P_{r}}{r!}", "answer": "A combination is a permutation divided by r! (the number of ways to reorder the chosen items). Dividing by r! ≥ 1 can only make it smaller or equal." },
-    { "id": "co-fc-9", "topic": "Counting", "front": "Counting paths with m steps of one type and n of another?", "latex": "\\dfrac{(m+n)!}{m!\\,n!}", "answer": "Choose which m of the (m+n) total steps are type-A (the rest are type-B). Same as nCr with n = m+n and r = m. e.g. 2 right + 3 down: (2+3)!/(2!·3!) = 10 paths." },
-    { "id": "co-fc-10", "topic": "Counting", "front": "Overlapping sets — two sets formula?", "answer": "Total = A + B − (A and B) + neither. Subtract the overlap to avoid double-counting each element that belongs to both sets." },
-    { "id": "co-fc-11", "topic": "Counting", "front": "Overlapping sets — three sets formula?", "answer": "Total = A + B + C − (A∩B) − (A∩C) − (B∩C) + (A∩B∩C) + neither. Subtracting the three pairwise overlaps removes elements in exactly two sets once each; the triple-overlap element got subtracted three times but should be added back once." },
-    { "id": "co-fc-12", "topic": "Counting", "front": "'Exactly one' vs 'at least one' in overlapping sets — how do you find each?", "answer": "'At least one' = the union = Total − neither. 'Exactly one' = (only A) + (only B) + (only C) = union minus all overlap regions. Draw a Venn diagram and subtract the pairwise and triple-overlap areas from each circle." },
-    { "id": "co-fc-13", "topic": "Counting", "front": "How do you apply the repeated-items formula to a word like ARRANGEMENT?", "latex": "\\dfrac{11!}{2!\\,2!\\,2!\\,2!}", "answer": "Count total letters (11), identify repeats: A×2, R×2, N×2, E×2. Divide by the factorial of each repeated group: 11!/(2!·2!·2!·2!) = 2,494,800. Each identical letter's group factorial removes duplicate orderings." },
-
-    { "id": "pr-fc-1", "topic": "Probability", "front": "Basic probability of an event?", "latex": "P = \\dfrac{\\text{favorable outcomes}}{\\text{total outcomes}}", "answer": "Favorable over total, assuming equally likely outcomes." },
-    { "id": "pr-fc-2", "topic": "Probability", "front": "The 'at least one' trick?", "latex": "P(\\text{at least one}) = 1 - P(\\text{none})", "answer": "It's usually easier to compute the complement than to add every case." },
-    { "id": "pr-fc-3", "topic": "Probability", "front": "P(A or B) for any two events?", "latex": "P(A) + P(B) - P(A \\cap B)", "answer": "Add the two, subtract the overlap. If mutually exclusive, the overlap is 0." },
-    { "id": "pr-fc-4", "topic": "Probability", "front": "P(A and B) for independent events?", "latex": "P(A)\\times P(B)", "answer": "Independent means one event doesn't change the other." },
-    { "id": "pr-fc-5", "topic": "Probability", "front": "Complement rule?", "latex": "P(A') = 1 - P(A)", "answer": "P(A) + P(A′) = 1." },
-    { "id": "pr-fc-6", "topic": "Probability", "front": "Binomial probability of exactly k successes in n trials?", "latex": "{}^{n}C_{k}\\, p^{k} (1-p)^{n-k}", "answer": "Ways to order × success part × failure part (the BINS conditions)." },
-
-    { "id": "st-fc-1", "topic": "Statistics", "front": "Z-score formula?", "latex": "z = \\dfrac{x - \\mu}{\\sigma}", "answer": "How many standard deviations x sits from the mean." },
-    { "id": "st-fc-2", "topic": "Statistics", "front": "Empirical Rule (68-95-99.7)?", "latex": "\\pm 1\\sigma \\approx 68\\%,\\ \\ \\pm 2\\sigma \\approx 95\\%,\\ \\ \\pm 3\\sigma \\approx 99.7\\%", "answer": "In a normal distribution, data clusters within these bands of the mean μ." },
-    { "id": "st-fc-3", "topic": "Statistics", "front": "Population standard deviation σ?", "latex": "\\sigma = \\sqrt{\\dfrac{1}{N}\\sum (x_i - \\mu)^{2}}", "answer": "The root-mean-square distance of each value from the mean." },
-    { "id": "st-fc-4", "topic": "Statistics", "front": "Weighted average?", "latex": "\\dfrac{\\sum (\\text{value} \\times \\text{weight})}{\\sum \\text{weights}}", "answer": "Use it when the groups have different sizes." },
-    { "id": "st-fc-5", "topic": "Statistics", "front": "Interquartile range (IQR)?", "latex": "\\text{IQR} = Q_3 - Q_1", "answer": "The spread of the middle 50% — the box in a boxplot." },
-    { "id": "st-fc-6", "topic": "Statistics", "front": "Expected value E(X)?", "latex": "E(X) = \\sum x \\cdot P(x)", "answer": "Sum each outcome times its probability; losses count as negative." },
-
-    { "id": "wp-fc-1", "topic": "Word Problems", "front": "Distance, rate, time relationship?", "latex": "\\text{Distance} = \\text{Rate} \\times \\text{Time}", "answer": "And average speed = total distance ÷ total time." },
-    { "id": "wp-fc-2", "topic": "Word Problems", "front": "Work formula for identical machines?", "latex": "W = n\\,r\\,t", "answer": "Number of workers × individual rate × time." },
-    { "id": "wp-fc-3", "topic": "Word Problems", "front": "Simple interest?", "latex": "SI = P\\,r\\,t", "answer": "Principal × rate × time." },
-    { "id": "wp-fc-4", "topic": "Word Problems", "front": "Compound interest?", "latex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}", "answer": "n is the number of compounding periods per year." },
-    { "id": "wp-fc-5", "topic": "Word Problems", "front": "Profit?", "latex": "\\text{Profit} = \\text{Revenue} - \\text{Expenses}", "answer": "What's left of revenue after costs." },
-    { "id": "wp-fc-6", "topic": "Word Problems", "front": "Two objects moving — how do you combine their speeds?", "latex": "\\text{opposite: add} \\quad\\cdot\\quad \\text{same way: subtract}", "answer": "Relative speed adds for opposite directions, subtracts for the same direction." }
+    {
+      "id": "np-fc-1",
+      "topic": "Number Properties",
+      "front": "Number of positive factors of pᵃ × qᵇ — what's the formula?",
+      "latex": "(a+1)(b+1)",
+      "answer": "Add 1 to each prime's exponent, then multiply. Works for any prime factorization."
+    },
+    {
+      "id": "np-fc-2",
+      "topic": "Number Properties",
+      "front": "Trailing zeros in n! — how do you count them?",
+      "latex": "\\left\\lfloor \\tfrac{n}{5} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{25} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{125} \\right\\rfloor + \\cdots",
+      "answer": "Count the factors of 5 in n! — 2s are plentiful, so the 5s are the limiting factor."
+    },
+    {
+      "id": "np-fc-3",
+      "topic": "Number Properties",
+      "front": "Exponent of a prime p inside n! (Legendre's formula)?",
+      "latex": "E_p(n!) = \\sum_{k=1}^{\\infty} \\left\\lfloor \\tfrac{n}{p^{k}} \\right\\rfloor",
+      "answer": "Sum the floor-divisions by increasing powers of p until the term becomes 0."
+    },
+    {
+      "id": "np-fc-4",
+      "topic": "Number Properties",
+      "front": "When does a fraction give a terminating decimal?",
+      "latex": "2^{c} \\times 5^{d}",
+      "answer": "When, in lowest terms, the denominator has only factors of 2 and 5 (c, d ≥ 0)."
+    },
+    {
+      "id": "np-fc-5",
+      "topic": "Number Properties",
+      "front": "+20% then −20% — what's the net effect?",
+      "latex": "1.20 \\times 0.80 = 0.96",
+      "answer": "A 4% net loss. Successive percent changes multiply — they do not add to 0."
+    },
+    {
+      "id": "np-fc-6",
+      "topic": "Number Properties",
+      "front": "Comparing a, a², √a when 0 < a < 1?",
+      "latex": "\\sqrt{a} > a > a^{2}",
+      "answer": "For values between 0 and 1 the square root is largest and squaring is smallest."
+    },
+    {
+      "id": "np-fc-7",
+      "topic": "Number Properties",
+      "front": "What are natural (counting) numbers?",
+      "answer": "1, 2, 3, 4, … — start at 1, no zero."
+    },
+    {
+      "id": "np-fc-8",
+      "topic": "Number Properties",
+      "front": "What are whole numbers?",
+      "answer": "0, 1, 2, 3, … — counting numbers plus 0."
+    },
+    {
+      "id": "np-fc-9",
+      "topic": "Number Properties",
+      "front": "What are integers?",
+      "answer": "…, −2, −1, 0, 1, 2, … — whole numbers and their negatives, extending in both directions."
+    },
+    {
+      "id": "np-fc-10",
+      "topic": "Number Properties",
+      "front": "Definition of a rational number?",
+      "answer": "Any number expressible as a/b (b ≠ 0). Includes all integers and all terminating or repeating decimals."
+    },
+    {
+      "id": "np-fc-11",
+      "topic": "Number Properties",
+      "front": "Definition of an irrational number?",
+      "answer": "A number that cannot be written as a fraction. Its decimal is non-terminating AND non-repeating (e.g. π, √2, e)."
+    },
+    {
+      "id": "np-fc-12",
+      "topic": "Number Properties",
+      "front": "Is 0.333… rational or irrational?",
+      "answer": "Rational — it equals 1/3. A decimal 'going on forever' alone doesn't make it irrational; it must also be non-repeating."
+    },
+    {
+      "id": "np-fc-13",
+      "topic": "Number Properties",
+      "front": "What is the full number hierarchy?",
+      "answer": "Complex ⊇ Real ⊇ Rational ⊇ Integers. Real = anything on the number line; Complex adds imaginary numbers (i = √−1)."
+    },
+    {
+      "id": "np-fc-14",
+      "topic": "Number Properties",
+      "front": "What is a proper fraction?",
+      "answer": "Numerator < Denominator; value < 1 (e.g. 3/5)."
+    },
+    {
+      "id": "np-fc-15",
+      "topic": "Number Properties",
+      "front": "What is an improper fraction?",
+      "answer": "Numerator ≥ Denominator; value ≥ 1. (5/5 = 1 still counts as improper.)"
+    },
+    {
+      "id": "np-fc-16",
+      "topic": "Number Properties",
+      "front": "What is a mixed number?",
+      "answer": "A whole number plus a proper fraction, e.g. 2 1/3; its value is always greater than 1."
+    },
+    {
+      "id": "np-fc-17",
+      "topic": "Number Properties",
+      "front": "How do you convert a fully-repeating decimal (e.g. 0.ababab…) to a fraction?",
+      "answer": "Numerator = the repeating block; denominator = one 9 for each repeating digit. e.g. 0.272727… = 27/99 = 3/11."
+    },
+    {
+      "id": "np-fc-18",
+      "topic": "Number Properties",
+      "front": "How do you convert a mixed-repeating decimal (e.g. 0.2141414…) to a fraction?",
+      "latex": "\\dfrac{214 - 2}{990} = \\dfrac{212}{990}",
+      "answer": "Numerator = (all decimal digits, one cycle) − (non-repeating digits). Denominator = a 9 per repeating digit + a 0 per non-repeating digit."
+    },
+    {
+      "id": "np-fc-19",
+      "topic": "Number Properties",
+      "front": "What is 0⁰?",
+      "answer": "Undefined. The rule xⁿ = 1 requires a non-zero base; 0⁰ has no agreed value."
+    },
+    {
+      "id": "np-fc-20",
+      "topic": "Number Properties",
+      "front": "What is 0!?",
+      "answer": "1, by definition."
+    },
+    {
+      "id": "np-fc-21",
+      "topic": "Number Properties",
+      "front": "Key facts about 0?",
+      "answer": "0 is a multiple of every integer; a factor of itself only; neither positive nor negative; and even."
+    },
+    {
+      "id": "np-fc-22",
+      "topic": "Number Properties",
+      "front": "How do you count the ODD factors of a number?",
+      "answer": "Strip all factors of 2 from the prime factorization, then count the factors of what remains using (exp+1)(exp+1)…"
+    },
+    {
+      "id": "np-fc-23",
+      "topic": "Number Properties",
+      "front": "How do you count the EVEN factors of a number?",
+      "answer": "Total factors − odd factors."
+    },
+    {
+      "id": "np-fc-24",
+      "topic": "Number Properties",
+      "front": "Why do you strip only the 2s when counting odd factors?",
+      "answer": "2 is the only even prime. Any factor containing a 2 is even, so odd factors have no 2s in them."
+    },
+    {
+      "id": "np-fc-25",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 2?",
+      "answer": "Last digit is even (0, 2, 4, 6, or 8)."
+    },
+    {
+      "id": "np-fc-26",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 3?",
+      "answer": "The digit sum is divisible by 3."
+    },
+    {
+      "id": "np-fc-27",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 4?",
+      "answer": "The last two digits form a number divisible by 4."
+    },
+    {
+      "id": "np-fc-28",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 5?",
+      "answer": "Last digit is 0 or 5."
+    },
+    {
+      "id": "np-fc-29",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 6?",
+      "answer": "Divisible by both 2 AND 3."
+    },
+    {
+      "id": "np-fc-30",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 8?",
+      "answer": "The last three digits form a number divisible by 8."
+    },
+    {
+      "id": "np-fc-31",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 9?",
+      "answer": "The digit sum is divisible by 9."
+    },
+    {
+      "id": "np-fc-32",
+      "topic": "Number Properties",
+      "front": "Divisibility rule for 11?",
+      "answer": "The alternating digit sum (+ − + − …) is a multiple of 11 (including 0)."
+    },
+    {
+      "id": "np-fc-33",
+      "topic": "Number Properties",
+      "front": "How do you find the remainder when dividing by 3 or 9?",
+      "answer": "The number leaves the same remainder as its digit sum does when divided by 3 (or 9)."
+    },
+    {
+      "id": "np-fc-34",
+      "topic": "Number Properties",
+      "front": "How do you find the remainder when dividing by 4, 8, or 10?",
+      "answer": "Use the last 2 digits for ÷4, last 3 digits for ÷8, and the unit digit for ÷10."
+    },
+    {
+      "id": "np-fc-35",
+      "topic": "Number Properties",
+      "front": "÷5 remainder rule (Burn-In shortcut)?",
+      "answer": "If the unit digit is 0–4, the remainder equals that digit. If the unit digit is 5–9, the remainder equals (digit − 5)."
+    },
+    {
+      "id": "np-fc-36",
+      "topic": "Number Properties",
+      "front": "What is the remainder when dividing x by y, if y > x?",
+      "answer": "The remainder is x itself; the quotient is 0."
+    },
+    {
+      "id": "np-fc-37",
+      "topic": "Number Properties",
+      "front": "HCF (GCF) via the ladder method?",
+      "answer": "Divide only while a number divides EVERY term; stop when no common divisor remains; multiply all left-side divisors."
+    },
+    {
+      "id": "np-fc-38",
+      "topic": "Number Properties",
+      "front": "LCM via the ladder method?",
+      "answer": "Divide while the number divides AT LEAST ONE term; continue until the bottom row is all 1s; multiply all left-side divisors."
+    },
+    {
+      "id": "np-fc-39",
+      "topic": "Number Properties",
+      "front": "What does it mean for two numbers to be co-prime?",
+      "answer": "They share no common factor except 1, i.e. their HCF = 1 (e.g. 8 and 15)."
+    },
+    {
+      "id": "np-fc-40",
+      "topic": "Number Properties",
+      "front": "How do you test whether n is prime?",
+      "answer": "Test divisibility only by primes ≤ √n. If none divide it, n is prime."
+    },
+    {
+      "id": "np-fc-41",
+      "topic": "Number Properties",
+      "front": "What does the floor function do?",
+      "latex": "\\left\\lfloor x \\right\\rfloor",
+      "answer": "Rounds DOWN to the nearest integer. e.g. ⌊3.9⌋ = 3; ⌊−2.3⌋ = −3 (not −2)."
+    },
+    {
+      "id": "np-fc-42",
+      "topic": "Number Properties",
+      "front": "What does |x| mean?",
+      "answer": "The distance of x from 0 on the number line; always ≥ 0. |−5| = 5, |5| = 5."
+    },
+    {
+      "id": "np-fc-43",
+      "topic": "Number Properties",
+      "front": "How do you solve |x − 3| = 5?",
+      "answer": "Split into two cases: x − 3 = 5 → x = 8, or x − 3 = −5 → x = −2."
+    },
+    {
+      "id": "np-fc-44",
+      "topic": "Number Properties",
+      "front": "How do you solve |x| < 5?",
+      "answer": "|x| < 5 means −5 < x < 5 (within 5 of zero). |x| > 5 means x < −5 OR x > 5 (outside)."
+    },
+    {
+      "id": "np-fc-45",
+      "topic": "Number Properties",
+      "front": "|a + b| vs |a| + |b| — what's the relationship?",
+      "latex": "|a + b| \\le |a| + |b|",
+      "answer": "Triangle inequality: the absolute value of a sum is at most the sum of the absolute values. Also, |ab| = |a|·|b| (always equal)."
+    },
+    {
+      "id": "np-fc-46",
+      "topic": "Number Properties",
+      "front": "Sum of the first n positive integers?",
+      "latex": "\\dfrac{n(n+1)}{2}",
+      "answer": "e.g. 1 + 2 + … + 100 = 5050."
+    },
+    {
+      "id": "np-fc-47",
+      "topic": "Number Properties",
+      "front": "Sum of the first n even positive integers?",
+      "latex": "n(n+1)",
+      "answer": "2 + 4 + … + 2n = n(n+1). e.g. first 3 evens: 2+4+6 = 12 = 3×4."
+    },
+    {
+      "id": "np-fc-48",
+      "topic": "Number Properties",
+      "front": "Sum of the first n odd positive integers?",
+      "latex": "n^{2}",
+      "answer": "1 + 3 + 5 + … + (2n−1) = n². e.g. first 4 odds: 1+3+5+7 = 16 = 4²."
+    },
+    {
+      "id": "np-fc-49",
+      "topic": "Number Properties",
+      "front": "Primes under 20?",
+      "answer": "2, 3, 5, 7, 11, 13, 17, 19. (2 is the only even prime; 1 is NOT prime.)"
+    },
+    {
+      "id": "np-fc-50",
+      "topic": "Number Properties",
+      "front": "Quick squares to know: 11² through 15²?",
+      "answer": "11² = 121, 12² = 144, 13² = 169, 14² = 196, 15² = 225."
+    },
+    {
+      "id": "np-fc-51",
+      "topic": "Number Properties",
+      "front": "Fraction–decimal–percent conversions worth memorising?",
+      "answer": "1/8 = 12.5%, 1/4 = 25%, 1/3 ≈ 33.3%, 3/8 = 37.5%, 1/2 = 50%, 5/8 = 62.5%, 2/3 ≈ 66.7%, 3/4 = 75%."
+    },
+    {
+      "id": "np-fc-52",
+      "topic": "Number Properties",
+      "front": "Is (−2)⁴ positive or negative? What about (−2)³?",
+      "answer": "Even power → positive: (−2)⁴ = 16. Odd power → negative: (−2)³ = −8."
+    },
+    {
+      "id": "al-fc-1",
+      "topic": "Algebra",
+      "front": "Quadratic formula — solutions of ax² + bx + c = 0?",
+      "latex": "x = \\dfrac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}",
+      "answer": "The ± yields the two roots; the expression under the root is the discriminant."
+    },
+    {
+      "id": "al-fc-2",
+      "topic": "Algebra",
+      "front": "Discriminant of ax² + bx + c = 0 — and what it tells you?",
+      "latex": "b^{2} - 4ac",
+      "answer": "> 0 → two real roots, = 0 → one root, < 0 → no real roots."
+    },
+    {
+      "id": "al-fc-3",
+      "topic": "Algebra",
+      "front": "Sum and product of the roots of ax² + bx + c = 0?",
+      "latex": "\\text{sum} = -\\tfrac{b}{a}, \\qquad \\text{product} = \\tfrac{c}{a}",
+      "answer": "Both read directly off the coefficients."
+    },
+    {
+      "id": "al-fc-4",
+      "topic": "Algebra",
+      "front": "Vertex / axis of symmetry of a parabola?",
+      "latex": "x = -\\dfrac{b}{2a}",
+      "answer": "Plug back in for the minimum (a > 0) or maximum (a < 0) y-value."
+    },
+    {
+      "id": "al-fc-5",
+      "topic": "Algebra",
+      "front": "Difference of squares identity?",
+      "latex": "a^{2} - b^{2} = (a+b)(a-b)",
+      "answer": "Any difference of two squares factors into a sum times a difference."
+    },
+    {
+      "id": "al-fc-6",
+      "topic": "Algebra",
+      "front": "Sum of an arithmetic sequence?",
+      "latex": "S = n \\cdot \\dfrac{a_1 + a_n}{2}",
+      "answer": "Number of terms times the average of the first and last term."
+    },
+    {
+      "id": "al-fc-7",
+      "topic": "Algebra",
+      "front": "xᵃ · xᵇ = ?",
+      "latex": "x^{a} \\cdot x^{b} = x^{a+b}",
+      "answer": "Same base, multiply → add the exponents."
+    },
+    {
+      "id": "al-fc-8",
+      "topic": "Algebra",
+      "front": "xᵃ / xᵇ = ?",
+      "latex": "\\dfrac{x^{a}}{x^{b}} = x^{a-b}",
+      "answer": "Same base, divide → subtract the exponents."
+    },
+    {
+      "id": "al-fc-9",
+      "topic": "Algebra",
+      "front": "xᵃ · yᵃ = ?",
+      "latex": "x^{a} \\cdot y^{a} = (xy)^{a}",
+      "answer": "Same exponent on different bases → multiply the bases."
+    },
+    {
+      "id": "al-fc-10",
+      "topic": "Algebra",
+      "front": "x⁻ⁿ = ?",
+      "latex": "x^{-n} = \\dfrac{1}{x^{n}}",
+      "answer": "A negative exponent means the reciprocal of the positive-exponent form."
+    },
+    {
+      "id": "al-fc-11",
+      "topic": "Algebra",
+      "front": "x⁰ = ? (for x ≠ 0)",
+      "latex": "x^{0} = 1",
+      "answer": "Any nonzero base raised to the power 0 equals 1. (0⁰ is undefined.)"
+    },
+    {
+      "id": "al-fc-12",
+      "topic": "Algebra",
+      "front": "(a + b)³ = ?",
+      "latex": "(a+b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}",
+      "answer": "Cube of a sum — all terms are positive; remember the 1-3-3-1 pattern."
+    },
+    {
+      "id": "al-fc-13",
+      "topic": "Algebra",
+      "front": "(a − b)³ = ?",
+      "latex": "(a-b)^{3} = a^{3} - 3a^{2}b + 3ab^{2} - b^{3}",
+      "answer": "Cube of a difference — signs alternate (−, +, −) after the leading a³."
+    },
+    {
+      "id": "al-fc-14",
+      "topic": "Algebra",
+      "front": "(a − b)² = ?",
+      "latex": "(a-b)^{2} = a^{2} - 2ab + b^{2}",
+      "answer": "Square of a difference — middle term is negative 2ab."
+    },
+    {
+      "id": "al-fc-15",
+      "topic": "Algebra",
+      "front": "√(a²) = ?",
+      "latex": "\\sqrt{a^{2}} = |a|",
+      "answer": "The square root of a square is the absolute value — always non-negative, not ±a."
+    },
+    {
+      "id": "al-fc-16",
+      "topic": "Algebra",
+      "front": "What is the polynomial test?",
+      "answer": "Every variable's exponent must be a whole number ≥ 0. No 1/x (= x⁻¹) and no √x (= x^½). Roots or fractions on coefficients are fine (e.g. √5·x² is a polynomial)."
+    },
+    {
+      "id": "al-fc-17",
+      "topic": "Algebra",
+      "front": "Completing the square — method and what it gives you?",
+      "answer": "Take half the x-coefficient and write (x + h)² + k. The vertex is (−h, k) and k is the minimum value of the quadratic when a > 0 (a perfect square is never negative)."
+    },
+    {
+      "id": "al-fc-18",
+      "topic": "Algebra",
+      "front": "√36 vs solving x² = 36 — what's the difference?",
+      "answer": "The √ symbol returns the positive root only: √36 = +6. Solving x² = 36 gives both roots: x = ±6."
+    },
+    {
+      "id": "al-fc-19",
+      "topic": "Algebra",
+      "front": "When do you flip an inequality sign?",
+      "answer": "Only when multiplying or dividing both sides by a negative number. Adding, subtracting, or multiplying/dividing by a positive → no flip."
+    },
+    {
+      "id": "al-fc-20",
+      "topic": "Algebra",
+      "front": "Order of a, a², √a when 0 < a < 1?",
+      "latex": "\\sqrt{a} > a > a^{2}",
+      "answer": "For fractions between 0 and 1 — squaring pushes toward 0, rooting pushes toward 1. ('1 is the magnet.')"
+    },
+    {
+      "id": "al-fc-21",
+      "topic": "Algebra",
+      "front": "Order of a, a², √a when a > 1?",
+      "latex": "a^{2} > a > \\sqrt{a}",
+      "answer": "For values above 1 — squaring grows fastest, rooting grows slowest."
+    },
+    {
+      "id": "al-fc-22",
+      "topic": "Algebra",
+      "front": "What is an arithmetic sequence?",
+      "answer": "A sequence where each term is obtained by adding (or subtracting) a constant common difference d. e.g. 3, 7, 11, 15, … (d = 4)."
+    },
+    {
+      "id": "al-fc-23",
+      "topic": "Algebra",
+      "front": "What is a geometric sequence?",
+      "answer": "A sequence where each term is obtained by multiplying by a constant common ratio r. e.g. 2, 6, 18, 54, … (r = 3)."
+    },
+    {
+      "id": "al-fc-24",
+      "topic": "Algebra",
+      "front": "What is a harmonic sequence?",
+      "answer": "A sequence whose terms are the reciprocals of an arithmetic sequence. e.g. 1, 1/2, 1/3, 1/4, …"
+    },
+    {
+      "id": "al-fc-25",
+      "topic": "Algebra",
+      "front": "What is a quadratic sequence?",
+      "answer": "A sequence where the second differences are constant (the first differences are not). Its general term involves n². e.g. 1, 4, 9, 16, … (first diff: 3,5,7; second diff: 2,2)."
+    },
+    {
+      "id": "al-fc-26",
+      "topic": "Algebra",
+      "front": "Sequence vs series — what's the difference?",
+      "answer": "A sequence is a list of terms (2, 4, 6). A series is the sum of those terms (2 + 4 + 6 = 12)."
+    },
+    {
+      "id": "al-fc-27",
+      "topic": "Algebra",
+      "front": "Number of terms in a spaced (evenly-spaced) series?",
+      "latex": "n = \\dfrac{\\text{last} - \\text{first}}{\\text{step}} + 1",
+      "answer": "Snap the endpoints inward to real multiples first if needed, then apply the formula. The +1 alone is only for step = 1."
+    },
+    {
+      "id": "al-fc-28",
+      "topic": "Algebra",
+      "front": "Sum of an infinite geometric series when |r| < 1?",
+      "latex": "S = \\dfrac{a}{1 - r}",
+      "answer": "When |r| < 1, the terms shrink to 0 and the series converges. If |r| ≥ 1, the sum diverges."
+    },
+    {
+      "id": "ge-fc-1",
+      "topic": "Geometry",
+      "front": "Distance between two points?",
+      "latex": "d = \\sqrt{(x_1 - x_2)^{2} + (y_1 - y_2)^{2}}",
+      "answer": "Pythagoras applied to the differences in coordinates."
+    },
+    {
+      "id": "ge-fc-2",
+      "topic": "Geometry",
+      "front": "Area of an equilateral triangle?",
+      "latex": "\\dfrac{\\sqrt{3}}{4}\\, s^{2}",
+      "answer": "Where s is the side length."
+    },
+    {
+      "id": "ge-fc-3",
+      "topic": "Geometry",
+      "front": "A central angle is ___ the inscribed angle on the same arc?",
+      "latex": "\\theta_{\\text{central}} = 2\\,\\theta_{\\text{inscribed}}",
+      "answer": "Double — the central angle is twice the inscribed angle subtending the same arc."
+    },
+    {
+      "id": "ge-fc-4",
+      "topic": "Geometry",
+      "front": "Pythagorean theorem?",
+      "latex": "a^{2} + b^{2} = c^{2}",
+      "answer": "c is the hypotenuse, the side opposite the right angle."
+    },
+    {
+      "id": "ge-fc-5",
+      "topic": "Geometry",
+      "front": "Sum of interior angles of an n-sided polygon?",
+      "latex": "(n-2)\\times 180^{\\circ}",
+      "answer": "Divide by n for each interior angle of a regular polygon."
+    },
+    {
+      "id": "ge-fc-6",
+      "topic": "Geometry",
+      "front": "30-60-90 triangle — side ratio?",
+      "latex": "x : x\\sqrt{3} : 2x",
+      "answer": "The 45-45-90 triangle is x : x : x√2."
+    },
+    {
+      "id": "ge-fc-7",
+      "topic": "Geometry",
+      "front": "Longest diagonal of a cube with side s?",
+      "latex": "s\\sqrt{3}",
+      "answer": "For a cuboid it is √(x² + y² + z²)."
+    },
+    {
+      "id": "ge-fc-8",
+      "topic": "Geometry",
+      "front": "Slope formula — rise over run?",
+      "latex": "m = \\dfrac{y_2 - y_1}{x_2 - x_1}",
+      "answer": "Rise (change in y) divided by run (change in x). Subtract in the same order for both coordinates."
+    },
+    {
+      "id": "ge-fc-9",
+      "topic": "Geometry",
+      "front": "Slope of a horizontal line (y = constant)?",
+      "answer": "0 — no rise, so rise/run = 0/something = 0."
+    },
+    {
+      "id": "ge-fc-10",
+      "topic": "Geometry",
+      "front": "Slope of a vertical line (x = constant)?",
+      "answer": "Undefined — run = 0, and you can't divide by zero."
+    },
+    {
+      "id": "ge-fc-11",
+      "topic": "Geometry",
+      "front": "Slope-intercept form of a line?",
+      "latex": "y = mx + c",
+      "answer": "m is the slope; c is the y-intercept (the value of y when x = 0)."
+    },
+    {
+      "id": "ge-fc-12",
+      "topic": "Geometry",
+      "front": "Point-slope form — when do you use it?",
+      "latex": "y - y_1 = m(x - x_1)",
+      "answer": "Use when you know the slope and one point on the line. No need to find c first."
+    },
+    {
+      "id": "ge-fc-13",
+      "topic": "Geometry",
+      "front": "Slopes of parallel lines?",
+      "answer": "Equal slopes, different y-intercepts. If m₁ = m₂ the lines never meet."
+    },
+    {
+      "id": "ge-fc-14",
+      "topic": "Geometry",
+      "front": "Slopes of perpendicular lines?",
+      "latex": "m_1 \\times m_2 = -1",
+      "answer": "Negative reciprocals — flip and negate. e.g. slope 2/3 ⊥ slope −3/2."
+    },
+    {
+      "id": "ge-fc-15",
+      "topic": "Geometry",
+      "front": "Midpoint between two points?",
+      "latex": "\\left(\\dfrac{x_1+x_2}{2},\\ \\dfrac{y_1+y_2}{2}\\right)",
+      "answer": "Average the x-coordinates and average the y-coordinates separately."
+    },
+    {
+      "id": "ge-fc-16",
+      "topic": "Geometry",
+      "front": "Equation of a circle — what do h, k, r represent?",
+      "latex": "(x-h)^{2}+(y-k)^{2}=r^{2}",
+      "answer": "Center is (h, k) — watch the sign flip from the equation. r is the radius."
+    },
+    {
+      "id": "ge-fc-17",
+      "topic": "Geometry",
+      "front": "Reflection across y = x?",
+      "answer": "Swap the coordinates: (x, y) → (y, x). The line y = x acts as a mirror."
+    },
+    {
+      "id": "ge-fc-18",
+      "topic": "Geometry",
+      "front": "Reflection across y = −x?",
+      "answer": "(x, y) → (−y, −x). Swap and negate both coordinates."
+    },
+    {
+      "id": "ge-fc-19",
+      "topic": "Geometry",
+      "front": "Reflection across a horizontal line y = k?",
+      "answer": "(x, y) → (x, 2k − y). The x-coordinate stays; the y-coordinate flips symmetrically about y = k."
+    },
+    {
+      "id": "ge-fc-20",
+      "topic": "Geometry",
+      "front": "Reflection across a vertical line x = k?",
+      "answer": "(x, y) → (2k − x, y). The y-coordinate stays; the x-coordinate flips symmetrically about x = k."
+    },
+    {
+      "id": "ge-fc-21",
+      "topic": "Geometry",
+      "front": "90° anticlockwise rotation about the origin?",
+      "answer": "(x, y) → (−y, x). The point lifts toward the +y axis."
+    },
+    {
+      "id": "ge-fc-22",
+      "topic": "Geometry",
+      "front": "90° clockwise rotation about the origin?",
+      "answer": "(x, y) → (y, −x). The point drops toward the −y axis."
+    },
+    {
+      "id": "ge-fc-23",
+      "topic": "Geometry",
+      "front": "180° rotation about the origin?",
+      "answer": "(x, y) → (−x, −y). Both coordinates are negated — the point moves to the diagonally opposite position."
+    },
+    {
+      "id": "ge-fc-24",
+      "topic": "Geometry",
+      "front": "Which way does a parabola y = ax² + bx + c open?",
+      "answer": "a > 0 → opens upward (minimum at vertex). a < 0 → opens downward (maximum at vertex)."
+    },
+    {
+      "id": "ge-fc-25",
+      "topic": "Geometry",
+      "front": "How do you find the x- and y-intercepts of a graph?",
+      "answer": "y-intercept: set x = 0. x-intercept(s): set y = 0. A point is on an axis when the other coordinate is 0."
+    },
+    {
+      "id": "ge-fc-26",
+      "topic": "Geometry",
+      "front": "Graph shift y = (x − h)² + k from y = x² — how does each parameter move the vertex?",
+      "answer": "Inside (horizontal) shift is backwards: −h in the bracket moves the vertex right by h. Outside (vertical): +k moves it up by k. Vertex is (h, k)."
+    },
+    {
+      "id": "ge-fc-27",
+      "topic": "Geometry",
+      "front": "Slope of a parabola ax²+bx+c at a point x?",
+      "latex": "2ax + b",
+      "answer": "Plug in x for the slope there; at the vertex (x = −b/2a) the slope is 0."
+    },
+    {
+      "id": "ge-fc-28",
+      "topic": "Geometry",
+      "front": "Sum of exterior angles of any convex polygon?",
+      "answer": "Always 360°, regardless of the number of sides. One exterior angle per vertex."
+    },
+    {
+      "id": "ge-fc-29",
+      "topic": "Geometry",
+      "front": "Each interior angle of a regular n-gon?",
+      "latex": "\\dfrac{(n-2)\\times 180^{\\circ}}{n}",
+      "answer": "Interior angle sum ÷ n. e.g. regular hexagon: (4×180)/6 = 120°."
+    },
+    {
+      "id": "ge-fc-30",
+      "topic": "Geometry",
+      "front": "Each exterior angle of a regular n-gon?",
+      "latex": "\\dfrac{360^{\\circ}}{n}",
+      "answer": "360° ÷ number of sides. Interior + exterior = 180° at every vertex."
+    },
+    {
+      "id": "ge-fc-31",
+      "topic": "Geometry",
+      "front": "The four Pythagorean triples to know by sight?",
+      "answer": "3-4-5, 5-12-13, 8-15-17, 7-24-25 (largest is always the hypotenuse). All their multiples also work (e.g. 6-8-10)."
+    },
+    {
+      "id": "ge-fc-32",
+      "topic": "Geometry",
+      "front": "45-45-90 triangle — side ratio?",
+      "latex": "x : x : x\\sqrt{2}",
+      "answer": "Two equal legs; hypotenuse = leg × √2. An isosceles right triangle."
+    },
+    {
+      "id": "ge-fc-33",
+      "topic": "Geometry",
+      "front": "What makes two triangles similar? What is the area ratio?",
+      "answer": "Same shape: equal angles AND proportional sides. Area ratio = (side ratio)². If sides scale by k, area scales by k²."
+    },
+    {
+      "id": "ge-fc-34",
+      "topic": "Geometry",
+      "front": "Volume ratio of two similar solids?",
+      "latex": "\\left(\\dfrac{s_1}{s_2}\\right)^{3}",
+      "answer": "Volume is 3D so it scales by the cube of the side ratio. If sides double, volume is 8× larger."
+    },
+    {
+      "id": "ge-fc-35",
+      "topic": "Geometry",
+      "front": "Similarity criteria for triangles?",
+      "answer": "AA (two angles), SAS (included angle + proportional adjacent sides), SSS (all three sides proportional). AA alone is sufficient."
+    },
+    {
+      "id": "ge-fc-36",
+      "topic": "Geometry",
+      "front": "Congruence criteria for triangles?",
+      "answer": "SSS, SAS, ASA, AAS — all require at least one pair of equal sides. AA is NOT enough for congruence (only for similarity)."
+    },
+    {
+      "id": "ge-fc-37",
+      "topic": "Geometry",
+      "front": "Sector/arc proportion rule?",
+      "answer": "(central angle / 360°) = arc length / circumference = sector area / total area. If the total is given, take the fraction directly without finding r."
+    },
+    {
+      "id": "ge-fc-38",
+      "topic": "Geometry",
+      "front": "Which shape has the largest area for a given perimeter?",
+      "answer": "A circle. Among polygons, a regular polygon maximises area for fixed perimeter; a square maximises for quadrilaterals."
+    },
+    {
+      "id": "ge-fc-39",
+      "topic": "Geometry",
+      "front": "In a regular hexagon, how does the circumradius relate to the side length?",
+      "answer": "They are equal. A regular hexagon is made of 6 equilateral triangles, so radius = side length."
+    },
+    {
+      "id": "ge-fc-40",
+      "topic": "Geometry",
+      "front": "Area of a parallelogram, rhombus, and rectangle?",
+      "answer": "All three: base × height. For a rectangle the height equals the width; for rhombus/parallelogram use the perpendicular height."
+    },
+    {
+      "id": "ge-fc-41",
+      "topic": "Geometry",
+      "front": "Area of a trapezoid — and why the average?",
+      "latex": "\\dfrac{b_1 + b_2}{2}\\times h",
+      "answer": "A trapezoid is almost a rectangle, but its two parallel sides differ (b₁ ≠ b₂), so there's no single width — use the average of the parallel sides as the effective width, times the height.",
+      "starred": true
+    },
+    {
+      "id": "ge-fc-42",
+      "topic": "Geometry",
+      "front": "Cube: surface area and volume?",
+      "latex": "SA = 6s^{2},\\quad Vol = s^{3}",
+      "answer": "6 square faces for SA; volume is the side cubed. Longest diagonal = s√3."
+    },
+    {
+      "id": "ge-fc-43",
+      "topic": "Geometry",
+      "front": "Cuboid: surface area and volume?",
+      "latex": "SA = 2(ab+bc+ca),\\quad Vol = abc",
+      "answer": "SA sums the three distinct face pairs (each counted twice). Volume is length × width × height."
+    },
+    {
+      "id": "ge-fc-44",
+      "topic": "Geometry",
+      "front": "Cylinder: volume and surface area?",
+      "latex": "Vol = \\pi r^{2}h,\\quad SA = 2\\pi r(r+h)",
+      "answer": "Volume is the circle area times height. SA = two circular caps plus the lateral rectangle (circumference × height)."
+    },
+    {
+      "id": "co-fc-1",
+      "topic": "Counting",
+      "front": "Permutation with repetition — what's the formula?",
+      "latex": "n^{r}",
+      "answer": "When items can repeat and order matters."
+    },
+    {
+      "id": "co-fc-2",
+      "topic": "Counting",
+      "front": "nCr (combinations) formula?",
+      "latex": "\\dfrac{n!}{r!\\,(n-r)!}",
+      "answer": "Choosing r of n — order doesn't matter."
+    },
+    {
+      "id": "co-fc-3",
+      "topic": "Counting",
+      "front": "nPr (permutations) formula?",
+      "latex": "\\dfrac{n!}{(n-r)!}",
+      "answer": "Arrange r of n — order matters."
+    },
+    {
+      "id": "co-fc-4",
+      "topic": "Counting",
+      "front": "Circular arrangements of n items?",
+      "latex": "(n-1)!",
+      "answer": "Fix one item to remove duplicate rotations."
+    },
+    {
+      "id": "co-fc-5",
+      "topic": "Counting",
+      "front": "Handshakes among n people (each pair once)?",
+      "latex": "\\dfrac{n(n-1)}{2}",
+      "answer": "Same as choosing 2 of n, i.e. nC2."
+    },
+    {
+      "id": "co-fc-6",
+      "topic": "Counting",
+      "front": "Arrangements of n items with repeats (p, q alike)?",
+      "latex": "\\dfrac{n!}{p!\\,q!\\cdots}",
+      "answer": "Divide out the orderings of the identical items."
+    },
+    {
+      "id": "co-fc-7",
+      "topic": "Counting",
+      "front": "Permutation vs combination — keyword cues?",
+      "answer": "Arrange / order / rank / seat → Permutation (order matters). Group / select / team / subset → Combination (order doesn't matter). When in doubt: could swapping two items give a different outcome? Yes → P; No → C."
+    },
+    {
+      "id": "co-fc-8",
+      "topic": "Counting",
+      "front": "Why is nCr always ≤ nPr?",
+      "latex": "{}^{n}C_{r} = \\dfrac{{}^{n}P_{r}}{r!}",
+      "answer": "A combination is a permutation divided by r! (the number of ways to reorder the chosen items). Dividing by r! ≥ 1 can only make it smaller or equal."
+    },
+    {
+      "id": "co-fc-9",
+      "topic": "Counting",
+      "front": "Counting paths with m steps of one type and n of another?",
+      "latex": "\\dfrac{(m+n)!}{m!\\,n!}",
+      "answer": "Choose which m of the (m+n) total steps are type-A (the rest are type-B). Same as nCr with n = m+n and r = m. e.g. 2 right + 3 down: (2+3)!/(2!·3!) = 10 paths."
+    },
+    {
+      "id": "co-fc-10",
+      "topic": "Counting",
+      "front": "Overlapping sets — two sets formula?",
+      "answer": "Total = A + B − (A and B) + neither. Subtract the overlap to avoid double-counting each element that belongs to both sets."
+    },
+    {
+      "id": "co-fc-11",
+      "topic": "Counting",
+      "front": "Overlapping sets — three sets formula?",
+      "answer": "Total = A + B + C − (A∩B) − (A∩C) − (B∩C) + (A∩B∩C) + neither. Subtracting the three pairwise overlaps removes elements in exactly two sets once each; the triple-overlap element got subtracted three times but should be added back once."
+    },
+    {
+      "id": "co-fc-12",
+      "topic": "Counting",
+      "front": "'Exactly one' vs 'at least one' in overlapping sets — how do you find each?",
+      "answer": "'At least one' = the union = Total − neither. 'Exactly one' = (only A) + (only B) + (only C) = union minus all overlap regions. Draw a Venn diagram and subtract the pairwise and triple-overlap areas from each circle."
+    },
+    {
+      "id": "co-fc-13",
+      "topic": "Counting",
+      "front": "How do you apply the repeated-items formula to a word like ARRANGEMENT?",
+      "latex": "\\dfrac{11!}{2!\\,2!\\,2!\\,2!}",
+      "answer": "Count total letters (11), identify repeats: A×2, R×2, N×2, E×2. Divide by the factorial of each repeated group: 11!/(2!·2!·2!·2!) = 2,494,800. Each identical letter's group factorial removes duplicate orderings."
+    },
+    {
+      "id": "pr-fc-1",
+      "topic": "Probability",
+      "front": "Basic probability of an event?",
+      "latex": "P = \\dfrac{\\text{favorable outcomes}}{\\text{total outcomes}}",
+      "answer": "Favorable over total, assuming equally likely outcomes."
+    },
+    {
+      "id": "pr-fc-2",
+      "topic": "Probability",
+      "front": "The 'at least one' trick?",
+      "latex": "P(\\text{at least one}) = 1 - P(\\text{none})",
+      "answer": "It's usually easier to compute the complement than to add every case."
+    },
+    {
+      "id": "pr-fc-3",
+      "topic": "Probability",
+      "front": "P(A or B) for any two events?",
+      "latex": "P(A) + P(B) - P(A \\cap B)",
+      "answer": "Add the two, subtract the overlap. If mutually exclusive, the overlap is 0."
+    },
+    {
+      "id": "pr-fc-4",
+      "topic": "Probability",
+      "front": "P(A and B) for independent events?",
+      "latex": "P(A)\\times P(B)",
+      "answer": "Independent means one event doesn't change the other."
+    },
+    {
+      "id": "pr-fc-5",
+      "topic": "Probability",
+      "front": "Complement rule?",
+      "latex": "P(A') = 1 - P(A)",
+      "answer": "P(A) + P(A′) = 1."
+    },
+    {
+      "id": "pr-fc-6",
+      "topic": "Probability",
+      "front": "Binomial probability of exactly k successes in n trials?",
+      "latex": "{}^{n}C_{k}\\, p^{k} (1-p)^{n-k}",
+      "answer": "Ways to order × success part × failure part (the BINS conditions)."
+    },
+    {
+      "id": "pr-fc-7",
+      "topic": "Probability",
+      "front": "Mutually exclusive events — what does it mean, and what is P(A and B)?",
+      "latex": "P(A \\cap B) = 0",
+      "answer": "Two events are mutually exclusive if they cannot both occur at the same time. Their overlap is zero: P(A and B) = 0, so P(A or B) = P(A) + P(B). Diagnostic: 'can both happen simultaneously?' — if no, they are mutually exclusive."
+    },
+    {
+      "id": "pr-fc-8",
+      "topic": "Probability",
+      "front": "Independent events — what does it mean, and how do you test it?",
+      "answer": "Two events are independent if knowing one occurred gives no information about the other — one does not affect the other's probability. Diagnostic: 'does one outcome change the probability of the other?' — if no, they are independent. Independent ≠ mutually exclusive."
+    },
+    {
+      "id": "pr-fc-9",
+      "topic": "Probability",
+      "front": "Why do you multiply for AND (independent events)?",
+      "latex": "P(A \\cap B) = P(A)\\times P(B)",
+      "answer": "'Both must happen' narrows the possibilities twice — the second probability acts on what survived the first, a fraction of a fraction. One factor per condition. AND → multiply (narrows, smaller); OR → add (widens, bigger).",
+      "starred": true
+    },
+    {
+      "id": "pr-fc-10",
+      "topic": "Probability",
+      "front": "Expected value E[X] — definition and meaning?",
+      "latex": "E[X] = \\sum (\\text{outcome} \\times P(\\text{outcome}))",
+      "answer": "Multiply each outcome by its probability, then sum. It equals the long-run average — what you expect per trial over many repetitions."
+    },
+    {
+      "id": "pr-fc-11",
+      "topic": "Probability",
+      "front": "Expected value of a game — formula and how to interpret it?",
+      "latex": "EV = (\\text{gain})\\,P(\\text{win}) + (\\text{loss})\\,P(\\text{lose})",
+      "answer": "Loss is a negative number. EV > 0: worth playing (you gain on average). EV < 0: don't play (you lose on average). EV = 0: fair game (no advantage either way)."
+    },
+    {
+      "id": "pr-fc-12",
+      "topic": "Probability",
+      "front": "Binomial conditions — what is BINS?",
+      "answer": "B — Binary outcomes (only two: success or failure). I — Independent trials. N — Number of trials is fixed in advance. S — Same probability of success on every trial. All four must hold to use the binomial formula."
+    },
+    {
+      "id": "pr-fc-13",
+      "topic": "Probability",
+      "front": "Sampling with vs without replacement — how does it affect probability?",
+      "answer": "With replacement: the item is returned before the next draw, so the total stays constant and each draw is independent (probabilities unchanged). Without replacement: the item is not returned, the total shrinks each draw, so events become dependent and probabilities shift."
+    },
+    {
+      "id": "st-fc-1",
+      "topic": "Statistics",
+      "front": "Z-score formula?",
+      "latex": "z = \\dfrac{x - \\mu}{\\sigma}",
+      "answer": "How many standard deviations x sits from the mean."
+    },
+    {
+      "id": "st-fc-2",
+      "topic": "Statistics",
+      "front": "Empirical Rule (68-95-99.7)?",
+      "latex": "\\pm 1\\sigma \\approx 68\\%,\\ \\ \\pm 2\\sigma \\approx 95\\%,\\ \\ \\pm 3\\sigma \\approx 99.7\\%",
+      "answer": "In a normal distribution, data clusters within these bands of the mean μ."
+    },
+    {
+      "id": "st-fc-3",
+      "topic": "Statistics",
+      "front": "Population standard deviation σ?",
+      "latex": "\\sigma = \\sqrt{\\dfrac{1}{N}\\sum (x_i - \\mu)^{2}}",
+      "answer": "The root-mean-square distance of each value from the mean."
+    },
+    {
+      "id": "st-fc-4",
+      "topic": "Statistics",
+      "front": "Weighted average?",
+      "latex": "\\dfrac{\\sum (\\text{value} \\times \\text{weight})}{\\sum \\text{weights}}",
+      "answer": "Use it when the groups have different sizes."
+    },
+    {
+      "id": "st-fc-5",
+      "topic": "Statistics",
+      "front": "Interquartile range (IQR)?",
+      "latex": "\\text{IQR} = Q_3 - Q_1",
+      "answer": "The spread of the middle 50% — the box in a boxplot."
+    },
+    {
+      "id": "st-fc-6",
+      "topic": "Statistics",
+      "front": "Expected value E(X)?",
+      "latex": "E(X) = \\sum x \\cdot P(x)",
+      "answer": "Sum each outcome times its probability; losses count as negative."
+    },
+    {
+      "id": "wp-fc-1",
+      "topic": "Word Problems",
+      "front": "Distance, rate, time relationship?",
+      "latex": "\\text{Distance} = \\text{Rate} \\times \\text{Time}",
+      "answer": "And average speed = total distance ÷ total time."
+    },
+    {
+      "id": "wp-fc-2",
+      "topic": "Word Problems",
+      "front": "Work formula for identical machines?",
+      "latex": "W = n\\,r\\,t",
+      "answer": "Number of workers × individual rate × time."
+    },
+    {
+      "id": "wp-fc-3",
+      "topic": "Word Problems",
+      "front": "Simple interest?",
+      "latex": "SI = P\\,r\\,t",
+      "answer": "Principal × rate × time."
+    },
+    {
+      "id": "wp-fc-4",
+      "topic": "Word Problems",
+      "front": "Compound interest?",
+      "latex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}",
+      "answer": "n is the number of compounding periods per year."
+    },
+    {
+      "id": "wp-fc-5",
+      "topic": "Word Problems",
+      "front": "Profit?",
+      "latex": "\\text{Profit} = \\text{Revenue} - \\text{Expenses}",
+      "answer": "What's left of revenue after costs."
+    },
+    {
+      "id": "wp-fc-6",
+      "topic": "Word Problems",
+      "front": "Two objects moving — how do you combine their speeds?",
+      "latex": "\\text{opposite: add} \\quad\\cdot\\quad \\text{same way: subtract}",
+      "answer": "Relative speed adds for opposite directions, subtracts for the same direction."
+    }
   ],
-
   "quizzes": [
-    { "id": "np-qz-1", "topic": "Number Properties", "question": "How many positive factors does 2³ × 5² have?", "options": ["12", "6", "9", "5"], "correct": 0, "explanation": "(a+1)(b+1) = (3+1)(2+1) = 4 × 3 = 12." },
-    { "id": "np-qz-2", "topic": "Number Properties", "questionLatex": "The unit digit of $2^{n}$ cycles through which sequence?", "options": ["2, 4, 8, 6", "2, 4, 6, 8", "2, 6, 2, 6", "2, 8, 2, 8"], "correct": 0, "explanation": "Powers of 2 end in 2, 4, 8, 6 and then repeat every four powers." },
-    { "id": "np-qz-3", "topic": "Number Properties", "questionLatex": "$0^{0}$ equals:", "options": ["undefined", "0", "1", "infinity"], "correct": 0, "explanation": "0⁰ is undefined." },
-    { "id": "np-qz-4", "topic": "Number Properties", "question": "A decimal terminates when its lowest-terms denominator has the form:", "options": ["2ᶜ × 5ᵈ", "any even number", "a prime number", "3ᶜ × 7ᵈ"], "correct": 0, "explanation": "Only factors of 2 and 5 in the denominator give a terminating decimal." },
-    { "id": "np-qz-5", "topic": "Number Properties", "question": "Which number is NOT in the set of natural numbers?", "options": ["1", "7", "0", "100"], "correct": 2, "explanation": "Natural (counting) numbers start at 1. Zero is a whole number but not a natural number." },
-    { "id": "np-qz-6", "topic": "Number Properties", "question": "A number is divisible by 11 if its alternating digit sum is:", "options": ["even", "a multiple of 11 (including 0)", "a multiple of 3", "a prime number"], "correct": 1, "explanation": "Alternating digit sum (+−+−…) must equal 0, 11, 22, −11, etc. — any multiple of 11." },
-    { "id": "np-qz-7", "topic": "Number Properties", "question": "What is the remainder when 7 is divided by 11?", "options": ["0", "4", "1", "7"], "correct": 3, "explanation": "When the divisor is larger than the dividend, the remainder equals the dividend itself. 7 ÷ 11 = 0 remainder 7." },
-    { "id": "np-qz-8", "topic": "Number Properties", "questionLatex": "Sum of the first $n$ positive integers?", "options": ["n(n+1)/2", "n²", "n(n+1)", "(n+1)/2"], "correct": 0, "explanation": "1 + 2 + … + n = n(n+1)/2. For n = 100 this gives 5050." },
-    { "id": "np-qz-9", "topic": "Number Properties", "question": "Sum of the first 6 odd positive integers (1+3+5+7+9+11) equals:", "options": ["42", "25", "36", "30"], "correct": 2, "explanation": "Sum of first n odd integers = n². With n = 6: 6² = 36." },
-    { "id": "np-qz-10", "topic": "Number Properties", "question": "What is the remainder when 37 is divided by 5?", "options": ["5", "7", "3", "2"], "correct": 3, "explanation": "The unit digit of 37 is 7, which is in the 5–9 range, so remainder = 7 − 5 = 2." },
-    { "id": "np-qz-11", "topic": "Number Properties", "question": "Which set of numbers is a subset of the rationals?", "options": ["Irrational numbers", "Integers", "Complex numbers", "Imaginary numbers"], "correct": 1, "explanation": "Every integer can be written as n/1, so integers ⊆ rationals. Irrationals and imaginary numbers are not rational." },
-    { "id": "np-qz-12", "topic": "Number Properties", "questionLatex": "Which inequality correctly expresses the solution to $|x| < 5$?", "options": ["−5 < x < 5", "x < −5 or x > 5", "x < 5", "x > −5"], "correct": 0, "explanation": "|x| < 5 means x is within distance 5 of 0, giving the compound inequality −5 < x < 5." },
-
-    { "id": "al-qz-1", "topic": "Algebra", "questionLatex": "Discriminant of $ax^{2} + bx + c = 0$?", "options": ["b² − 4ac", "−b/2a", "2a", "b² + 4ac"], "correct": 0, "explanation": "The discriminant is b² − 4ac: positive → two real roots, zero → one, negative → none." },
-    { "id": "al-qz-2", "topic": "Algebra", "questionLatex": "Sum of the roots of $ax^{2} + bx + c = 0$ is:", "options": ["−b/a", "c/a", "b/a", "−c/a"], "correct": 0, "explanation": "Sum of roots = −b/a; product of roots = c/a." },
-    { "id": "al-qz-3", "topic": "Algebra", "questionLatex": "If a > 0, the parabola $y = ax^{2} + bx + c$:", "options": ["opens up, has a minimum", "opens down, has a maximum", "is a straight line", "has no vertex"], "correct": 0, "explanation": "a > 0 opens upward, so the vertex is a minimum." },
-    { "id": "al-qz-4", "topic": "Algebra", "question": "A discriminant equal to 0 means the quadratic has:", "options": ["exactly one real solution", "two real solutions", "no real solutions", "infinitely many solutions"], "correct": 0, "explanation": "b² − 4ac = 0 gives one repeated real root (one x-intercept)." },
-
-    { "id": "al-qz-5", "topic": "Algebra", "questionLatex": "$x^{-3}$ equals:", "options": ["$-x^{3}$", "$\\dfrac{1}{x^{3}}$", "$x^{3}$", "$-\\dfrac{1}{x^{3}}$"], "correct": 1, "explanation": "A negative exponent means take the reciprocal: x⁻³ = 1/x³. It does not make the result negative." },
-    { "id": "al-qz-6", "topic": "Algebra", "questionLatex": "Which expansion is correct for $(a - b)^{3}$?", "options": ["$a^{3} + 3a^{2}b + 3ab^{2} + b^{3}$", "$a^{3} - 3a^{2}b - 3ab^{2} - b^{3}$", "$a^{3} - 3a^{2}b + 3ab^{2} - b^{3}$", "$a^{3} + 3a^{2}b - 3ab^{2} - b^{3}$"], "correct": 2, "explanation": "(a−b)³ = a³ − 3a²b + 3ab² − b³. Signs alternate after the leading term: −, +, −. The first option is (a+b)³." },
-    { "id": "al-qz-7", "topic": "Algebra", "questionLatex": "$\\sqrt{(-5)^{2}}$ equals:", "options": ["-5", "±5", "25", "5"], "correct": 3, "explanation": "√(a²) = |a|, the absolute value. √((-5)²) = √25 = 5, not −5 and not ±5. The √ symbol always returns a non-negative result." },
-    { "id": "al-qz-8", "topic": "Algebra", "question": "You flip an inequality sign when:", "options": ["multiplying or dividing both sides by a negative number", "adding a negative number to both sides", "subtracting a positive number from both sides", "multiplying both sides by a positive number"], "correct": 0, "explanation": "Only multiplication or division by a negative reverses the order on the number line. Adding or subtracting, or multiplying/dividing by a positive, leaves the direction unchanged." },
-    { "id": "al-qz-9", "topic": "Algebra", "questionLatex": "The sum of the infinite geometric series $1 + \\dfrac{1}{3} + \\dfrac{1}{9} + \\cdots$ is:", "options": ["1", "3/2", "2", "1/2"], "correct": 1, "explanation": "a = 1, r = 1/3. S = a/(1−r) = 1/(1 − 1/3) = 1/(2/3) = 3/2. Since |r| = 1/3 < 1 the series converges." },
-    { "id": "al-qz-10", "topic": "Algebra", "question": "A harmonic sequence is best described as:", "options": ["a sequence with constant second differences", "a sequence where each term is multiplied by a constant ratio", "a sequence of terms that are reciprocals of an arithmetic sequence", "a sequence where each term is a perfect square"], "correct": 2, "explanation": "Harmonic sequences are formed by taking reciprocals of an arithmetic sequence. e.g. 1, 1/2, 1/3, 1/4, … are the reciprocals of 1, 2, 3, 4, … Option A describes a quadratic sequence; option B describes a geometric sequence." },
-
-    { "id": "ge-qz-1", "topic": "Geometry", "question": "A central angle is ___ the inscribed angle on the same arc.", "options": ["half", "double", "equal to", "triple"], "correct": 1, "explanation": "A central angle is twice (double) the inscribed angle subtending the same arc — the inscribed-angle theorem." },
-    { "id": "ge-qz-2", "topic": "Geometry", "question": "Sum of the interior angles of a hexagon?", "options": ["720°", "540°", "360°", "1080°"], "correct": 0, "explanation": "(n − 2) × 180° = (6 − 2) × 180° = 720°." },
-    { "id": "ge-qz-3", "topic": "Geometry", "question": "The 45-45-90 triangle has side ratio:", "options": ["x : x : x√2", "x : x√3 : 2x", "1 : 2 : 3", "x : 2x : 3x"], "correct": 0, "explanation": "An isosceles right triangle has equal legs and a hypotenuse of x√2." },
-    { "id": "ge-qz-4", "topic": "Geometry", "question": "Area of an equilateral triangle with side s?", "options": ["(√3/4)·s²", "(1/2)·s²", "s²", "(√3/2)·s²"], "correct": 0, "explanation": "Area of an equilateral triangle = (√3 / 4) · s²." },
-    { "id": "ge-qz-5", "topic": "Geometry", "question": "Sum of the exterior angles of any polygon?", "options": ["360°", "180°", "(n − 2) × 180°", "720°"], "correct": 0, "explanation": "The exterior angles of any polygon always sum to 360°." },
-
-    { "id": "ge-qz-6", "topic": "Geometry", "question": "A line has slope 3/4. What is the slope of a line perpendicular to it?", "options": ["3/4", "4/3", "−3/4", "−4/3"], "correct": 3, "explanation": "Perpendicular slopes are negative reciprocals: flip 3/4 to 4/3 and negate to get −4/3. Their product = (3/4)(−4/3) = −1." },
-    { "id": "ge-qz-7", "topic": "Geometry", "question": "Point (2, 5) is reflected across y = x. What are the new coordinates?", "options": ["(5, 2)", "(−2, −5)", "(2, −5)", "(−5, −2)"], "correct": 0, "explanation": "Reflection across y = x swaps the coordinates: (x, y) → (y, x). So (2, 5) → (5, 2)." },
-    { "id": "ge-qz-8", "topic": "Geometry", "question": "Point (3, 1) is rotated 90° anticlockwise about the origin. What is the image?", "options": ["(1, 3)", "(3, −1)", "(1, −3)", "(−1, 3)"], "correct": 3, "explanation": "90° anticlockwise: (x, y) → (−y, x). So (3, 1) → (−1, 3)." },
-    { "id": "ge-qz-9", "topic": "Geometry", "questionLatex": "The circle equation is $(x+3)^{2}+(y-2)^{2}=25$. What is the center?", "options": ["(3, −2)", "(−3, 2)", "(3, 2)", "(−3, −2)"], "correct": 1, "explanation": "Standard form (x − h)² + (y − k)² = r² — the signs flip. Here h = −3, k = 2, so center = (−3, 2) and r = 5." },
-    { "id": "ge-qz-10", "topic": "Geometry", "question": "Two similar solids have a side length ratio of 1:3. What is the ratio of their volumes?", "options": ["1:3", "1:9", "1:6", "1:27"], "correct": 3, "explanation": "Volume scales by the cube of the side ratio: (1/3)³ = 1/27. So volumes are in ratio 1:27." },
-    { "id": "ge-qz-11", "topic": "Geometry", "questionLatex": "A cylinder has radius 4 and height 6. Its total surface area is:", "options": ["$80\\pi$", "$48\\pi$", "$56\\pi$", "$96\\pi$"], "correct": 0, "explanation": "SA = 2πr(r + h) = 2π·4·(4 + 6) = 8π·10 = 80π." },
-    { "id": "ge-qz-12", "topic": "Geometry", "question": "Each exterior angle of a regular octagon (8 sides) equals:", "options": ["30°", "45°", "60°", "135°"], "correct": 1, "explanation": "Each exterior angle = 360°/n = 360°/8 = 45°. Interior angle = 180° − 45° = 135°." },
-
-    { "id": "co-qz-1", "topic": "Counting", "question": "Count of r picks from n where order matters and repeats are allowed:", "options": ["nʳ", "n!", "nCr", "n! / (n − r)!"], "correct": 0, "explanation": "When items can repeat and order matters, the count is nʳ." },
-    { "id": "co-qz-2", "topic": "Counting", "question": "nCr counts:", "options": ["selections where order doesn't matter", "arrangements where order matters", "only circular arrangements", "permutations with repetition"], "correct": 0, "explanation": "A combination is a selection — order doesn't matter (ABC = BCA)." },
-    { "id": "co-qz-3", "topic": "Counting", "question": "Number of ways to seat n people around a circle?", "options": ["(n − 1)!", "n!", "n²", "n! / 2"], "correct": 0, "explanation": "Circular arrangements = (n − 1)! because rotations are equivalent." },
-    { "id": "co-qz-4", "topic": "Counting", "question": "10 people each shake hands once. How many handshakes?", "options": ["45", "90", "100", "55"], "correct": 0, "explanation": "n(n − 1)/2 = 10 · 9 / 2 = 45." },
-
-    { "id": "co-qz-5", "topic": "Counting", "question": "You want to rank the top 3 finishers in a race of 8 runners. Which formula applies, and why?", "options": ["8C3 = 56, because order doesn't matter", "8P3 = 336, because 1st/2nd/3rd are distinct positions", "8³ = 512, because repeats are allowed", "8! = 40320, because all runners are arranged"], "correct": 1, "explanation": "Ranking assigns distinct positions (1st ≠ 2nd), so order matters → permutation. 8P3 = 8!/(8−3)! = 8·7·6 = 336." },
-    { "id": "co-qz-6", "topic": "Counting", "question": "How many distinct ways can the letters of SUCCESS be arranged? (S×3, C×2, U×1, E×1)", "options": ["5040", "720", "420", "840"], "correct": 2, "explanation": "Total letters = 7; S repeats 3 times, C repeats 2 times. Formula: 7!/(3!·2!) = 5040/12 = 420." },
-    { "id": "co-qz-7", "topic": "Counting", "question": "In a group of 50 students, 30 study Maths, 25 study Science, and 10 study both. How many study neither?", "options": ["5", "50", "45", "15"], "correct": 0, "explanation": "Union = 30 + 25 − 10 = 45. Neither = 50 − 45 = 5. Use Total = A + B − both + neither." },
-    { "id": "co-qz-8", "topic": "Counting", "question": "The inclusion–exclusion formula for three sets |A ∪ B ∪ C| includes which terms?", "options": ["|A|+|B|+|C| − |A∩B| − |A∩C| − |B∩C| + |A∩B∩C|", "|A|+|B|+|C| + |A∩B| + |A∩C| + |B∩C| − |A∩B∩C|", "|A|+|B|+|C| − |A∩B∩C|", "|A|+|B|+|C| − |A∩B| − |A∩C| − |B∩C|"], "correct": 0, "explanation": "Subtract all three pairwise overlaps (to undo double-counting), then add back the triple overlap (it was subtracted one too many times). The full formula: |A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|." },
-    { "id": "co-qz-9", "topic": "Counting", "question": "How many shortest lattice paths use 3 right-steps and 2 up-steps?", "options": ["6", "12", "10", "5"], "correct": 2, "explanation": "You need 3 right-steps and 2 up-steps = 5 total steps. Choose which 3 are 'right': 5!/(3!·2!) = 10." },
-
-    { "id": "pr-qz-1", "topic": "Probability", "question": "P(at least one) equals:", "options": ["1 − P(none)", "P(all)", "1 − P(all)", "P(none)"], "correct": 0, "explanation": "The complement of 'at least one' is 'none', so P(at least one) = 1 − P(none)." },
-    { "id": "pr-qz-2", "topic": "Probability", "question": "For independent events A and B, P(A and B) =", "options": ["P(A) × P(B)", "P(A) + P(B)", "P(A) − P(B)", "P(A) / P(B)"], "correct": 0, "explanation": "Independent events multiply: P(A and B) = P(A) · P(B)." },
-    { "id": "pr-qz-3", "topic": "Probability", "question": "P(A or B) for any two events is:", "options": ["P(A) + P(B) − P(A and B)", "P(A) + P(B)", "P(A) × P(B)", "P(A) − P(B)"], "correct": 0, "explanation": "Add the two probabilities, then subtract the overlap you double-counted." },
-    { "id": "pr-qz-4", "topic": "Probability", "question": "Two mutually exclusive events have an overlap probability of:", "options": ["0", "1", "0.5", "P(A) · P(B)"], "correct": 0, "explanation": "Mutually exclusive events can't co-occur, so P(A and B) = 0." },
-
-    { "id": "st-qz-1", "topic": "Statistics", "questionLatex": "The z-score $z = \\frac{x - \\mu}{\\sigma}$ measures:", "options": ["how many SDs x is from the mean", "the mean of x", "the variance", "the median"], "correct": 0, "explanation": "z standardizes x: it is the number of standard deviations from the mean." },
-    { "id": "st-qz-2", "topic": "Statistics", "question": "Empirical Rule: about what % of a normal distribution lies within ±2σ?", "options": ["95%", "68%", "99.7%", "50%"], "correct": 0, "explanation": "±1σ ≈ 68%, ±2σ ≈ 95%, ±3σ ≈ 99.7%." },
-    { "id": "st-qz-3", "topic": "Statistics", "question": "The interquartile range is:", "options": ["Q₃ − Q₁", "max − min", "Q₂ − Q₁", "Q₃ − Q₂"], "correct": 0, "explanation": "IQR = Q₃ − Q₁, the spread of the middle 50%." },
-    { "id": "st-qz-4", "topic": "Statistics", "question": "Adding a constant to every value in a data set changes the standard deviation how?", "options": ["no change", "increases it", "decreases it", "doubles it"], "correct": 0, "explanation": "Shifting all values leaves the spread unchanged; only scaling by k changes σ (by |k|)." },
-    { "id": "st-qz-5", "topic": "Statistics", "question": "A z-score of 0 means x is:", "options": ["at the mean", "one SD above the mean", "the minimum", "the median only"], "correct": 0, "explanation": "z = 0 ⇒ x = μ, exactly at the mean." },
-
-    { "id": "wp-qz-1", "topic": "Word Problems", "question": "Distance equals:", "options": ["Rate × Time", "Rate / Time", "Time / Rate", "Rate + Time"], "correct": 0, "explanation": "Distance = Rate × Time; rearrange to solve for rate or time." },
-    { "id": "wp-qz-2", "topic": "Word Problems", "question": "Two cars move toward each other. Their relative speed is:", "options": ["the sum of their speeds", "the difference of their speeds", "the average of their speeds", "the faster speed"], "correct": 0, "explanation": "Opposite directions add; same direction subtract." },
-    { "id": "wp-qz-3", "topic": "Word Problems", "question": "Compound interest amount A is:", "options": ["P(1 + r/n)^(nt)", "P · r · t", "P + r + t", "P(1 + rt)"], "correct": 0, "explanation": "A = P(1 + r/n)^(nt); P · r · t is simple interest." },
-    { "id": "wp-qz-4", "topic": "Word Problems", "question": "Average speed for a whole trip is:", "options": ["total distance / total time", "the average of the speeds", "distance × time", "the fastest speed"], "correct": 0, "explanation": "Average speed = total distance ÷ total time, not the mean of the speeds." }
+    {
+      "id": "np-qz-1",
+      "topic": "Number Properties",
+      "question": "How many positive factors does 2³ × 5² have?",
+      "options": [
+        "12",
+        "6",
+        "9",
+        "5"
+      ],
+      "correct": 0,
+      "explanation": "(a+1)(b+1) = (3+1)(2+1) = 4 × 3 = 12."
+    },
+    {
+      "id": "np-qz-2",
+      "topic": "Number Properties",
+      "questionLatex": "The unit digit of $2^{n}$ cycles through which sequence?",
+      "options": [
+        "2, 4, 8, 6",
+        "2, 4, 6, 8",
+        "2, 6, 2, 6",
+        "2, 8, 2, 8"
+      ],
+      "correct": 0,
+      "explanation": "Powers of 2 end in 2, 4, 8, 6 and then repeat every four powers."
+    },
+    {
+      "id": "np-qz-3",
+      "topic": "Number Properties",
+      "questionLatex": "$0^{0}$ equals:",
+      "options": [
+        "undefined",
+        "0",
+        "1",
+        "infinity"
+      ],
+      "correct": 0,
+      "explanation": "0⁰ is undefined."
+    },
+    {
+      "id": "np-qz-4",
+      "topic": "Number Properties",
+      "question": "A decimal terminates when its lowest-terms denominator has the form:",
+      "options": [
+        "2ᶜ × 5ᵈ",
+        "any even number",
+        "a prime number",
+        "3ᶜ × 7ᵈ"
+      ],
+      "correct": 0,
+      "explanation": "Only factors of 2 and 5 in the denominator give a terminating decimal."
+    },
+    {
+      "id": "np-qz-5",
+      "topic": "Number Properties",
+      "question": "Which number is NOT in the set of natural numbers?",
+      "options": [
+        "1",
+        "7",
+        "0",
+        "100"
+      ],
+      "correct": 2,
+      "explanation": "Natural (counting) numbers start at 1. Zero is a whole number but not a natural number."
+    },
+    {
+      "id": "np-qz-6",
+      "topic": "Number Properties",
+      "question": "A number is divisible by 11 if its alternating digit sum is:",
+      "options": [
+        "even",
+        "a multiple of 11 (including 0)",
+        "a multiple of 3",
+        "a prime number"
+      ],
+      "correct": 1,
+      "explanation": "Alternating digit sum (+−+−…) must equal 0, 11, 22, −11, etc. — any multiple of 11."
+    },
+    {
+      "id": "np-qz-7",
+      "topic": "Number Properties",
+      "question": "What is the remainder when 7 is divided by 11?",
+      "options": [
+        "0",
+        "4",
+        "1",
+        "7"
+      ],
+      "correct": 3,
+      "explanation": "When the divisor is larger than the dividend, the remainder equals the dividend itself. 7 ÷ 11 = 0 remainder 7."
+    },
+    {
+      "id": "np-qz-8",
+      "topic": "Number Properties",
+      "questionLatex": "Sum of the first $n$ positive integers?",
+      "options": [
+        "n(n+1)/2",
+        "n²",
+        "n(n+1)",
+        "(n+1)/2"
+      ],
+      "correct": 0,
+      "explanation": "1 + 2 + … + n = n(n+1)/2. For n = 100 this gives 5050."
+    },
+    {
+      "id": "np-qz-9",
+      "topic": "Number Properties",
+      "question": "Sum of the first 6 odd positive integers (1+3+5+7+9+11) equals:",
+      "options": [
+        "42",
+        "25",
+        "36",
+        "30"
+      ],
+      "correct": 2,
+      "explanation": "Sum of first n odd integers = n². With n = 6: 6² = 36."
+    },
+    {
+      "id": "np-qz-10",
+      "topic": "Number Properties",
+      "question": "What is the remainder when 37 is divided by 5?",
+      "options": [
+        "5",
+        "7",
+        "3",
+        "2"
+      ],
+      "correct": 3,
+      "explanation": "The unit digit of 37 is 7, which is in the 5–9 range, so remainder = 7 − 5 = 2."
+    },
+    {
+      "id": "np-qz-11",
+      "topic": "Number Properties",
+      "question": "Which set of numbers is a subset of the rationals?",
+      "options": [
+        "Irrational numbers",
+        "Integers",
+        "Complex numbers",
+        "Imaginary numbers"
+      ],
+      "correct": 1,
+      "explanation": "Every integer can be written as n/1, so integers ⊆ rationals. Irrationals and imaginary numbers are not rational."
+    },
+    {
+      "id": "np-qz-12",
+      "topic": "Number Properties",
+      "questionLatex": "Which inequality correctly expresses the solution to $|x| < 5$?",
+      "options": [
+        "−5 < x < 5",
+        "x < −5 or x > 5",
+        "x < 5",
+        "x > −5"
+      ],
+      "correct": 0,
+      "explanation": "|x| < 5 means x is within distance 5 of 0, giving the compound inequality −5 < x < 5."
+    },
+    {
+      "id": "al-qz-1",
+      "topic": "Algebra",
+      "questionLatex": "Discriminant of $ax^{2} + bx + c = 0$?",
+      "options": [
+        "b² − 4ac",
+        "−b/2a",
+        "2a",
+        "b² + 4ac"
+      ],
+      "correct": 0,
+      "explanation": "The discriminant is b² − 4ac: positive → two real roots, zero → one, negative → none."
+    },
+    {
+      "id": "al-qz-2",
+      "topic": "Algebra",
+      "questionLatex": "Sum of the roots of $ax^{2} + bx + c = 0$ is:",
+      "options": [
+        "−b/a",
+        "c/a",
+        "b/a",
+        "−c/a"
+      ],
+      "correct": 0,
+      "explanation": "Sum of roots = −b/a; product of roots = c/a."
+    },
+    {
+      "id": "al-qz-3",
+      "topic": "Algebra",
+      "questionLatex": "If a > 0, the parabola $y = ax^{2} + bx + c$:",
+      "options": [
+        "opens up, has a minimum",
+        "opens down, has a maximum",
+        "is a straight line",
+        "has no vertex"
+      ],
+      "correct": 0,
+      "explanation": "a > 0 opens upward, so the vertex is a minimum."
+    },
+    {
+      "id": "al-qz-4",
+      "topic": "Algebra",
+      "question": "A discriminant equal to 0 means the quadratic has:",
+      "options": [
+        "exactly one real solution",
+        "two real solutions",
+        "no real solutions",
+        "infinitely many solutions"
+      ],
+      "correct": 0,
+      "explanation": "b² − 4ac = 0 gives one repeated real root (one x-intercept)."
+    },
+    {
+      "id": "al-qz-5",
+      "topic": "Algebra",
+      "questionLatex": "$x^{-3}$ equals:",
+      "options": [
+        "$-x^{3}$",
+        "$\\dfrac{1}{x^{3}}$",
+        "$x^{3}$",
+        "$-\\dfrac{1}{x^{3}}$"
+      ],
+      "correct": 1,
+      "explanation": "A negative exponent means take the reciprocal: x⁻³ = 1/x³. It does not make the result negative."
+    },
+    {
+      "id": "al-qz-6",
+      "topic": "Algebra",
+      "questionLatex": "Which expansion is correct for $(a - b)^{3}$?",
+      "options": [
+        "$a^{3} + 3a^{2}b + 3ab^{2} + b^{3}$",
+        "$a^{3} - 3a^{2}b - 3ab^{2} - b^{3}$",
+        "$a^{3} - 3a^{2}b + 3ab^{2} - b^{3}$",
+        "$a^{3} + 3a^{2}b - 3ab^{2} - b^{3}$"
+      ],
+      "correct": 2,
+      "explanation": "(a−b)³ = a³ − 3a²b + 3ab² − b³. Signs alternate after the leading term: −, +, −. The first option is (a+b)³."
+    },
+    {
+      "id": "al-qz-7",
+      "topic": "Algebra",
+      "questionLatex": "$\\sqrt{(-5)^{2}}$ equals:",
+      "options": [
+        "-5",
+        "±5",
+        "25",
+        "5"
+      ],
+      "correct": 3,
+      "explanation": "√(a²) = |a|, the absolute value. √((-5)²) = √25 = 5, not −5 and not ±5. The √ symbol always returns a non-negative result."
+    },
+    {
+      "id": "al-qz-8",
+      "topic": "Algebra",
+      "question": "You flip an inequality sign when:",
+      "options": [
+        "multiplying or dividing both sides by a negative number",
+        "adding a negative number to both sides",
+        "subtracting a positive number from both sides",
+        "multiplying both sides by a positive number"
+      ],
+      "correct": 0,
+      "explanation": "Only multiplication or division by a negative reverses the order on the number line. Adding or subtracting, or multiplying/dividing by a positive, leaves the direction unchanged."
+    },
+    {
+      "id": "al-qz-9",
+      "topic": "Algebra",
+      "questionLatex": "The sum of the infinite geometric series $1 + \\dfrac{1}{3} + \\dfrac{1}{9} + \\cdots$ is:",
+      "options": [
+        "1",
+        "3/2",
+        "2",
+        "1/2"
+      ],
+      "correct": 1,
+      "explanation": "a = 1, r = 1/3. S = a/(1−r) = 1/(1 − 1/3) = 1/(2/3) = 3/2. Since |r| = 1/3 < 1 the series converges."
+    },
+    {
+      "id": "al-qz-10",
+      "topic": "Algebra",
+      "question": "A harmonic sequence is best described as:",
+      "options": [
+        "a sequence with constant second differences",
+        "a sequence where each term is multiplied by a constant ratio",
+        "a sequence of terms that are reciprocals of an arithmetic sequence",
+        "a sequence where each term is a perfect square"
+      ],
+      "correct": 2,
+      "explanation": "Harmonic sequences are formed by taking reciprocals of an arithmetic sequence. e.g. 1, 1/2, 1/3, 1/4, … are the reciprocals of 1, 2, 3, 4, … Option A describes a quadratic sequence; option B describes a geometric sequence."
+    },
+    {
+      "id": "ge-qz-1",
+      "topic": "Geometry",
+      "question": "A central angle is ___ the inscribed angle on the same arc.",
+      "options": [
+        "half",
+        "double",
+        "equal to",
+        "triple"
+      ],
+      "correct": 1,
+      "explanation": "A central angle is twice (double) the inscribed angle subtending the same arc — the inscribed-angle theorem."
+    },
+    {
+      "id": "ge-qz-2",
+      "topic": "Geometry",
+      "question": "Sum of the interior angles of a hexagon?",
+      "options": [
+        "720°",
+        "540°",
+        "360°",
+        "1080°"
+      ],
+      "correct": 0,
+      "explanation": "(n − 2) × 180° = (6 − 2) × 180° = 720°."
+    },
+    {
+      "id": "ge-qz-3",
+      "topic": "Geometry",
+      "question": "The 45-45-90 triangle has side ratio:",
+      "options": [
+        "x : x : x√2",
+        "x : x√3 : 2x",
+        "1 : 2 : 3",
+        "x : 2x : 3x"
+      ],
+      "correct": 0,
+      "explanation": "An isosceles right triangle has equal legs and a hypotenuse of x√2."
+    },
+    {
+      "id": "ge-qz-4",
+      "topic": "Geometry",
+      "question": "Area of an equilateral triangle with side s?",
+      "options": [
+        "(√3/4)·s²",
+        "(1/2)·s²",
+        "s²",
+        "(√3/2)·s²"
+      ],
+      "correct": 0,
+      "explanation": "Area of an equilateral triangle = (√3 / 4) · s²."
+    },
+    {
+      "id": "ge-qz-5",
+      "topic": "Geometry",
+      "question": "Sum of the exterior angles of any polygon?",
+      "options": [
+        "360°",
+        "180°",
+        "(n − 2) × 180°",
+        "720°"
+      ],
+      "correct": 0,
+      "explanation": "The exterior angles of any polygon always sum to 360°."
+    },
+    {
+      "id": "ge-qz-6",
+      "topic": "Geometry",
+      "question": "A line has slope 3/4. What is the slope of a line perpendicular to it?",
+      "options": [
+        "3/4",
+        "4/3",
+        "−3/4",
+        "−4/3"
+      ],
+      "correct": 3,
+      "explanation": "Perpendicular slopes are negative reciprocals: flip 3/4 to 4/3 and negate to get −4/3. Their product = (3/4)(−4/3) = −1."
+    },
+    {
+      "id": "ge-qz-7",
+      "topic": "Geometry",
+      "question": "Point (2, 5) is reflected across y = x. What are the new coordinates?",
+      "options": [
+        "(5, 2)",
+        "(−2, −5)",
+        "(2, −5)",
+        "(−5, −2)"
+      ],
+      "correct": 0,
+      "explanation": "Reflection across y = x swaps the coordinates: (x, y) → (y, x). So (2, 5) → (5, 2)."
+    },
+    {
+      "id": "ge-qz-8",
+      "topic": "Geometry",
+      "question": "Point (3, 1) is rotated 90° anticlockwise about the origin. What is the image?",
+      "options": [
+        "(1, 3)",
+        "(3, −1)",
+        "(1, −3)",
+        "(−1, 3)"
+      ],
+      "correct": 3,
+      "explanation": "90° anticlockwise: (x, y) → (−y, x). So (3, 1) → (−1, 3)."
+    },
+    {
+      "id": "ge-qz-9",
+      "topic": "Geometry",
+      "questionLatex": "The circle equation is $(x+3)^{2}+(y-2)^{2}=25$. What is the center?",
+      "options": [
+        "(3, −2)",
+        "(−3, 2)",
+        "(3, 2)",
+        "(−3, −2)"
+      ],
+      "correct": 1,
+      "explanation": "Standard form (x − h)² + (y − k)² = r² — the signs flip. Here h = −3, k = 2, so center = (−3, 2) and r = 5."
+    },
+    {
+      "id": "ge-qz-10",
+      "topic": "Geometry",
+      "question": "Two similar solids have a side length ratio of 1:3. What is the ratio of their volumes?",
+      "options": [
+        "1:3",
+        "1:9",
+        "1:6",
+        "1:27"
+      ],
+      "correct": 3,
+      "explanation": "Volume scales by the cube of the side ratio: (1/3)³ = 1/27. So volumes are in ratio 1:27."
+    },
+    {
+      "id": "ge-qz-11",
+      "topic": "Geometry",
+      "questionLatex": "A cylinder has radius 4 and height 6. Its total surface area is:",
+      "options": [
+        "$80\\pi$",
+        "$48\\pi$",
+        "$56\\pi$",
+        "$96\\pi$"
+      ],
+      "correct": 0,
+      "explanation": "SA = 2πr(r + h) = 2π·4·(4 + 6) = 8π·10 = 80π."
+    },
+    {
+      "id": "ge-qz-12",
+      "topic": "Geometry",
+      "question": "Each exterior angle of a regular octagon (8 sides) equals:",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "135°"
+      ],
+      "correct": 1,
+      "explanation": "Each exterior angle = 360°/n = 360°/8 = 45°. Interior angle = 180° − 45° = 135°."
+    },
+    {
+      "id": "co-qz-1",
+      "topic": "Counting",
+      "question": "Count of r picks from n where order matters and repeats are allowed:",
+      "options": [
+        "nʳ",
+        "n!",
+        "nCr",
+        "n! / (n − r)!"
+      ],
+      "correct": 0,
+      "explanation": "When items can repeat and order matters, the count is nʳ."
+    },
+    {
+      "id": "co-qz-2",
+      "topic": "Counting",
+      "question": "nCr counts:",
+      "options": [
+        "selections where order doesn't matter",
+        "arrangements where order matters",
+        "only circular arrangements",
+        "permutations with repetition"
+      ],
+      "correct": 0,
+      "explanation": "A combination is a selection — order doesn't matter (ABC = BCA)."
+    },
+    {
+      "id": "co-qz-3",
+      "topic": "Counting",
+      "question": "Number of ways to seat n people around a circle?",
+      "options": [
+        "(n − 1)!",
+        "n!",
+        "n²",
+        "n! / 2"
+      ],
+      "correct": 0,
+      "explanation": "Circular arrangements = (n − 1)! because rotations are equivalent."
+    },
+    {
+      "id": "co-qz-4",
+      "topic": "Counting",
+      "question": "10 people each shake hands once. How many handshakes?",
+      "options": [
+        "45",
+        "90",
+        "100",
+        "55"
+      ],
+      "correct": 0,
+      "explanation": "n(n − 1)/2 = 10 · 9 / 2 = 45."
+    },
+    {
+      "id": "co-qz-5",
+      "topic": "Counting",
+      "question": "You want to rank the top 3 finishers in a race of 8 runners. Which formula applies, and why?",
+      "options": [
+        "8C3 = 56, because order doesn't matter",
+        "8P3 = 336, because 1st/2nd/3rd are distinct positions",
+        "8³ = 512, because repeats are allowed",
+        "8! = 40320, because all runners are arranged"
+      ],
+      "correct": 1,
+      "explanation": "Ranking assigns distinct positions (1st ≠ 2nd), so order matters → permutation. 8P3 = 8!/(8−3)! = 8·7·6 = 336."
+    },
+    {
+      "id": "co-qz-6",
+      "topic": "Counting",
+      "question": "How many distinct ways can the letters of SUCCESS be arranged? (S×3, C×2, U×1, E×1)",
+      "options": [
+        "5040",
+        "720",
+        "420",
+        "840"
+      ],
+      "correct": 2,
+      "explanation": "Total letters = 7; S repeats 3 times, C repeats 2 times. Formula: 7!/(3!·2!) = 5040/12 = 420."
+    },
+    {
+      "id": "co-qz-7",
+      "topic": "Counting",
+      "question": "In a group of 50 students, 30 study Maths, 25 study Science, and 10 study both. How many study neither?",
+      "options": [
+        "5",
+        "50",
+        "45",
+        "15"
+      ],
+      "correct": 0,
+      "explanation": "Union = 30 + 25 − 10 = 45. Neither = 50 − 45 = 5. Use Total = A + B − both + neither."
+    },
+    {
+      "id": "co-qz-8",
+      "topic": "Counting",
+      "question": "The inclusion–exclusion formula for three sets |A ∪ B ∪ C| includes which terms?",
+      "options": [
+        "|A|+|B|+|C| − |A∩B| − |A∩C| − |B∩C| + |A∩B∩C|",
+        "|A|+|B|+|C| + |A∩B| + |A∩C| + |B∩C| − |A∩B∩C|",
+        "|A|+|B|+|C| − |A∩B∩C|",
+        "|A|+|B|+|C| − |A∩B| − |A∩C| − |B∩C|"
+      ],
+      "correct": 0,
+      "explanation": "Subtract all three pairwise overlaps (to undo double-counting), then add back the triple overlap (it was subtracted one too many times). The full formula: |A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|."
+    },
+    {
+      "id": "co-qz-9",
+      "topic": "Counting",
+      "question": "How many shortest lattice paths use 3 right-steps and 2 up-steps?",
+      "options": [
+        "6",
+        "12",
+        "10",
+        "5"
+      ],
+      "correct": 2,
+      "explanation": "You need 3 right-steps and 2 up-steps = 5 total steps. Choose which 3 are 'right': 5!/(3!·2!) = 10."
+    },
+    {
+      "id": "pr-qz-1",
+      "topic": "Probability",
+      "question": "P(at least one) equals:",
+      "options": [
+        "1 − P(none)",
+        "P(all)",
+        "1 − P(all)",
+        "P(none)"
+      ],
+      "correct": 0,
+      "explanation": "The complement of 'at least one' is 'none', so P(at least one) = 1 − P(none)."
+    },
+    {
+      "id": "pr-qz-2",
+      "topic": "Probability",
+      "question": "For independent events A and B, P(A and B) =",
+      "options": [
+        "P(A) × P(B)",
+        "P(A) + P(B)",
+        "P(A) − P(B)",
+        "P(A) / P(B)"
+      ],
+      "correct": 0,
+      "explanation": "Independent events multiply: P(A and B) = P(A) · P(B)."
+    },
+    {
+      "id": "pr-qz-3",
+      "topic": "Probability",
+      "question": "P(A or B) for any two events is:",
+      "options": [
+        "P(A) + P(B) − P(A and B)",
+        "P(A) + P(B)",
+        "P(A) × P(B)",
+        "P(A) − P(B)"
+      ],
+      "correct": 0,
+      "explanation": "Add the two probabilities, then subtract the overlap you double-counted."
+    },
+    {
+      "id": "pr-qz-4",
+      "topic": "Probability",
+      "question": "Two mutually exclusive events have an overlap probability of:",
+      "options": [
+        "0",
+        "1",
+        "0.5",
+        "P(A) · P(B)"
+      ],
+      "correct": 0,
+      "explanation": "Mutually exclusive events can't co-occur, so P(A and B) = 0."
+    },
+    {
+      "id": "pr-qz-5",
+      "topic": "Probability",
+      "question": "A fair coin is flipped twice. What is P(heads on both flips)?",
+      "options": [
+        "1/2",
+        "1/4",
+        "3/4",
+        "1/8"
+      ],
+      "correct": 1,
+      "explanation": "The flips are independent, so P(heads AND heads) = P(heads) × P(heads) = 1/2 × 1/2 = 1/4."
+    },
+    {
+      "id": "pr-qz-6",
+      "topic": "Probability",
+      "question": "A game pays $5 if you win (P = 0.4) and you lose $3 if you lose (P = 0.6). The expected value per play is:",
+      "options": [
+        "$1.00",
+        "−$0.20",
+        "$2.00",
+        "$0.20"
+      ],
+      "correct": 3,
+      "explanation": "EV = 5 × 0.4 + (−3) × 0.6 = 2.00 − 1.80 = $0.20 > 0, so the game is slightly favorable."
+    },
+    {
+      "id": "pr-qz-7",
+      "topic": "Probability",
+      "question": "Which of the following is NOT one of the BINS conditions for a binomial experiment?",
+      "options": [
+        "Exactly two outcomes per trial",
+        "Trials are independent",
+        "Outcomes must be normally distributed",
+        "Same success probability each trial"
+      ],
+      "correct": 2,
+      "explanation": "BINS: Binary outcomes, Independent trials, Number of trials fixed, Same probability. Normal distribution is not a requirement."
+    },
+    {
+      "id": "pr-qz-8",
+      "topic": "Probability",
+      "question": "A bag has 3 red and 2 blue balls. You draw one ball and do NOT replace it, then draw again. Are the two draws independent?",
+      "options": [
+        "Yes — the colours are still the same",
+        "Yes — only the order matters",
+        "Cannot be determined",
+        "No — the pool shrinks, so probabilities change"
+      ],
+      "correct": 3,
+      "explanation": "Without replacement the total drops from 5 to 4 after the first draw, changing the probability on the second draw. The events are dependent."
+    },
+    {
+      "id": "pr-qz-9",
+      "topic": "Probability",
+      "question": "Events A and B are mutually exclusive. Which statement must be true?",
+      "options": [
+        "A and B are also independent",
+        "P(A and B) = P(A) × P(B)",
+        "P(A and B) = 0",
+        "P(A or B) = P(A) + P(B)"
+      ],
+      "correct": 2,
+      "explanation": "Mutually exclusive means they cannot co-occur: P(A and B) = 0. They are generally NOT independent (if one happens, the other definitely doesn't — that is dependence)."
+    },
+    {
+      "id": "st-qz-1",
+      "topic": "Statistics",
+      "questionLatex": "The z-score $z = \\frac{x - \\mu}{\\sigma}$ measures:",
+      "options": [
+        "how many SDs x is from the mean",
+        "the mean of x",
+        "the variance",
+        "the median"
+      ],
+      "correct": 0,
+      "explanation": "z standardizes x: it is the number of standard deviations from the mean."
+    },
+    {
+      "id": "st-qz-2",
+      "topic": "Statistics",
+      "question": "Empirical Rule: about what % of a normal distribution lies within ±2σ?",
+      "options": [
+        "95%",
+        "68%",
+        "99.7%",
+        "50%"
+      ],
+      "correct": 0,
+      "explanation": "±1σ ≈ 68%, ±2σ ≈ 95%, ±3σ ≈ 99.7%."
+    },
+    {
+      "id": "st-qz-3",
+      "topic": "Statistics",
+      "question": "The interquartile range is:",
+      "options": [
+        "Q₃ − Q₁",
+        "max − min",
+        "Q₂ − Q₁",
+        "Q₃ − Q₂"
+      ],
+      "correct": 0,
+      "explanation": "IQR = Q₃ − Q₁, the spread of the middle 50%."
+    },
+    {
+      "id": "st-qz-4",
+      "topic": "Statistics",
+      "question": "Adding a constant to every value in a data set changes the standard deviation how?",
+      "options": [
+        "no change",
+        "increases it",
+        "decreases it",
+        "doubles it"
+      ],
+      "correct": 0,
+      "explanation": "Shifting all values leaves the spread unchanged; only scaling by k changes σ (by |k|)."
+    },
+    {
+      "id": "st-qz-5",
+      "topic": "Statistics",
+      "question": "A z-score of 0 means x is:",
+      "options": [
+        "at the mean",
+        "one SD above the mean",
+        "the minimum",
+        "the median only"
+      ],
+      "correct": 0,
+      "explanation": "z = 0 ⇒ x = μ, exactly at the mean."
+    },
+    {
+      "id": "wp-qz-1",
+      "topic": "Word Problems",
+      "question": "Distance equals:",
+      "options": [
+        "Rate × Time",
+        "Rate / Time",
+        "Time / Rate",
+        "Rate + Time"
+      ],
+      "correct": 0,
+      "explanation": "Distance = Rate × Time; rearrange to solve for rate or time."
+    },
+    {
+      "id": "wp-qz-2",
+      "topic": "Word Problems",
+      "question": "Two cars move toward each other. Their relative speed is:",
+      "options": [
+        "the sum of their speeds",
+        "the difference of their speeds",
+        "the average of their speeds",
+        "the faster speed"
+      ],
+      "correct": 0,
+      "explanation": "Opposite directions add; same direction subtract."
+    },
+    {
+      "id": "wp-qz-3",
+      "topic": "Word Problems",
+      "question": "Compound interest amount A is:",
+      "options": [
+        "P(1 + r/n)^(nt)",
+        "P · r · t",
+        "P + r + t",
+        "P(1 + rt)"
+      ],
+      "correct": 0,
+      "explanation": "A = P(1 + r/n)^(nt); P · r · t is simple interest."
+    },
+    {
+      "id": "wp-qz-4",
+      "topic": "Word Problems",
+      "question": "Average speed for a whole trip is:",
+      "options": [
+        "total distance / total time",
+        "the average of the speeds",
+        "distance × time",
+        "the fastest speed"
+      ],
+      "correct": 0,
+      "explanation": "Average speed = total distance ÷ total time, not the mean of the speeds."
+    }
   ],
-
   "formulas": [
-    { "id": "np-fm-1", "topic": "Number Properties", "label": "Number of positive factors of pᵃ·qᵇ", "latex": "(a+1)(b+1)" },
-    { "id": "np-fm-2", "topic": "Number Properties", "label": "Trailing zeros in n!", "latex": "\\left\\lfloor \\tfrac{n}{5} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{25} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{125} \\right\\rfloor + \\cdots" },
-    { "id": "np-fm-3", "topic": "Number Properties", "label": "Exponent of prime p in n! (Legendre)", "latex": "\\sum_{k=1}^{\\infty}\\left\\lfloor \\tfrac{n}{p^{k}} \\right\\rfloor" },
-    { "id": "np-fm-4", "topic": "Number Properties", "label": "Percent increase", "latex": "\\dfrac{|\\text{difference}|}{\\text{smaller number}} \\times 100" },
-    { "id": "np-fm-5", "topic": "Number Properties", "label": "Percent decrease", "latex": "\\dfrac{|\\text{difference}|}{\\text{larger number}} \\times 100" },
-    { "id": "np-fm-6", "topic": "Number Properties", "label": "Terminating-decimal denominator", "latex": "2^{c} \\times 5^{d}" },
-    { "id": "np-fm-7", "topic": "Number Properties", "label": "Triangle inequality for absolute values", "latex": "|a + b| \\le |a| + |b|" },
-    { "id": "np-fm-8", "topic": "Number Properties", "label": "Part-to-whole share of a ratio a : b", "latex": "\\dfrac{a}{a + b}" },
-    { "id": "np-fm-9", "topic": "Number Properties", "label": "Sum of the first n positive integers", "latex": "\\dfrac{n(n+1)}{2}" },
-    { "id": "np-fm-10", "topic": "Number Properties", "label": "Sum of the first n even positive integers", "latex": "n(n+1)" },
-    { "id": "np-fm-11", "topic": "Number Properties", "label": "Sum of the first n odd positive integers", "latex": "n^{2}" },
-    { "id": "np-fm-12", "topic": "Number Properties", "label": "Absolute value of a product", "latex": "|ab| = |a|\\,|b|" },
-    { "id": "np-fm-13", "topic": "Number Properties", "label": "Mixed-repeating decimal to fraction (e.g. 0.2141414…)", "latex": "\\dfrac{(\\text{all digits, 1 cycle}) - (\\text{non-repeating digits})}{9{\\cdots}0{\\cdots}}" },
-
-    { "id": "al-fm-1", "topic": "Algebra", "label": "Quadratic formula (roots)", "latex": "x = \\dfrac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}" },
-    { "id": "al-fm-2", "topic": "Algebra", "label": "Discriminant of a quadratic", "latex": "b^{2} - 4ac" },
-    { "id": "al-fm-3", "topic": "Algebra", "label": "Sum of the roots", "latex": "-\\dfrac{b}{a}" },
-    { "id": "al-fm-4", "topic": "Algebra", "label": "Product of the roots", "latex": "\\dfrac{c}{a}" },
-    { "id": "al-fm-5", "topic": "Algebra", "label": "Axis of symmetry / vertex x", "latex": "x = -\\dfrac{b}{2a}" },
-    { "id": "al-fm-6", "topic": "Algebra", "label": "Difference of squares", "latex": "a^{2} - b^{2} = (a+b)(a-b)" },
-    { "id": "al-fm-7", "topic": "Algebra", "label": "Square of a sum", "latex": "(a+b)^{2} = a^{2} + 2ab + b^{2}" },
-    { "id": "al-fm-8", "topic": "Algebra", "label": "Cube of a sum", "latex": "(a+b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}" },
-    { "id": "al-fm-9", "topic": "Algebra", "label": "Number of terms in an arithmetic sequence", "latex": "\\dfrac{\\text{last} - \\text{first}}{d} + 1" },
-    { "id": "al-fm-10", "topic": "Algebra", "label": "Sum of an arithmetic sequence", "latex": "S = n \\cdot \\dfrac{a_1 + a_n}{2}" },
-    { "id": "al-fm-11", "topic": "Algebra", "label": "Sum of a geometric sequence", "latex": "S = \\dfrac{a(r^{n} - 1)}{r - 1}" },
-    { "id": "al-fm-12", "topic": "Algebra", "label": "Summation notation", "latex": "\\sum_{n=k}^{m} a_n = a_k + a_{k+1} + \\cdots + a_m" },
-    { "id": "al-fm-13", "topic": "Algebra", "label": "Negative exponent", "latex": "x^{-n} = \\dfrac{1}{x^{n}}" },
-    { "id": "al-fm-14", "topic": "Algebra", "label": "Cube of a difference", "latex": "(a-b)^{3} = a^{3} - 3a^{2}b + 3ab^{2} - b^{3}" },
-    { "id": "al-fm-15", "topic": "Algebra", "label": "Square of a difference", "latex": "(a-b)^{2} = a^{2} - 2ab + b^{2}" },
-    { "id": "al-fm-16", "topic": "Algebra", "label": "Infinite geometric series sum (|r| < 1)", "latex": "S = \\dfrac{a}{1 - r}" },
-    { "id": "al-fm-17", "topic": "Algebra", "label": "Square root of a square", "latex": "\\sqrt{a^{2}} = |a|" },
-
-    { "id": "ge-fm-1", "topic": "Geometry", "label": "Distance between two points", "latex": "\\sqrt{(x_1 - x_2)^{2} + (y_1 - y_2)^{2}}" },
-    { "id": "ge-fm-2", "topic": "Geometry", "label": "Midpoint", "latex": "\\left( \\dfrac{x_1 + x_2}{2},\\ \\dfrac{y_1 + y_2}{2} \\right)" },
-    { "id": "ge-fm-3", "topic": "Geometry", "label": "Slope", "latex": "m = \\dfrac{y_2 - y_1}{x_2 - x_1}" },
-    { "id": "ge-fm-4", "topic": "Geometry", "label": "Pythagorean theorem", "latex": "a^{2} + b^{2} = c^{2}" },
-    { "id": "ge-fm-5", "topic": "Geometry", "label": "Area of a triangle", "latex": "\\tfrac{1}{2} \\times \\text{base} \\times \\text{height}" },
-    { "id": "ge-fm-6", "topic": "Geometry", "label": "Area of an equilateral triangle", "latex": "\\dfrac{\\sqrt{3}}{4}\\, s^{2}" },
-    { "id": "ge-fm-7", "topic": "Geometry", "label": "Circumference of a circle", "latex": "2\\pi r = \\pi d" },
-    { "id": "ge-fm-8", "topic": "Geometry", "label": "Area of a circle", "latex": "\\pi r^{2}" },
-    { "id": "ge-fm-9", "topic": "Geometry", "label": "Sector area", "latex": "\\dfrac{\\theta}{360^{\\circ}} \\times \\pi r^{2}" },
-    { "id": "ge-fm-10", "topic": "Geometry", "label": "Sum of interior angles (n-gon)", "latex": "(n-2)\\times 180^{\\circ}" },
-    { "id": "ge-fm-11", "topic": "Geometry", "label": "Volume of a cylinder", "latex": "\\pi r^{2} h" },
-    { "id": "ge-fm-12", "topic": "Geometry", "label": "Surface area of a cylinder", "latex": "2\\pi r (r + h)" },
-    { "id": "ge-fm-13", "topic": "Geometry", "label": "Longest diagonal of a cuboid", "latex": "\\sqrt{x^{2} + y^{2} + z^{2}}" },
-    { "id": "ge-fm-14", "topic": "Geometry", "label": "Equation of a circle", "latex": "(x - h)^{2} + (y - k)^{2} = r^{2}" },
-    { "id": "ge-fm-15", "topic": "Geometry", "label": "Area of a trapezoid", "latex": "\\dfrac{b_1 + b_2}{2}\\times h" },
-    { "id": "ge-fm-16", "topic": "Geometry", "label": "Point-slope form", "latex": "y - y_1 = m(x - x_1)" },
-    { "id": "ge-fm-17", "topic": "Geometry", "label": "Slope-intercept form", "latex": "y = mx + c" },
-    { "id": "ge-fm-18", "topic": "Geometry", "label": "Reflection across y = x", "latex": "(x,y)\\to(y,x)" },
-    { "id": "ge-fm-19", "topic": "Geometry", "label": "Reflection across y = −x", "latex": "(x,y)\\to(-y,-x)" },
-    { "id": "ge-fm-20", "topic": "Geometry", "label": "90° anticlockwise rotation", "latex": "(x,y)\\to(-y,x)" },
-    { "id": "ge-fm-21", "topic": "Geometry", "label": "90° clockwise rotation", "latex": "(x,y)\\to(y,-x)" },
-    { "id": "ge-fm-22", "topic": "Geometry", "label": "180° rotation", "latex": "(x,y)\\to(-x,-y)" },
-    { "id": "ge-fm-23", "topic": "Geometry", "label": "Volume ratio of similar solids", "latex": "\\left(\\dfrac{s_1}{s_2}\\right)^{3}" },
-    { "id": "ge-fm-24", "topic": "Geometry", "label": "Each exterior angle of a regular n-gon", "latex": "\\dfrac{360^{\\circ}}{n}" },
-    { "id": "ge-fm-25", "topic": "Geometry", "label": "Slope of parabola ax²+bx+c at point x", "latex": "2ax + b" },
-
-    { "id": "co-fm-1", "topic": "Counting", "label": "Arrangements of n distinct items", "latex": "n!" },
-    { "id": "co-fm-2", "topic": "Counting", "label": "Permutations of r from n (order matters)", "latex": "{}^{n}P_{r} = \\dfrac{n!}{(n-r)!}" },
-    { "id": "co-fm-3", "topic": "Counting", "label": "Combinations of r from n (order doesn't matter)", "latex": "{}^{n}C_{r} = \\dfrac{n!}{r!\\,(n-r)!}" },
-    { "id": "co-fm-4", "topic": "Counting", "label": "Permutation with repetition", "latex": "n^{r}" },
-    { "id": "co-fm-5", "topic": "Counting", "label": "Arrangements with repeated items", "latex": "\\dfrac{n!}{p!\\,q!\\cdots}" },
-    { "id": "co-fm-6", "topic": "Counting", "label": "Circular arrangements", "latex": "(n-1)!" },
-    { "id": "co-fm-7", "topic": "Counting", "label": "Combination symmetry", "latex": "{}^{n}C_{r} = {}^{n}C_{n-r}" },
-    { "id": "co-fm-8", "topic": "Counting", "label": "Handshakes", "latex": "\\dfrac{n(n-1)}{2}" },
-    { "id": "co-fm-9", "topic": "Counting", "label": "Grid paths (m right, n down)", "latex": "\\dfrac{(m+n)!}{m!\\,n!}" },
-    { "id": "co-fm-10", "topic": "Counting", "label": "Inclusion–exclusion (2 sets)", "latex": "|A \\cup B| = |A| + |B| - |A \\cap B|" },
-    { "id": "co-fm-11", "topic": "Counting", "label": "Inclusion–exclusion (3 sets)", "latex": "|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|" },
-
-    { "id": "pr-fm-1", "topic": "Probability", "label": "Probability of an event", "latex": "P = \\dfrac{\\text{favorable}}{\\text{total}}" },
-    { "id": "pr-fm-2", "topic": "Probability", "label": "Complement rule", "latex": "P(A') = 1 - P(A)" },
-    { "id": "pr-fm-3", "topic": "Probability", "label": "At least one", "latex": "P(\\text{at least one}) = 1 - P(\\text{none})" },
-    { "id": "pr-fm-4", "topic": "Probability", "label": "Independent events (and)", "latex": "P(A \\cap B) = P(A)\\,P(B)" },
-    { "id": "pr-fm-5", "topic": "Probability", "label": "General 'or'", "latex": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)" },
-    { "id": "pr-fm-6", "topic": "Probability", "label": "Conditional probability", "latex": "P(A \\cap B) = P(A)\\,P(B \\mid A)" },
-    { "id": "pr-fm-7", "topic": "Probability", "label": "Binomial probability (k of n)", "latex": "P(X=k) = {}^{n}C_{k}\\, p^{k} (1-p)^{n-k}" },
-
-    { "id": "st-fm-1", "topic": "Statistics", "label": "Mean", "latex": "\\bar{x} = \\dfrac{\\sum x}{n}" },
-    { "id": "st-fm-2", "topic": "Statistics", "label": "Weighted average", "latex": "\\dfrac{\\sum (x_i\\, w_i)}{\\sum w_i}" },
-    { "id": "st-fm-3", "topic": "Statistics", "label": "Range", "latex": "\\text{max} - \\text{min}" },
-    { "id": "st-fm-4", "topic": "Statistics", "label": "Population standard deviation", "latex": "\\sigma = \\sqrt{\\dfrac{1}{N}\\sum (x_i - \\mu)^{2}}" },
-    { "id": "st-fm-5", "topic": "Statistics", "label": "Sample standard deviation", "latex": "s = \\sqrt{\\dfrac{\\sum (x - \\bar{x})^{2}}{n - 1}}" },
-    { "id": "st-fm-6", "topic": "Statistics", "label": "Interquartile range", "latex": "\\text{IQR} = Q_3 - Q_1" },
-    { "id": "st-fm-7", "topic": "Statistics", "label": "Percentile rank", "latex": "\\dfrac{\\#\\,\\text{values below } x}{\\text{total values}} \\times 100" },
-    { "id": "st-fm-8", "topic": "Statistics", "label": "Z-score", "latex": "z = \\dfrac{x - \\mu}{\\sigma}" },
-    { "id": "st-fm-9", "topic": "Statistics", "label": "Empirical rule (68-95-99.7)", "latex": "\\pm 1\\sigma \\approx 68\\%,\\ \\pm 2\\sigma \\approx 95\\%,\\ \\pm 3\\sigma \\approx 99.7\\%" },
-    { "id": "st-fm-10", "topic": "Statistics", "label": "Expected value", "latex": "E(X) = \\sum x\\,P(x)" },
-    { "id": "st-fm-11", "topic": "Statistics", "label": "Continuous uniform mean", "latex": "\\dfrac{a + b}{2}" },
-    { "id": "st-fm-12", "topic": "Statistics", "label": "Continuous uniform standard deviation", "latex": "\\dfrac{b - a}{\\sqrt{12}}" },
-
-    { "id": "wp-fm-1", "topic": "Word Problems", "label": "Profit", "latex": "\\text{Profit} = \\text{Revenue} - \\text{Expenses}" },
-    { "id": "wp-fm-2", "topic": "Word Problems", "label": "Distance", "latex": "\\text{Distance} = \\text{Rate} \\times \\text{Time}" },
-    { "id": "wp-fm-3", "topic": "Word Problems", "label": "Average speed", "latex": "\\dfrac{\\text{total distance}}{\\text{total time}}" },
-    { "id": "wp-fm-4", "topic": "Word Problems", "label": "Work (identical machines)", "latex": "W = n\\,r\\,t" },
-    { "id": "wp-fm-5", "topic": "Word Problems", "label": "Mixture concentration", "latex": "\\dfrac{\\text{component}}{\\text{total}}" },
-    { "id": "wp-fm-6", "topic": "Word Problems", "label": "Simple interest", "latex": "SI = P\\,r\\,t" },
-    { "id": "wp-fm-7", "topic": "Word Problems", "label": "Compound interest", "latex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}" }
+    {
+      "id": "np-fm-1",
+      "topic": "Number Properties",
+      "label": "Number of positive factors of pᵃ·qᵇ",
+      "latex": "(a+1)(b+1)"
+    },
+    {
+      "id": "np-fm-2",
+      "topic": "Number Properties",
+      "label": "Trailing zeros in n!",
+      "latex": "\\left\\lfloor \\tfrac{n}{5} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{25} \\right\\rfloor + \\left\\lfloor \\tfrac{n}{125} \\right\\rfloor + \\cdots"
+    },
+    {
+      "id": "np-fm-3",
+      "topic": "Number Properties",
+      "label": "Exponent of prime p in n! (Legendre)",
+      "latex": "\\sum_{k=1}^{\\infty}\\left\\lfloor \\tfrac{n}{p^{k}} \\right\\rfloor"
+    },
+    {
+      "id": "np-fm-4",
+      "topic": "Number Properties",
+      "label": "Percent increase",
+      "latex": "\\dfrac{|\\text{difference}|}{\\text{smaller number}} \\times 100"
+    },
+    {
+      "id": "np-fm-5",
+      "topic": "Number Properties",
+      "label": "Percent decrease",
+      "latex": "\\dfrac{|\\text{difference}|}{\\text{larger number}} \\times 100"
+    },
+    {
+      "id": "np-fm-6",
+      "topic": "Number Properties",
+      "label": "Terminating-decimal denominator",
+      "latex": "2^{c} \\times 5^{d}"
+    },
+    {
+      "id": "np-fm-7",
+      "topic": "Number Properties",
+      "label": "Triangle inequality for absolute values",
+      "latex": "|a + b| \\le |a| + |b|"
+    },
+    {
+      "id": "np-fm-8",
+      "topic": "Number Properties",
+      "label": "Part-to-whole share of a ratio a : b",
+      "latex": "\\dfrac{a}{a + b}"
+    },
+    {
+      "id": "np-fm-9",
+      "topic": "Number Properties",
+      "label": "Sum of the first n positive integers",
+      "latex": "\\dfrac{n(n+1)}{2}"
+    },
+    {
+      "id": "np-fm-10",
+      "topic": "Number Properties",
+      "label": "Sum of the first n even positive integers",
+      "latex": "n(n+1)"
+    },
+    {
+      "id": "np-fm-11",
+      "topic": "Number Properties",
+      "label": "Sum of the first n odd positive integers",
+      "latex": "n^{2}"
+    },
+    {
+      "id": "np-fm-12",
+      "topic": "Number Properties",
+      "label": "Absolute value of a product",
+      "latex": "|ab| = |a|\\,|b|"
+    },
+    {
+      "id": "np-fm-13",
+      "topic": "Number Properties",
+      "label": "Mixed-repeating decimal to fraction (e.g. 0.2141414…)",
+      "latex": "\\dfrac{(\\text{all digits, 1 cycle}) - (\\text{non-repeating digits})}{9{\\cdots}0{\\cdots}}"
+    },
+    {
+      "id": "al-fm-1",
+      "topic": "Algebra",
+      "label": "Quadratic formula (roots)",
+      "latex": "x = \\dfrac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}"
+    },
+    {
+      "id": "al-fm-2",
+      "topic": "Algebra",
+      "label": "Discriminant of a quadratic",
+      "latex": "b^{2} - 4ac"
+    },
+    {
+      "id": "al-fm-3",
+      "topic": "Algebra",
+      "label": "Sum of the roots",
+      "latex": "-\\dfrac{b}{a}"
+    },
+    {
+      "id": "al-fm-4",
+      "topic": "Algebra",
+      "label": "Product of the roots",
+      "latex": "\\dfrac{c}{a}"
+    },
+    {
+      "id": "al-fm-5",
+      "topic": "Algebra",
+      "label": "Axis of symmetry / vertex x",
+      "latex": "x = -\\dfrac{b}{2a}"
+    },
+    {
+      "id": "al-fm-6",
+      "topic": "Algebra",
+      "label": "Difference of squares",
+      "latex": "a^{2} - b^{2} = (a+b)(a-b)"
+    },
+    {
+      "id": "al-fm-7",
+      "topic": "Algebra",
+      "label": "Square of a sum",
+      "latex": "(a+b)^{2} = a^{2} + 2ab + b^{2}"
+    },
+    {
+      "id": "al-fm-8",
+      "topic": "Algebra",
+      "label": "Cube of a sum",
+      "latex": "(a+b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}"
+    },
+    {
+      "id": "al-fm-9",
+      "topic": "Algebra",
+      "label": "Number of terms in an arithmetic sequence",
+      "latex": "\\dfrac{\\text{last} - \\text{first}}{d} + 1"
+    },
+    {
+      "id": "al-fm-10",
+      "topic": "Algebra",
+      "label": "Sum of an arithmetic sequence",
+      "latex": "S = n \\cdot \\dfrac{a_1 + a_n}{2}"
+    },
+    {
+      "id": "al-fm-11",
+      "topic": "Algebra",
+      "label": "Sum of a geometric sequence",
+      "latex": "S = \\dfrac{a(r^{n} - 1)}{r - 1}"
+    },
+    {
+      "id": "al-fm-12",
+      "topic": "Algebra",
+      "label": "Summation notation",
+      "latex": "\\sum_{n=k}^{m} a_n = a_k + a_{k+1} + \\cdots + a_m"
+    },
+    {
+      "id": "al-fm-13",
+      "topic": "Algebra",
+      "label": "Negative exponent",
+      "latex": "x^{-n} = \\dfrac{1}{x^{n}}"
+    },
+    {
+      "id": "al-fm-14",
+      "topic": "Algebra",
+      "label": "Cube of a difference",
+      "latex": "(a-b)^{3} = a^{3} - 3a^{2}b + 3ab^{2} - b^{3}"
+    },
+    {
+      "id": "al-fm-15",
+      "topic": "Algebra",
+      "label": "Square of a difference",
+      "latex": "(a-b)^{2} = a^{2} - 2ab + b^{2}"
+    },
+    {
+      "id": "al-fm-16",
+      "topic": "Algebra",
+      "label": "Infinite geometric series sum (|r| < 1)",
+      "latex": "S = \\dfrac{a}{1 - r}"
+    },
+    {
+      "id": "al-fm-17",
+      "topic": "Algebra",
+      "label": "Square root of a square",
+      "latex": "\\sqrt{a^{2}} = |a|"
+    },
+    {
+      "id": "ge-fm-1",
+      "topic": "Geometry",
+      "label": "Distance between two points",
+      "latex": "\\sqrt{(x_1 - x_2)^{2} + (y_1 - y_2)^{2}}"
+    },
+    {
+      "id": "ge-fm-2",
+      "topic": "Geometry",
+      "label": "Midpoint",
+      "latex": "\\left( \\dfrac{x_1 + x_2}{2},\\ \\dfrac{y_1 + y_2}{2} \\right)"
+    },
+    {
+      "id": "ge-fm-3",
+      "topic": "Geometry",
+      "label": "Slope",
+      "latex": "m = \\dfrac{y_2 - y_1}{x_2 - x_1}"
+    },
+    {
+      "id": "ge-fm-4",
+      "topic": "Geometry",
+      "label": "Pythagorean theorem",
+      "latex": "a^{2} + b^{2} = c^{2}"
+    },
+    {
+      "id": "ge-fm-5",
+      "topic": "Geometry",
+      "label": "Area of a triangle",
+      "latex": "\\tfrac{1}{2} \\times \\text{base} \\times \\text{height}"
+    },
+    {
+      "id": "ge-fm-6",
+      "topic": "Geometry",
+      "label": "Area of an equilateral triangle",
+      "latex": "\\dfrac{\\sqrt{3}}{4}\\, s^{2}"
+    },
+    {
+      "id": "ge-fm-7",
+      "topic": "Geometry",
+      "label": "Circumference of a circle",
+      "latex": "2\\pi r = \\pi d"
+    },
+    {
+      "id": "ge-fm-8",
+      "topic": "Geometry",
+      "label": "Area of a circle",
+      "latex": "\\pi r^{2}"
+    },
+    {
+      "id": "ge-fm-9",
+      "topic": "Geometry",
+      "label": "Sector area",
+      "latex": "\\dfrac{\\theta}{360^{\\circ}} \\times \\pi r^{2}"
+    },
+    {
+      "id": "ge-fm-10",
+      "topic": "Geometry",
+      "label": "Sum of interior angles (n-gon)",
+      "latex": "(n-2)\\times 180^{\\circ}"
+    },
+    {
+      "id": "ge-fm-11",
+      "topic": "Geometry",
+      "label": "Volume of a cylinder",
+      "latex": "\\pi r^{2} h"
+    },
+    {
+      "id": "ge-fm-12",
+      "topic": "Geometry",
+      "label": "Surface area of a cylinder",
+      "latex": "2\\pi r (r + h)"
+    },
+    {
+      "id": "ge-fm-13",
+      "topic": "Geometry",
+      "label": "Longest diagonal of a cuboid",
+      "latex": "\\sqrt{x^{2} + y^{2} + z^{2}}"
+    },
+    {
+      "id": "ge-fm-14",
+      "topic": "Geometry",
+      "label": "Equation of a circle",
+      "latex": "(x - h)^{2} + (y - k)^{2} = r^{2}"
+    },
+    {
+      "id": "ge-fm-15",
+      "topic": "Geometry",
+      "label": "Area of a trapezoid",
+      "latex": "\\dfrac{b_1 + b_2}{2}\\times h"
+    },
+    {
+      "id": "ge-fm-16",
+      "topic": "Geometry",
+      "label": "Point-slope form",
+      "latex": "y - y_1 = m(x - x_1)"
+    },
+    {
+      "id": "ge-fm-17",
+      "topic": "Geometry",
+      "label": "Slope-intercept form",
+      "latex": "y = mx + c"
+    },
+    {
+      "id": "ge-fm-18",
+      "topic": "Geometry",
+      "label": "Reflection across y = x",
+      "latex": "(x,y)\\to(y,x)"
+    },
+    {
+      "id": "ge-fm-19",
+      "topic": "Geometry",
+      "label": "Reflection across y = −x",
+      "latex": "(x,y)\\to(-y,-x)"
+    },
+    {
+      "id": "ge-fm-20",
+      "topic": "Geometry",
+      "label": "90° anticlockwise rotation",
+      "latex": "(x,y)\\to(-y,x)"
+    },
+    {
+      "id": "ge-fm-21",
+      "topic": "Geometry",
+      "label": "90° clockwise rotation",
+      "latex": "(x,y)\\to(y,-x)"
+    },
+    {
+      "id": "ge-fm-22",
+      "topic": "Geometry",
+      "label": "180° rotation",
+      "latex": "(x,y)\\to(-x,-y)"
+    },
+    {
+      "id": "ge-fm-23",
+      "topic": "Geometry",
+      "label": "Volume ratio of similar solids",
+      "latex": "\\left(\\dfrac{s_1}{s_2}\\right)^{3}"
+    },
+    {
+      "id": "ge-fm-24",
+      "topic": "Geometry",
+      "label": "Each exterior angle of a regular n-gon",
+      "latex": "\\dfrac{360^{\\circ}}{n}"
+    },
+    {
+      "id": "ge-fm-25",
+      "topic": "Geometry",
+      "label": "Slope of parabola ax²+bx+c at point x",
+      "latex": "2ax + b"
+    },
+    {
+      "id": "co-fm-1",
+      "topic": "Counting",
+      "label": "Arrangements of n distinct items",
+      "latex": "n!"
+    },
+    {
+      "id": "co-fm-2",
+      "topic": "Counting",
+      "label": "Permutations of r from n (order matters)",
+      "latex": "{}^{n}P_{r} = \\dfrac{n!}{(n-r)!}"
+    },
+    {
+      "id": "co-fm-3",
+      "topic": "Counting",
+      "label": "Combinations of r from n (order doesn't matter)",
+      "latex": "{}^{n}C_{r} = \\dfrac{n!}{r!\\,(n-r)!}"
+    },
+    {
+      "id": "co-fm-4",
+      "topic": "Counting",
+      "label": "Permutation with repetition",
+      "latex": "n^{r}"
+    },
+    {
+      "id": "co-fm-5",
+      "topic": "Counting",
+      "label": "Arrangements with repeated items",
+      "latex": "\\dfrac{n!}{p!\\,q!\\cdots}"
+    },
+    {
+      "id": "co-fm-6",
+      "topic": "Counting",
+      "label": "Circular arrangements",
+      "latex": "(n-1)!"
+    },
+    {
+      "id": "co-fm-7",
+      "topic": "Counting",
+      "label": "Combination symmetry",
+      "latex": "{}^{n}C_{r} = {}^{n}C_{n-r}"
+    },
+    {
+      "id": "co-fm-8",
+      "topic": "Counting",
+      "label": "Handshakes",
+      "latex": "\\dfrac{n(n-1)}{2}"
+    },
+    {
+      "id": "co-fm-9",
+      "topic": "Counting",
+      "label": "Grid paths (m right, n down)",
+      "latex": "\\dfrac{(m+n)!}{m!\\,n!}"
+    },
+    {
+      "id": "co-fm-10",
+      "topic": "Counting",
+      "label": "Inclusion–exclusion (2 sets)",
+      "latex": "|A \\cup B| = |A| + |B| - |A \\cap B|"
+    },
+    {
+      "id": "co-fm-11",
+      "topic": "Counting",
+      "label": "Inclusion–exclusion (3 sets)",
+      "latex": "|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|"
+    },
+    {
+      "id": "pr-fm-1",
+      "topic": "Probability",
+      "label": "Probability of an event",
+      "latex": "P = \\dfrac{\\text{favorable}}{\\text{total}}"
+    },
+    {
+      "id": "pr-fm-2",
+      "topic": "Probability",
+      "label": "Complement rule",
+      "latex": "P(A') = 1 - P(A)"
+    },
+    {
+      "id": "pr-fm-3",
+      "topic": "Probability",
+      "label": "At least one",
+      "latex": "P(\\text{at least one}) = 1 - P(\\text{none})"
+    },
+    {
+      "id": "pr-fm-4",
+      "topic": "Probability",
+      "label": "Independent events (and)",
+      "latex": "P(A \\cap B) = P(A)\\,P(B)"
+    },
+    {
+      "id": "pr-fm-5",
+      "topic": "Probability",
+      "label": "General 'or'",
+      "latex": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)"
+    },
+    {
+      "id": "pr-fm-6",
+      "topic": "Probability",
+      "label": "Conditional probability",
+      "latex": "P(A \\cap B) = P(A)\\,P(B \\mid A)"
+    },
+    {
+      "id": "pr-fm-7",
+      "topic": "Probability",
+      "label": "Binomial probability (k of n)",
+      "latex": "P(X=k) = {}^{n}C_{k}\\, p^{k} (1-p)^{n-k}"
+    },
+    {
+      "id": "pr-fm-8",
+      "topic": "Probability",
+      "label": "Expected value of a game",
+      "latex": "EV = (\\text{gain})\\,P(\\text{win}) + (\\text{loss})\\,P(\\text{lose})"
+    },
+    {
+      "id": "st-fm-1",
+      "topic": "Statistics",
+      "label": "Mean",
+      "latex": "\\bar{x} = \\dfrac{\\sum x}{n}"
+    },
+    {
+      "id": "st-fm-2",
+      "topic": "Statistics",
+      "label": "Weighted average",
+      "latex": "\\dfrac{\\sum (x_i\\, w_i)}{\\sum w_i}"
+    },
+    {
+      "id": "st-fm-3",
+      "topic": "Statistics",
+      "label": "Range",
+      "latex": "\\text{max} - \\text{min}"
+    },
+    {
+      "id": "st-fm-4",
+      "topic": "Statistics",
+      "label": "Population standard deviation",
+      "latex": "\\sigma = \\sqrt{\\dfrac{1}{N}\\sum (x_i - \\mu)^{2}}"
+    },
+    {
+      "id": "st-fm-5",
+      "topic": "Statistics",
+      "label": "Sample standard deviation",
+      "latex": "s = \\sqrt{\\dfrac{\\sum (x - \\bar{x})^{2}}{n - 1}}"
+    },
+    {
+      "id": "st-fm-6",
+      "topic": "Statistics",
+      "label": "Interquartile range",
+      "latex": "\\text{IQR} = Q_3 - Q_1"
+    },
+    {
+      "id": "st-fm-7",
+      "topic": "Statistics",
+      "label": "Percentile rank",
+      "latex": "\\dfrac{\\#\\,\\text{values below } x}{\\text{total values}} \\times 100"
+    },
+    {
+      "id": "st-fm-8",
+      "topic": "Statistics",
+      "label": "Z-score",
+      "latex": "z = \\dfrac{x - \\mu}{\\sigma}"
+    },
+    {
+      "id": "st-fm-9",
+      "topic": "Statistics",
+      "label": "Empirical rule (68-95-99.7)",
+      "latex": "\\pm 1\\sigma \\approx 68\\%,\\ \\pm 2\\sigma \\approx 95\\%,\\ \\pm 3\\sigma \\approx 99.7\\%"
+    },
+    {
+      "id": "st-fm-10",
+      "topic": "Statistics",
+      "label": "Expected value",
+      "latex": "E(X) = \\sum x\\,P(x)"
+    },
+    {
+      "id": "st-fm-11",
+      "topic": "Statistics",
+      "label": "Continuous uniform mean",
+      "latex": "\\dfrac{a + b}{2}"
+    },
+    {
+      "id": "st-fm-12",
+      "topic": "Statistics",
+      "label": "Continuous uniform standard deviation",
+      "latex": "\\dfrac{b - a}{\\sqrt{12}}"
+    },
+    {
+      "id": "wp-fm-1",
+      "topic": "Word Problems",
+      "label": "Profit",
+      "latex": "\\text{Profit} = \\text{Revenue} - \\text{Expenses}"
+    },
+    {
+      "id": "wp-fm-2",
+      "topic": "Word Problems",
+      "label": "Distance",
+      "latex": "\\text{Distance} = \\text{Rate} \\times \\text{Time}"
+    },
+    {
+      "id": "wp-fm-3",
+      "topic": "Word Problems",
+      "label": "Average speed",
+      "latex": "\\dfrac{\\text{total distance}}{\\text{total time}}"
+    },
+    {
+      "id": "wp-fm-4",
+      "topic": "Word Problems",
+      "label": "Work (identical machines)",
+      "latex": "W = n\\,r\\,t"
+    },
+    {
+      "id": "wp-fm-5",
+      "topic": "Word Problems",
+      "label": "Mixture concentration",
+      "latex": "\\dfrac{\\text{component}}{\\text{total}}"
+    },
+    {
+      "id": "wp-fm-6",
+      "topic": "Word Problems",
+      "label": "Simple interest",
+      "latex": "SI = P\\,r\\,t"
+    },
+    {
+      "id": "wp-fm-7",
+      "topic": "Word Problems",
+      "label": "Compound interest",
+      "latex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}"
+    }
   ]
 }
