@@ -204,7 +204,18 @@
     { "id": "wp-fc-3", "topic": "Word Problems", "front": "Simple interest?", "latex": "SI = P\\,r\\,t", "answer": "Principal × rate × time." },
     { "id": "wp-fc-4", "topic": "Word Problems", "front": "Compound interest?", "latex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}", "answer": "n is the number of compounding periods per year." },
     { "id": "wp-fc-5", "topic": "Word Problems", "front": "Profit?", "latex": "\\text{Profit} = \\text{Revenue} - \\text{Expenses}", "answer": "What's left of revenue after costs." },
-    { "id": "wp-fc-6", "topic": "Word Problems", "front": "Two objects moving — how do you combine their speeds?", "latex": "\\text{opposite: add} \\quad\\cdot\\quad \\text{same way: subtract}", "answer": "Relative speed adds for opposite directions, subtracts for the same direction." }
+    { "id": "wp-fc-6", "topic": "Word Problems", "front": "Two objects moving — how do you combine their speeds?", "latex": "\\text{opposite: add} \\quad\\cdot\\quad \\text{same way: subtract}", "answer": "Relative speed adds for opposite directions, subtracts for the same direction." },
+    { "id": "wp-fc-7", "topic": "Word Problems", "front": "What is a ratio, and how do you scale it?", "answer": "A comparison a:b. Multiply or divide both parts by the same number to scale (2:3 = 4:6 = 6:9). Reduce to lowest terms to compare." },
+    { "id": "wp-fc-8", "topic": "Word Problems", "front": "How do you combine two ratios A:B and B:C?", "answer": "Make the shared term B match, then chain. If A:B = 2:3 and B:C = 4:5, scale B to 12: A:B:C = 8:12:15." },
+    { "id": "wp-fc-9", "topic": "Word Problems", "front": "Direct vs inverse proportion?", "latex": "y = kx \\text{ (direct)}\\qquad y = \\dfrac{k}{x} \\text{ (inverse)}", "answer": "Direct: y = kx — both grow together (y/x constant). Inverse: y = k/x — one grows as the other shrinks (xy constant)." },
+    { "id": "wp-fc-10", "topic": "Word Problems", "front": "How do you split a quantity in a given ratio?", "answer": "Add the ratio parts to find total parts, then give each share. Split 60 in ratio 2:3 → 5 total parts → 24 and 36." },
+    { "id": "wp-fc-11", "topic": "Word Problems", "front": "Successive percent changes — can you just add them?", "answer": "No. Apply multipliers in sequence. +20% then −20% = ×1.2 × ×0.8 = ×0.96 = a 4% net decrease, not 0%." },
+    { "id": "wp-fc-12", "topic": "Word Problems", "front": "Percent of a percent?", "answer": "Multiply the decimals. 30% of 40% = 0.30 × 0.40 = 0.12 = 12%." },
+    { "id": "wp-fc-13", "topic": "Word Problems", "front": "'A is what percent of B' vs 'A is what percent greater than B'?", "answer": "'Percent of' = A/B × 100. 'Percent greater than' = (A − B)/B × 100 (the change relative to B)." },
+    { "id": "wp-fc-14", "topic": "Word Problems", "front": "Quick way to apply a percent change?", "latex": "\\times\\left(1 \\pm \\dfrac{x}{100}\\right)", "answer": "+x% → multiply by (1 + x/100); −x% → multiply by (1 − x/100). Chain multipliers for successive changes." },
+    { "id": "wp-fc-15", "topic": "Word Problems", "front": "Round-trip average speed formula?", "latex": "\\dfrac{2ab}{a+b}", "answer": "For equal distances at speeds a and b, average speed = 2ab/(a+b). Example: a=60, b=40 → 48 mph (not 50)." },
+    { "id": "wp-fc-16", "topic": "Word Problems", "front": "Combined work rate for two workers?", "latex": "\\dfrac{xy}{x+y}", "answer": "If A takes x hours and B takes y hours, together they finish in xy/(x+y) hours. Add their rates: 1/x + 1/y." },
+    { "id": "wp-fc-17", "topic": "Word Problems", "front": "Mixture / concentration formula?", "answer": "Concentration = component ÷ total. To mix two solutions: total component = sum of components from each; divide by total volume." }
   ],
 
   "quizzes": [
@@ -283,7 +294,13 @@
     { "id": "wp-qz-1", "topic": "Word Problems", "question": "Distance equals:", "options": ["Rate × Time", "Rate / Time", "Time / Rate", "Rate + Time"], "correct": 0, "explanation": "Distance = Rate × Time; rearrange to solve for rate or time." },
     { "id": "wp-qz-2", "topic": "Word Problems", "question": "Two cars move toward each other. Their relative speed is:", "options": ["the sum of their speeds", "the difference of their speeds", "the average of their speeds", "the faster speed"], "correct": 0, "explanation": "Opposite directions add; same direction subtract." },
     { "id": "wp-qz-3", "topic": "Word Problems", "question": "Compound interest amount A is:", "options": ["P(1 + r/n)^(nt)", "P · r · t", "P + r + t", "P(1 + rt)"], "correct": 0, "explanation": "A = P(1 + r/n)^(nt); P · r · t is simple interest." },
-    { "id": "wp-qz-4", "topic": "Word Problems", "question": "Average speed for a whole trip is:", "options": ["total distance / total time", "the average of the speeds", "distance × time", "the fastest speed"], "correct": 0, "explanation": "Average speed = total distance ÷ total time, not the mean of the speeds." }
+    { "id": "wp-qz-4", "topic": "Word Problems", "question": "Average speed for a whole trip is:", "options": ["total distance / total time", "the average of the speeds", "distance × time", "the fastest speed"], "correct": 0, "explanation": "Average speed = total distance ÷ total time, not the mean of the speeds." },
+    { "id": "wp-qz-5", "topic": "Word Problems", "question": "A:B = 2:3 and B:C = 4:5. What is A:B:C expressed with a common B-term of 12?", "options": ["8:12:15", "2:12:15", "6:12:10", "8:12:20"], "correct": 0, "explanation": "Scale A:B = 2:3 by ×4 → 8:12; scale B:C = 4:5 by ×3 → 12:15. Chain: A:B:C = 8:12:15." },
+    { "id": "wp-qz-6", "topic": "Word Problems", "question": "If y is inversely proportional to x and y = 12 when x = 2, what is y when x = 6?", "options": ["36", "6", "18", "4"], "correct": 3, "explanation": "xy = k is constant. k = 12 × 2 = 24. When x = 6: y = 24/6 = 4." },
+    { "id": "wp-qz-7", "topic": "Word Problems", "question": "A price rises 20% then falls 20%. The net change is:", "options": ["0%", "+4%", "−4%", "+2%"], "correct": 2, "explanation": "Multiply the multipliers: ×1.20 × ×0.80 = ×0.96 = 4% net decrease. You cannot simply add +20% and −20%." },
+    { "id": "wp-qz-8", "topic": "Word Problems", "question": "A is 150 and B is 100. 'A is what percent greater than B?' equals:", "options": ["150%", "50%", "33%", "67%"], "correct": 1, "explanation": "'Percent greater than B' = (A − B)/B × 100 = (150 − 100)/100 × 100 = 50%. 'A is 150% of B' is different (A/B × 100 = 150%)." },
+    { "id": "wp-qz-9", "topic": "Word Problems", "question": "A car travels 60 km at 60 km/h, then 60 km at 40 km/h. The average speed for the whole trip is:", "options": ["50 km/h", "52 km/h", "46 km/h", "48 km/h"], "correct": 3, "explanation": "Use 2ab/(a+b) for equal distances: 2×60×40/(60+40) = 4800/100 = 48 km/h. Check: time = 1 + 1.5 = 2.5 hr, distance = 120 km, speed = 48 km/h." },
+    { "id": "wp-qz-10", "topic": "Word Problems", "question": "Worker A finishes a job in 6 hours; Worker B finishes it in 3 hours. Working together, how long do they take?", "options": ["4.5 hours", "4 hours", "3 hours", "2 hours"], "correct": 3, "explanation": "Time together = xy/(x+y) = 6×3/(6+3) = 18/9 = 2 hours. Rates: A=1/6, B=1/3 per hour; combined=1/6+1/3=1/2 per hour → 2 hours." }
   ],
 
   "formulas": [
@@ -387,6 +404,11 @@
     { "id": "wp-fm-4", "topic": "Word Problems", "label": "Work (identical machines)", "latex": "W = n\\,r\\,t" },
     { "id": "wp-fm-5", "topic": "Word Problems", "label": "Mixture concentration", "latex": "\\dfrac{\\text{component}}{\\text{total}}" },
     { "id": "wp-fm-6", "topic": "Word Problems", "label": "Simple interest", "latex": "SI = P\\,r\\,t" },
-    { "id": "wp-fm-7", "topic": "Word Problems", "label": "Compound interest", "latex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}" }
+    { "id": "wp-fm-7", "topic": "Word Problems", "label": "Compound interest", "latex": "A = P\\left(1 + \\dfrac{r}{n}\\right)^{nt}" },
+    { "id": "wp-fm-8", "topic": "Word Problems", "label": "Direct proportion", "latex": "y = kx" },
+    { "id": "wp-fm-9", "topic": "Word Problems", "label": "Inverse proportion", "latex": "y = \\dfrac{k}{x}" },
+    { "id": "wp-fm-10", "topic": "Word Problems", "label": "Round-trip average speed", "latex": "\\dfrac{2ab}{a+b}" },
+    { "id": "wp-fm-11", "topic": "Word Problems", "label": "Combined work rate (time together)", "latex": "\\dfrac{xy}{x+y}" },
+    { "id": "wp-fm-12", "topic": "Word Problems", "label": "Percent-change multiplier", "latex": "\\times\\left(1 \\pm \\dfrac{x}{100}\\right)" }
   ]
 }
