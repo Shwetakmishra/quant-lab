@@ -215,7 +215,12 @@
     { "id": "wp-fc-14", "topic": "Word Problems", "front": "Quick way to apply a percent change?", "latex": "\\times\\left(1 \\pm \\dfrac{x}{100}\\right)", "answer": "+x% → multiply by (1 + x/100); −x% → multiply by (1 − x/100). Chain multipliers for successive changes." },
     { "id": "wp-fc-15", "topic": "Word Problems", "front": "Round-trip average speed formula?", "latex": "\\dfrac{2ab}{a+b}", "answer": "For equal distances at speeds a and b, average speed = 2ab/(a+b). Example: a=60, b=40 → 48 mph (not 50)." },
     { "id": "wp-fc-16", "topic": "Word Problems", "front": "Combined work rate for two workers?", "latex": "\\dfrac{xy}{x+y}", "answer": "If A takes x hours and B takes y hours, together they finish in xy/(x+y) hours. Add their rates: 1/x + 1/y." },
-    { "id": "wp-fc-17", "topic": "Word Problems", "front": "Mixture / concentration formula?", "answer": "Concentration = component ÷ total. To mix two solutions: total component = sum of components from each; divide by total volume." }
+    { "id": "wp-fc-17", "topic": "Word Problems", "front": "Mixture / concentration formula?", "answer": "Concentration = component ÷ total. To mix two solutions: total component = sum of components from each; divide by total volume." },
+
+    { "id": "di-fc-1", "topic": "Data Interpretation", "front": "What is a Data Interpretation set on the GRE?", "answer": "A group of questions based on one or more charts or tables (bar, line, pie, scatter). You read values off the graphic and compute." },
+    { "id": "di-fc-2", "topic": "Data Interpretation", "front": "Reading a pie chart — what is the key relationship between a slice and the total?", "answer": "Each slice's % × the total = that category's value. The whole circle = 100% = 360°." },
+    { "id": "di-fc-3", "topic": "Data Interpretation", "front": "What are the most common DI traps to watch for?", "answer": "Watch axis scales (do they start at 0?), units (thousands vs millions), and whether a question asks for a value vs a percent change. Re-read what's actually being asked." },
+    { "id": "di-fc-4", "topic": "Data Interpretation", "front": "How do you read a value from a bar or line chart?", "answer": "Trace the bar or data point horizontally to the y-axis scale and read off the value. Check the axis label for units (e.g. thousands) and whether the axis starts at 0 or a non-zero baseline." }
   ],
 
   "quizzes": [
@@ -300,7 +305,11 @@
     { "id": "wp-qz-7", "topic": "Word Problems", "question": "A price rises 20% then falls 20%. The net change is:", "options": ["0%", "+4%", "−4%", "+2%"], "correct": 2, "explanation": "Multiply the multipliers: ×1.20 × ×0.80 = ×0.96 = 4% net decrease. You cannot simply add +20% and −20%." },
     { "id": "wp-qz-8", "topic": "Word Problems", "question": "A is 150 and B is 100. 'A is what percent greater than B?' equals:", "options": ["150%", "50%", "33%", "67%"], "correct": 1, "explanation": "'Percent greater than B' = (A − B)/B × 100 = (150 − 100)/100 × 100 = 50%. 'A is 150% of B' is different (A/B × 100 = 150%)." },
     { "id": "wp-qz-9", "topic": "Word Problems", "question": "A car travels 60 km at 60 km/h, then 60 km at 40 km/h. The average speed for the whole trip is:", "options": ["50 km/h", "52 km/h", "46 km/h", "48 km/h"], "correct": 3, "explanation": "Use 2ab/(a+b) for equal distances: 2×60×40/(60+40) = 4800/100 = 48 km/h. Check: time = 1 + 1.5 = 2.5 hr, distance = 120 km, speed = 48 km/h." },
-    { "id": "wp-qz-10", "topic": "Word Problems", "question": "Worker A finishes a job in 6 hours; Worker B finishes it in 3 hours. Working together, how long do they take?", "options": ["4.5 hours", "4 hours", "3 hours", "2 hours"], "correct": 3, "explanation": "Time together = xy/(x+y) = 6×3/(6+3) = 18/9 = 2 hours. Rates: A=1/6, B=1/3 per hour; combined=1/6+1/3=1/2 per hour → 2 hours." }
+    { "id": "wp-qz-10", "topic": "Word Problems", "question": "Worker A finishes a job in 6 hours; Worker B finishes it in 3 hours. Working together, how long do they take?", "options": ["4.5 hours", "4 hours", "3 hours", "2 hours"], "correct": 3, "explanation": "Time together = xy/(x+y) = 6×3/(6+3) = 18/9 = 2 hours. Rates: A=1/6, B=1/3 per hour; combined=1/6+1/3=1/2 per hour → 2 hours." },
+
+    { "id": "di-qz-1", "topic": "Data Interpretation", "question": "A pie chart shows that a category takes up 25% of the total. If the total is 800, what is that category's value?", "options": ["25", "80", "160", "200"], "correct": 3, "explanation": "Slice value = slice % × total = 25% × 800 = 0.25 × 800 = 200." },
+    { "id": "di-qz-2", "topic": "Data Interpretation", "question": "A full pie chart represents 360°. A slice occupying 90° represents what percentage of the total?", "options": ["90%", "45%", "25%", "30%"], "correct": 2, "explanation": "Percent of total = (degrees of slice / 360) × 100 = (90 / 360) × 100 = 25%." },
+    { "id": "di-qz-3", "topic": "Data Interpretation", "question": "A bar chart's y-axis starts at 50,000 rather than 0. Bar A reaches 60,000 and Bar B reaches 55,000. A student reads Bar A as 'twice as tall as Bar B' on the chart. This is an example of which DI trap?", "options": ["Confusing value with percent change", "Using wrong units (thousands vs millions)", "A non-zero axis baseline making differences appear larger", "Misreading the x-axis labels"], "correct": 2, "explanation": "When the axis does not start at 0, visual bar heights exaggerate relative differences. The actual values (60k vs 55k) are only about 9% apart, but the chart makes the bars look very different." }
   ],
 
   "formulas": [
@@ -409,6 +418,9 @@
     { "id": "wp-fm-9", "topic": "Word Problems", "label": "Inverse proportion", "latex": "y = \\dfrac{k}{x}" },
     { "id": "wp-fm-10", "topic": "Word Problems", "label": "Round-trip average speed", "latex": "\\dfrac{2ab}{a+b}" },
     { "id": "wp-fm-11", "topic": "Word Problems", "label": "Combined work rate (time together)", "latex": "\\dfrac{xy}{x+y}" },
-    { "id": "wp-fm-12", "topic": "Word Problems", "label": "Percent-change multiplier", "latex": "\\times\\left(1 \\pm \\dfrac{x}{100}\\right)" }
+    { "id": "wp-fm-12", "topic": "Word Problems", "label": "Percent-change multiplier", "latex": "\\times\\left(1 \\pm \\dfrac{x}{100}\\right)" },
+
+    { "id": "di-fm-1", "topic": "Data Interpretation", "label": "Pie slice value", "latex": "\\text{slice}\\% \\times \\text{total}" },
+    { "id": "di-fm-2", "topic": "Data Interpretation", "label": "Degrees of a pie slice", "latex": "\\dfrac{\\text{value}}{\\text{total}} \\times 360^{\\circ}" }
   ]
 }
