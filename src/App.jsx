@@ -11,8 +11,9 @@ import Flashcards from './screens/Flashcards'
 import Quiz from './screens/Quiz'
 import Formulas from './screens/Formulas'
 import logo from './assets/quant-logo.png'
+import { totals } from './lib/content'
 
-const DAILY_GOAL = 25
+const DAILY_GOAL = totals.cards
 
 export default function App() {
   const auth = useAuth()

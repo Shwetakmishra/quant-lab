@@ -52,10 +52,7 @@ export default function Home({ name, goalDone, goalTotal, onNav, topic, setTopic
           pct={pct}
           color="var(--accent)"
           inner={
-            <>
-              <div style={{ fontSize: isMobile ? 18 : 26, fontWeight: 800, color: '#3B3766' }}>{pct}%</div>
-              <div style={{ fontSize: isMobile ? 8 : 10, fontWeight: 700, letterSpacing: '.08em', color: 'rgba(59,55,102,.55)', textTransform: 'uppercase' }}>daily goal</div>
-            </>
+            <div style={{ fontSize: isMobile ? 18 : 26, fontWeight: 800, color: '#3B3766' }}>{pct}%</div>
           }
         />
       </div>
