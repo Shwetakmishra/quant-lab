@@ -136,9 +136,6 @@ for (const f of data.formulas) {
   if (!f.latex?.trim()) err(`formula ${f.id} missing latex`); else renders(f.latex, `formula ${f.id}`)
 }
 
-// starred floor
-if (starred < 3) err(`expected >=3 starred flashcards, found ${starred}`)
-
 // per-topic counts + floors
 const fcBy = (n) => data.flashcards.filter((c) => c.topic === n).length
 const qzBy = (n) => data.quizzes.filter((q) => q.topic === n).length
@@ -149,8 +146,10 @@ const enforce = (n) => {
   if (fcBy(n) < FLOORS[n]) err(`${n}: ${fcBy(n)} flashcards < floor ${FLOORS[n]}`)
   if (qzBy(n) < QUIZ_FLOOR) err(`${n}: ${qzBy(n)} quizzes < floor ${QUIZ_FLOOR}`)
 }
-if (full) Object.keys(FLOORS).forEach(enforce)
-else if (onlyTopic) enforce(onlyTopic)
+if (full) {
+  Object.keys(FLOORS).forEach(enforce)
+  if (starred < 3) err(`expected >=3 starred flashcards, found ${starred}`)
+} else if (onlyTopic) enforce(onlyTopic)
 
 // id-preservation diff vs committed baseline
 try {
